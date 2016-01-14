@@ -1,0 +1,25 @@
+<script type="text/juicer" id="wechat-xmas-tpl">
+	
+	{@if wxred }
+	{@each wxred as info}
+	<li class="clear li2">
+		<p class="fl">
+			{@if info.type == '投资' }
+			<span class="text">购买的红包</span>
+			{@else if info.type == '注册' }
+			<span class="text">注册的红包</span>
+			{@/if}
+			<br />
+			<span class="date">${info.createdAt|formatDate}</span>
+		</p>
+		<p class="fr hnum"><strong>${info.amt}</strong><span>元</span></p>
+	</li>
+	{@/each}
+	{@else}
+	<li class="clear li2">
+		<p class="fl">
+			<span class="text">您没有领取到红包。</span>
+		</p>
+	</li>
+	{@/if}
+</script>

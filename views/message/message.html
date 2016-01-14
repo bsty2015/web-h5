@@ -1,0 +1,48 @@
+<%-layout('blank-layout') -%>
+<html>
+
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/message.css"/>
+
+<body>
+<!--  ==========  -->
+<!--  = 未读 =  -->
+<!--  ==========  -->
+<% for(var i=0;i
+<messages.length
+;i++){
+var message = messages[i];
+%>
+<% if(message.isRead =='未读'){%>
+<a class="display-block pTop2 border1-c5 pTopBottom1" href="/user/messageDetail/<%=message.msgId%>">
+    <button class="bg-red mLeft2 FontColorWhite radius3 FontSize12 height2"><%=message.msgType%></button>
+    <span class="FontSize18 FontColor65"><%=message.title%></span>
+    <i class="iconfont FontSize20 FontColor120 height2 set">&#xe633;</i>
+
+    <p class="mLeftRight2 FontSize14 mTop1 FontColor66">
+        <%=message.info%>....
+    </p>
+</a>
+<%}else{%>
+<a class="display-block pTop2 border1-c5 pTopBottom1" href="/user/messageDetail/<%=message.msgId%>">
+    <span class="FontSize18 pleft2 FontColor168"><%=message.title%></span>
+    <i class="iconfont FontSize20 FontColor157 height2 set">&#xe633;</i>
+
+    <p class="mLeftRight2 FontSize14 mTop1 FontColor157">
+        <%=message.info%>....
+    </p>
+</a>
+<%}%>
+<%}%>
+
+<!--  ==========  -->
+<!--  = 无数据 =  -->
+<!--  ==========  -->
+<%if(messages.length == 0){%>
+<article class="AlginCenter pTopBottom2">
+    <i style="font-size: 10rem;color: #c1c1c1;display: block;text-align: center;margin-top:2rem"
+       class="iconfont FontColor120">&#xe642;</i>
+</article>
+<%}%>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+}
+﻿1)	a,button,input{-webkit-tap-highlight-color:rgba(255,0,0,0);}/* 1.去除android a/button/input标签被点击时产生的边框 2.去除ios a标签被点击时产生的半透明灰色背景 */
+2)	微信下开发，a链接会有点击后的默认反应，解决方法为：*:visited{color:...}
+
+3)	2015-06-19 修复情况
+
+	>	首页滚动透明度问题，已解决（问题原因：代码使用了定位。使用浮动代替定位可解决此问题）
+4)  去掉bingdingbank.HTML页面，pay.HTML页面	
+5)	交通银行	BOCO
+	招商银行	ICBC
+	中国银行	BOC
+	建设银行	CCB
+	邮政银行	POST
+	中信银行	ECITIC
+	光大银行	CEB
+	华夏银行	HXB
+	招商银行	CMBCHINA
+	兴业银行	CIB
+	浦发银行	SPDB
+	平安银行	PINGAN
+	广发银行	GDB
+	民生银行	CMBC
+	农业银行	ABC
+6)	设置背景大小，要注意加载顺序，最好将背景路径放在第一位，如：*{background:url(...);background-size:cover;....;}
+7)	https://jicaicdn.b0.upaiyun.com CDN域名
+8)	银行卡最多19位，身份证最多18位。
+
+
+
+
+<!DOCTYPE html>
+<% layout('blank-layout') -%>
+<html>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/wechat_dec_activity/third/xamsThird.css" />
+	<body>
+		
+		<div class="container">
+			<img class="img-full" src="/img/wechat_Dec_activity/third/bg_01.jpg">
+			<figure class="content">
+				<img class="img-full" src="/img/wechat_Dec_activity/third/bg_02.jpg">
+				 <figcaption class="no-weixin"> <!--非微信打开-->
+				 	<p class="info">关注微信公众号<span>“集财圈儿”</span></p>
+				 	<p class="info">参加活动，领取红包</p>
+				 </figcaption>
+				 
+				 <figcaption class="weixin"> <!--微信打开-->
+				 	<% if(!userId){%> 
+				 		<p class="btn-p"><a href="/wechatbind" class="clickBtn"><button class="btn">拆红包</button></a></p>
+				 	<% } else if(xmasInfo){%>
+			 		   <% if(xmasInfo.amt>0){%> 
+			 		   	   <p class="btn-p see-p"><a href="javascript:;" class="clickBtn" id="btn_open btn_open1" data-flag="red-list"><button class="btn">查看我的红包</button></a></p>
+			 		   	<%} else {%>
+			 		   		<p class="btn-p"><a href="javascript:;" class="clickBtn" id="btn_open"><button class="btn">拆红包</button></a></p>
+			 		    <% } %> 
+		 		   	<%}else{%>
+	 		   		 	<p class="btn-p"><a href="javascript:;" class="clickBtn" id="btn_open"><button class="btn">拆红包</button></a></p>
+	 		   		<%}%>
+				 	
+				 	<p class="info reg-p">购买集财年度理财产品</p>
+				 	<p class="info"> 领取200元大红包</p>
+				 	<p class="info-end">抱歉，活动已结束 </p>
+				 </figcaption>
+			</figure>
+		<article class="text-detail">
+		        <p class="title">活动规则</p>
+						<pre>
+							
+		
+						</pre>
+	    </article>
+	    
+	      <aside class="mask"></aside><!--遮罩层-->
+	      <%if(xmasInfo){%> 
+	      	<%if(xmasInfo.amt>0){%> 
+	      <article class="myred">  <!--我的红包-->
+	      		<p class="getred">我的红包</p>
+	      	    	<div class="getred-info clear">
+	      	    		<p class="fl ">
+	      	    			<span class="buy-red">购买红包</span><br>
+	      	    			<span class="time"><%=xmasInfo.date%></span>
+	      	    		</p>
+	      	    		<p class="money-num fr"><%=xmasInfo.amt%><span>元</span></p>
+	      	    	</div>
+	      	    	<p class="divider"></p>
+	      	        <p class="return-p"><a class="return-a" id="return-a">返回</a></p>
+	      </article>
+	      <%}else {%> 
+	        <article class="regred">  <!--注册未购买-->
+	      		<p class="getred">购买年度理财产品领取红包</p>
+	      		<p class="img-red"><img src="/img/wechat_Dec_activity/third/wl-bg.png" ></p>
+	      	    		<p class="money-num p1"> 买500元，领<span>20元红包</span>。</p>
+	      	    	    <p class="money-num"> 买1000元，领<span>50元红包</span>。</p>
+	      	    	    <p class="money-num"> 买5000元，领<span>200元红包</span>。</p>
+	      	    	<p class="divider"></p>
+	      	        <p class="return-p"><a class="return-a" href="xmasThird/product">购买</a></p>
+	      </article>
+	        <%} %>
+	      <%}
+	      %>
+	     <p class="send-p">
+				      	红包由微信公众号“集财圈儿”<br>
+				      	发送给您，请注意查收	
+		</p>
+		</div>
+		
+		
+		<script src="/js/wechat_Dec_activity/third/xmasThird-config.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
+
+
+
+
+

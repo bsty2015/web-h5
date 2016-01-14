@@ -1,0 +1,122 @@
+html {
+    font-size: 62.5%;
+    /*padding-bottom: 5rem;*/
+}
+
+a,
+button,
+input {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+/* 1.去除android a/button/input标签被点击时产生的边框 2.去除ios a标签被点击时产生的半透明灰色背景 */
+/* = 这里是底部tab代码 = */
+
+nav {
+    display: block;
+    bottom: 0;
+    position: fixed;
+    background: #faf9f9;
+    border-top: .2rem solid #dbdbdb;
+    width: 100%;
+}
+
+nav a {
+    width: 25%;
+    /*height: 4.3rem;*/
+
+    margin-top: .5rem;
+    /*margin-bottom: .2rem;*/
+}
+
+.home-icon {
+    background: url(../img/menu/Home.png) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.product-icon {
+    background: url(../img/menu/Product.png) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.uc-icon {
+    background: url(../img/menu/User.png) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.about-icon {
+    background: url(../img/menu/AboutUs.png) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.home-active-icon {
+    background: url(../img/menu/homeClick.png) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.product-active-icon {
+    background: url(../img/menu/ProductClick.png) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.uc-active-icon {
+    background: url(../img/menu/UserClick.png) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.about-active-icon {
+    background: url(../img/menu/AboutUsClick.png) no-repeat;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.product-text {
+    margin: 0 auto;
+    color: #929292;
+    height: 1.84rem;
+    margin-top: .3rem;
+    text-align: center;
+    font-size: 1.22rem;
+    line-height: 1.84rem;
+}
+
+.product-active-text {
+    color: #00CD98;
+    margin: 0 auto;
+    height: 1.84rem;
+    margin-top: .3rem;
+    text-align: center;
+    font-size: 1.22rem;
+    line-height: 1.84rem;
+}

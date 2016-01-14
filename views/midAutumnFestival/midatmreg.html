@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<%-layout('blank-layout') -%>
+<!--  ==========  -->
+<!--  = 新用户注册页面---中秋节 =  -->
+<!--  ==========  -->
+<html>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/virtualGifts/midAutumnFestival/midatminv.css"/>
+<title>中秋-老用户分享页</title>
+
+<body>
+<header>
+    <img class="img-full" src="<%=assertHost%>/img/midAutumnFestival/m_mid_reg.png"/>
+    <article class="midEnd">
+        <p>本次活动已结束。</p>
+        <a href="/activity">
+            <button>返回</button>
+        </a>
+    </article>
+</header>
+
+<article class="mid_rule_box">
+    <section>
+        <h3 style="position: relative;left: 5rem;top: -3rem;">活动规则</h3>
+				<pre class="FontSize14" style="word-wrap: break-word;">
+1. 本次活动2015年9月21日开始，到2015年9月26日00:00结束。
+2. 本次活动为交易用户专享活动。2015年9月26日00:00之前成功购买集财理财产品（不包括万元体验金理财产品）的用户参与活动，都将获得话费赠送。
+3. 活动期间，分享此页面邀请好友注册：
+每邀请一位新用户注册集财并购买理财产品（不包括万元体验金理财产品），即可获得10元手机话费；
+通过邀请页面注册购买的新用户还可获得30元话费和50元礼金。
+4. 参与活动所赚取话费将于9月26日、9月27日两天充值到用户在集财网注册的手机号码；新用户获取的50元礼金将跟随用户到期的理财产品一起兑付。					
+				</pre>
+    </section>
+</article>
+<input type="hidden" id="J_appId" value="<%=appId%>"/>
+<input type="hidden" id="J_shareTitle" value="中秋送福 好友同享"/>
+<input type="hidden" id="J_sharepyqTitle" value="集财中秋送好礼！"/>
+<input type="hidden" id="J_shareLink" value="http://m.jicai.com/midatmreg?code=<%=code%>"/>
+<input type="hidden" id="J_shareDesc" value="集财中秋送好礼！现在注册并购买集财理财产品，就可以获得30元话费和50元礼金。邀请好友还可以获得更多奖励。"/>
+<script src="<%=assertHost%>/js/modules/wechartShare-config.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

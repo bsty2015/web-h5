@@ -1,0 +1,51 @@
+<%-layout('blank-layout') -%>
+<!DOCTYPE HTML>
+<html>
+
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/addBank.css"/>
+
+<body class="setbg">
+<article id="blist">
+    <% for(var i=0;i
+    <cards.length
+    ;i++){
+    var card = cards[i];
+    %>
+    <section class="blistp mTop1">
+        <img class="bimg" src="<%=assertHost%>/img/bankbg/<%=card.bankCode%>.png"/>
+
+        <p class="FontSize18 FontColor65 btitle"><%=card.name%><span class="FontSize14 FontColor157">&nbsp;储蓄卡</span>
+        </p>
+
+        <p class="FontSize18 FontColor129 firstfont bnum"><%=card.cardNo%></p>
+
+        <p class="alin"></p>
+
+        <p class="tip">
+            <span class="tipS">卡片限额</span>
+					<span class="text">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;<%=card.oneLimitAmt%></span>万/笔&nbsp;&nbsp;&nbsp;&nbsp;<span><%=card.dayLimitAmt%></span>万/日&nbsp;&nbsp;&nbsp;&nbsp;<span><%=card.mothLimitAmt%></span>万/月
+					</span>
+        </p>
+    </section>
+    <%}%>
+</article>
+
+
+<%if(cards.length == 0){%>
+<article class="AlginCenter pTopBottom2">
+    <img class="" src="<%=assertHost%>/img/datano.png"/>
+</article>
+<%}%>
+
+<section class="pTop2 subBtn">
+    <a href="/bank/add">
+        <button class="btn-55-normal"><span class="iconfont FontSize20 alignM">&#xe622;</span><span
+                class="FontSize18 alignM">添加银行卡</span></button>
+    </a>
+
+    <p class="AlginCenter mTop1 FontSize12 FontColor120">最多绑定<span class="firstfont">5</span>张银行卡</p>
+</section>
+</body>
+
+</html>

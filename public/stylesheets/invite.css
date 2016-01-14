@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    height: 12rem;
+    line-height: 12rem;
+    background: #26B597 url(../img/invitation/mask.png) no-repeat bottom;
+    background-size: 100%;
+}
+
+.header .left-div {
+    margin-left: 3rem;
+    float: left;
+}
+
+.left-div ul {
+    position: relative;
+    top: -2rem
+}
+
+.left-div li.remenber {
+    letter-spacing: 1px;
+}
+
+.left-div ul li {
+    font-size: 16px;
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    height: 2.4rem;
+}
+
+.left-div .button {
+    padding: 0.8rem;
+    background: none;
+    border: 1px solid rgb(105, 232, 205);
+    border-radius: 0.4rem;
+    color: rgb(105, 232, 205);
+    size: 1rem;
+}
+
+.header .right-div {
+    float: right;
+    margin: 2rem 4rem 0rem 0rem;
+}
+
+.header .right-div img {
+    height: 8rem;
+}
+
+/*以上是头部样式*/
+
+.btn-red {
+    font-size: 1.4rem;
+    background: rgb(249, 94, 94);
+    border: none;
+    border-radius: 2.2rem;
+}
+
+/**遮罩层的样式如下*/
+
+/* ----------------------- *
+* ws_mask zhognciyisheng@live.com 2015年10月23日15:24:14 遮罩样式文件
+* ----------------------- *
+*/
+
+#mask {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 999;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+}
+
+.ws_mask li {
+    background: #fff;
+    position: absolute;
+    z-index: 1000;
+    top: 10rem;
+    left: 50%;
+    margin-left: -13rem;
+}
+
+.ws_mask img {
+    width: 26rem;
+}
+
+.ws_mask li p {
+    padding-bottom: 2rem;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, .7);
+    line-height: 4rem;
+}

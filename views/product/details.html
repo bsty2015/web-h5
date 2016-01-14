@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<%-layout('blank-layout') -%>
+<html>
+
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/Details.css"/>
+
+<body>
+<button class="head-details-btn FontColorGreen height3 FontSize14">产品数据</button>
+<div class="details-to-center">
+    <p class="FontSize12 FontColor120 AlginCenter mTop1">发行机构</p>
+
+    <p class="FontSize16 details-set-fc4a AlginCenter"><%=outString(detail.publishOrg)%></p>
+    <span class="AlginCenter display-block details-set-fcE6">——————————————————</span>
+</div>
+<div class="clear details-set-width">
+    <p class="fl mTop1">
+        <span class="FontSize12 FontColor120">转让金额</span><br/>
+        <span class="firstfont FontSize16 details-set-fc4a"><%=formatCurrency(detail.amt)%></span>
+    </p>
+
+    <p class="fr mTop1">
+        <span class="FontSize12 FontColor120">资产评估</span><br/>
+        <span class="firstfont FontSize16 details-set-fc4a"><%=formatCurrency(detail.worth)%></span>
+    </p>
+    <span class="AlginCenter display-block details-set-fcE6">——————————————————</span>
+</div>
+<div>
+    <p class="FontSize12 FontColor120 AlginCenter mTop1">评估机构</p>
+
+    <p class="FontSize16 details-set-fc4a AlginCenter"><%=outString(detail.assessmentOrg)%></p>
+    <span class="AlginCenter display-block details-set-fcE6">——————————————————</span>
+</div>
+<div>
+    <p class="FontSize12 FontColor120 AlginCenter mTop1">第三方增信保障</p>
+
+    <p class="FontSize16 details-set-fc4a AlginCenter"><%=outString(detail.guaranteeOrg)%></p>
+    <span class="AlginCenter display-block details-set-fcE6">——————————————————</span>
+</div>
+<div>
+    <p class="FontSize12 FontColor120 AlginCenter mTop1">计息方式</p>
+
+    <p class="FontSize16 details-set-fc4a AlginCenter">购买当日起息</p>
+    <span class="AlginCenter display-block details-set-fcE6">——————————————————</span>
+</div>
+<div>
+    <p class="FontSize12 FontColor120 AlginCenter mTop1">兑付方式</p>
+
+    <p class="FontSize16 details-set-fc4a AlginCenter">到期一次性还本付息</p>
+    <!--<span class="AlginCenter display-block FontColor98">——————————————————</span>-->
+</div>
+<section class="mTop2">
+    <img class="img-full" src="<%=assertHost%>/img/DetaiilsBg1.jpg"/>
+</section>
+<p>
+    <button class="head-details-btn FontColorGreen height3 FontSize14">你买的是什么</button>
+</p>
+<p class="FontSize16 mTop1 FontColorGreen AlginCenter">
+    <span><span class="firstfont">500</span>元即可分享的</span><br/>
+    城市新核心区高端商业物业收益增值
+</p>
+
+<p class="max-64 pLeftRight2 FontColor219 FontSize14 AlginCenter">
+    <%=outString(detail.info)%>
+</p>
+<article>
+    <p class="AlginCenter pTop2"><img src="<%=assertHost%>/img/DetaiilsBg2.jpg"/></p>
+
+    <p>
+        <button class="head-details-btn FontColorGreen height3 FontSize14">集财如何保障安全</button>
+    </p>
+    <p class="AlginCenter FontColorGreen FontSize18 mTop1">和银行一样让你放心</p>
+    <section class="mTop2 AlginCenter">
+        <p><img src="<%=assertHost%>/img/DetaiilsBg3.jpg"/></p>
+
+        <p class="details-set-fc4a FontSize15 mTop1">银行级风控</p>
+
+        <p class="details-set-fc4a FontSize12">多重深度尽调将风险隔离于无形</p>
+    </section>
+    <section class="mTop2 AlginCenter">
+        <p><img src="<%=assertHost%>/img/DetaiilsBg4.jpg"/></p>
+
+        <p class="details-set-fc4a FontSize15 mTop1">资金安全保障</p>
+
+        <p class="details-set-fc4a FontSize12">第三方支付托管，同卡进出，风险保证金</p>
+
+        <p class="details-set-fc4a FontSize12">增信机构 共同保障资金安全</p>
+    </section>
+    <section class="mTop2 AlginCenter">
+        <p><img src="<%=assertHost%>/img/DetaiilsBg5.jpg"/></p>
+
+        <p class="details-set-fc4a FontSize15 mTop1">资产优质</p>
+
+        <p class="details-set-fc4a FontSize12">城市新核心区高端商业物业</p>
+
+        <p class="details-set-fc4a FontSize12">租售收益完全覆盖债权</p>
+    </section>
+</article>
+</body>
+
+</html>

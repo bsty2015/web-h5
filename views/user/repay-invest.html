@@ -1,0 +1,150 @@
+<!--<!DOCTYPE html>-->
+<%-layout( 'blank-layout') -%>
+<html>
+
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/bingdingBank.css"/>
+<body class="bg-219">
+<header class="FontColorWhite pTop2 bg-green pBottom2 pleft2">
+    <section class="clear">
+        <h3 class="FontSize24 fl"><%=product.name%></h3>
+        <button class="fl">期限<span><%=product.duration%></span>天</button>
+    </section>
+    <p class="h-bingdingbang-text"><span class="FontSize16">预期年化收益率</span><span class="firstfont per FontSize16"><%=formatCurrency(product.rate)%></span><span
+            class="FontSize14">%</span>
+    </p>
+
+    <p class="clear">
+        <img class="fr head-bingding-bg"
+        <src
+        ="<%=assertHost%>/img/bingdingbg.png" />
+    </p>
+</header>
+<article>
+    <ul class="bg-white">
+        <li class="border1-c5 fisrt-bank">
+            <button class="bingding-tag bingding-tag-bgGreen height2 FontSize12">银行卡</button>
+        </li>
+        <% if(card == null){%>
+        <li>
+            <a class="visited120 clear FontColor120 fontweight display-block border1-c5 fisrt-bank pTopBottom1plus FontSize18 mLeft2"
+               href="/bank/add">
+                <span>先去绑定银行卡</span>
+                <img class="height2 fr mRight2"
+                <src
+                ="<%=assertHost%>/img/plus.png" />
+            </a>
+        </li>
+        <%}else{%>
+        <li style="background-position: 0 center;"
+            class="ws pTopBottom1 mLeft2 pleft4 <%=card.bankCode%> bingdingbank-logo">
+
+            <p class="FontSize13 FontColor120 fontweight clear">
+                <%=card.bankName%>(尾号<span class="firstfont FontColorGreen"><%=card.cardLast%></span>)
+                <span class="iconfont  set-right fr mRight2">&#xe633;</span>
+            </p>
+
+            <p class="FontColor130 FontSize12">限额交易
+								<span>
+
+								<%=formatCurrency(card.oneLimitAmt)%>
+
+							</span>万元/笔
+								<span>
+
+								<%=formatCurrency(card.dayLimitAmt)%>
+
+							</span>万元/日
+								<span> <%=formatCurrency(card.mothLimitAmt)%>
+
+							</span>万/月
+            </p>
+        </li>
+        <%}%>
+
+    </ul>
+    <form data-url="/invest/repeatPay" action="/invest/repeatPay" method="post">
+        <input type="hidden" name="orderId" value="<%=orderId%>">
+        <input type="hidden" name="cardId" value="<%=card.id%>">
+        <ul class="mTopplus bg-white pBottom2">
+            <li class="pTopBottom1plus border1-c5 pleft2">
+                <label class="FontColor120 FontSize18 fontweight">购买金额</label>
+                <input readonly="readonly" class="FontColorB3 FontSize18 mLeft1" type="number" name="investAmt"
+                       id="J_investAmt" value="<%=investAmt%>"/>
+            </li>
+            <li class="pTopBottom1 clear">
+                <p class="FontSize13 FontColor120 fl mLeft2"><span class="iconfont FontSize13 bingding-set-color">&#xe62b;</span>预计收益
+                    <span class="firstfont bingding-num" id="J_profit"><%=profit%></span> 元</p>
+            </li>
+            <li class="pTop2">
+                <button class="btn-55-green" id="J_invest">下一步</button>
+            </li>
+            <li class="AlginCenter pTop1 FontSize14">
+                <% if(product.category == '体验产品') { %>
+                <span class="iconfont FontColorGreen FontSize18">&#xe634;</span><span class="FontColor98">我已阅读并同意</span><a
+                    href="/virtual/rule">活动规则</a>
+                <% } else { %>
+                <span class="iconfont FontColorGreen FontSize18">&#xe634;</span><span class="FontColor98">我已阅读并同意</span><a
+                    href="/pay/contract?productId=<%=product.id%>" class="visitedgreen bingding-agree">应收账款转让及回购协议</a>
+                <% } %>
+            </li>
+        </ul>
+        <input type="hidden" name="loadingText" id="loadingText" value="订单处理中，请稍后..."/>
+    </form>
+</article>
+<% if(ownCards != null){%>
+<footer class="showHidden">
+    <p class="bg-white"><a class="FontSize20 visited120 FontColor120 fr controlBtn"><span class="iconfont FontSize26">&#xe620;</span></a>
+    </p>
+
+    <h3 class="bg-white FontSize18 FontColor219 AlginCenter height3 pTop2 border1-c5">银行卡</h3>
+    <ul>
+        <% for(var i=0;i
+        <ownCards.length
+        ;i++){ ocard=ownCards[i]; %>
+        <li class="border1-c5 bg-white investCtrShow">
+
+            <a class="display-block clear pBottom1" href="/user/invest/repayInvest/<%=orderId%>?cardId=<%=ocard.id%>">
+
+                <p style="height: 3rem;width: 3rem;" class="<%=ocard.bankCode%> mTopplus mTop1 fl my-bank-listbg">
+                    <!--这里是图片位置--></p>
+
+
+                <section class="fl alignM">
+
+                    <p class="BankText">
+
+                        <%=ocard.bankName%>(尾号<span class="firstfont">
+
+								<%=ocard.cardLast%></span>)
+
+                    </p>
+
+                    <p class="BankText2">限额 <span>
+
+								<%=formatCurrency(ocard.oneLimitAmt)%></span>万/笔<span>
+
+								<%=formatCurrency(ocard.dayLimitAmt)%></span>万/日<span> 
+
+								<%=formatCurrency(ocard.mothLimitAmt)%></span>万/月</p>
+
+                </section>
+
+            </a>
+        </li>
+        <%}%>
+        <li class="add-bank-wrap">
+            <a class="display-block" href="/bank/add">
+                <button class="add-bank-btn btn-39-normal FontColor157">
+                    <span class="iconfont FontSize1.6 alignM FontColor157">&#xe622;</span>添加银行卡
+                </button>
+            </a>
+        </li>
+    </ul>
+</footer>
+<%}%>
+<section id="msTip">
+    <input type="text" name="" id="msg" value="<%=outString(msg)%>"/>
+</section>
+</body>
+<script src="<%=assertHost%>/js/modules/bankListShowHidden-config.js" type="text/javascript" charset="utf-8"></script>
+</html>

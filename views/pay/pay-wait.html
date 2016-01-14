@@ -1,0 +1,23 @@
+<%-layout( 'blank-layout') -%>
+<html>
+<script src="<%=assertHost%>/js/modules/pay-wait-config.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/PayWait.css"/>
+
+<body>
+<article>
+    <section>
+        <form action="/invest/paystatus" id="J_freshform" method="post">
+            <input type="hidden" name="num" value="<%=outString(num)%>">
+        </form>
+        <div class="spinner ball">
+            <div class="cube1"></div>
+            <div class="cube2"></div>
+        </div>
+        <div>
+            <p class="payStatuText">正在支付中...</p>
+        </div>
+    </section>
+</article>
+</body>
+
+</html>

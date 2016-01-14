@@ -1,0 +1,1 @@
+seajs.use(assertHost+'/js/wechat_Dec_activity/pay_suc_change_status');

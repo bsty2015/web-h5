@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<%-layout('blank-layout') -%>
+<html>
+
+<!--<link rel="stylesheet" type="text/css" href="stylesheets/bingdingBank.css" />-->
+
+<body>
+<header>
+    <img class="img-full" src="<%=assertHost%>/img/pay_bg1.gif"/>
+</header>
+<form class="pTop2" action="javascript:;" method="post">
+    <input class="inpbor-bottom-30 FontSize18" type="tel" name="" id="" value="" placeholder="请填写银行预留手机号"/>
+    <input class="inpbor-bottom-30 mTopBottom2 FontSize18" type="tel" name="" id="" value="" placeholder="请填写短信验证码"/>
+    <button class="btn-55-green">获取验证码</button>
+
+</form>
+<p class="FontSize14 AlginCenter pTop1"><span class="iconfont FontSize18 FontColorGreen">&#xe635;</span><span
+        class="FontColor120">我已阅读并同意易宝</span><a class="FontColorLblue">投资通服务协议</a>
+</p>
+<footer class="FontSize12 FontColor98 AlginCenter pTop2 mTop2">
+    <p class="mTop2">本服务由易宝支付<span class="firstfont">(yeepay.com)</span>提供</p>
+
+    <p>易宝支付客服电话 <span class="FontColorGreen firstfont FontColorGreen">4001-500-800</span>
+    </p>
+    <input type="hidden" name="loadingText" id="loadingText" value="支付中，请稍后..."/>
+</footer>
+<section>
+    <a href="payCode">
+        <button class="bottom-btn-66 FontColorWhite bottom-btn-green">确认支付</button>
+    </a>
+</section>
+</body>
+</html>

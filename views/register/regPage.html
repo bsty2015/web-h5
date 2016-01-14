@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<%-layout( 'blank-layout') -%>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/regPage.css"/>
+<script src="<%=assertHost%>/js/jquery_md5.js" type="text/javascript" charset="utf-8"></script>
+<form class="reg_page_form" action="javascript:;" method="post">
+    <div class="reg_page_form_top">
+        <input id="telephone" class="tel" type="tel" maxlength="11" name="telephone" value="" placeholder="输入手机号"
+               onkeyup="value=value.replace(/[^\d]/g,'')"/>
+        <input id="imgCode" class="imgCode" type="text" maxlength="4" name="" value="" placeholder="输入图片验证码"/>
+			<span>
+				<img id="oRandomImg" src=""/>
+			</span>
+    </div>
+    <div class="reg_page_form_center">
+        <input id="validateCode" class="msgCode" type="tel" maxlength="6" name="validateCode" value=""
+               placeholder="输入短信验证码" onkeyup="value=value.replace(/[^\d]/g,'')"/>
+        <input id="passwd" class="setPsd" type="password" maxlength="16" name="passwd" value=""
+               placeholder="设置6~16位密码"/>
+        <button id="oSendCodeBtn">发送验证码</button>
+        <em>
+            <img id="psdImg" src="/img/password.png"/>
+            <!--<img src="/img/passwordActive.png"/>-->
+        </em>
+    </div>
+    <button id="btn_Confirm">注册</button>
+    <p class="pTop2 AlginCenter">
+        <span class="iconfont FontColorGreen FontSize18">&#xe635;</span>
+        <span class="FontColor120 FontSize14">我已阅读并同意</span>
+        <a href="/useragreement">
+            <span class="reg-active FontColorGreen FontSize14">用户服务协议</span>
+        </a>
+    </p>
+    <input type="hidden" name="" id="loadingText" value="正在提交中..."/>
+    <input type="text" name="mmsg" id="mmsg" value=""/>
+</form>
+<section id="msTip">
+    <input type="text" name="" id="msg" value="<%=outString(msg)%>"/>
+</section>
+<script src="<%=assertHost%>/js/modules/regPage-config.js" type="text/javascript" charset="utf-8"></script>

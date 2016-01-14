@@ -1,0 +1,171 @@
+<!--
+	作者：zhongciyisheng@live.com
+	时间：2015-11-09
+	描述：菜籽观影季
+-->
+<%-layout('blank-layout') %>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/movie-2.css"/>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/share.css"/>
+
+<body>
+<header>
+    <% if(userId==undefined){%>
+    <img class="img-full" src="<%=assertHost%>/img/movie-2/movie-2-top-index.jpg"/>
+    <% if(isExistUsefulGiftCode==1){%>
+    <p>还有<span class="firstfont"> <%=unUsedCodeAmt%> </span>个红包等你来抢！</p>
+    <% if(isExistRegistGift==0){%>
+    <p><span>注册红包已领完，认证和购买还能得到40元</span></p>
+    <%}%>
+    <%}%>
+    <img class="img-full" src="<%=assertHost%>/img/movie-2/movie-2-index.jpg"/>
+    <a href="/regpage"><img class="img-full" src="<%=assertHost%>/img/movie-2/movie-2-index2.jpg"/></a>
+
+    <p class="clear pTop1"><a href="/login" class="fr FontColorWhite FontSize16 pLeftRight2">已有账号，马上登录</a></p>
+    <%}else{%>
+    <% if(status=='REGIST'){%>
+    <img class="img-full" src="<%=assertHost%>/img/movie-2/movie-2-top-smrz.jpg"/>
+    <% if(isExistUsefulGiftCode==1){%>
+    <p>还有<span class="firstfont bold"> <%=unUsedCodeAmt%> </span>个红包等你来抢！</p>
+    <% if(isExistAuthGift==0){%>
+    <p><span>认证红包已领完，购买还能得到30元</span></p>
+    <%}%>
+    <%}%>
+    <%}else if(status=='AUTH'){%>
+    <img class="img-full" src="<%=assertHost%>/img/movie-2/movie-2-top-gm.jpg"/>
+    <% if(isExistUsefulGiftCode==1){%>
+    <p>还有<span class="firstfont bold"> <%=unUsedCodeAmt%> </span>个红包等你来抢！</p>
+    <% if(isExistAuthGift==0){%>
+    <p><span>认证红包已领完，购买还能得到30元</span></p>
+    <%}%>
+    <%}%>
+    <%}else if(status=='INVEST'){%>
+    <img class="img-full" src="<%=assertHost%>/img/movie-2/movie-2-top-yq.jpg"/>
+    <% if(isExistUsefulGiftCode==1){%>
+    <p>还有<span class="firstfont bold"> <%=unUsedCodeAmt%> </span>个红包等你来抢！</p>
+
+    <p><span></span></p>
+    <%}%>
+    <%}%>
+    <%}%>
+</header>
+<% if(userId){%>
+<% if(status=='REGIST'){%>
+<img class="img-full" src="<%=assertHost%>/img/movie-2/movie-2-center-yq.jpg"/>
+<% if(receivedGiftAmt>0){%>
+<p class="hb_text">您已获得<%=receivedGiftAmt%>个红包<a class="FontSize14" href="javascript:;">点击查看</a></p>
+<%}%>
+<a class="display-block mTop2" href="/bank/add"><img class="img-full" src="<%=assertHost%>/img/movie-2/movie-2-btn-rz.jpg"/></a>
+<%}else if(status=='AUTH'){%>
+<img class="img-full" src="<%=assertHost%>/img/movie-2/movie-2-center-gm.jpg"/>
+<% if(receivedGiftAmt>0){%>
+<p class="hb_text">您已获得<%=receivedGiftAmt%>个红包<a class="FontSize14" href="javascript:;">点击查看</a></p>
+<%}%>
+<a class="display-block mTop2" href="/product/list"><img class="img-full" src="<%=assertHost%>/img/movie-2/movie-2-btn-gm.jpg"/></a>
+<%}else if(status=='INVEST'){%>
+<div id="movie-2-invite">
+    <img class="img-full" src="<%=assertHost%>/img/movie-2/movie-2-center-yq.jpg"/>
+
+    <p><span class="FontSize20">× </span><span class="FontSize40 ffirstfont"><%=inviteAmt%></span></p>
+</div>
+<% if(receivedGiftAmt>0){%>
+<p class="hb_text">您已获得<%=receivedGiftAmt%>个红包<a class="FontSize14" href="javascript:;">点击查看</a></p>
+<%}%>
+<a class="display-block mTop2 showShare" href="javascript:;"><img class="img-full"
+                                                                  src="<%=assertHost%>/img/movie-2/movie-2-btn-yq.jpg"/></a>
+<%}%>
+<%}%>
+<article id="cpm">
+    <section>
+        <p class="mLeftRight2 top">
+            <a class="close" href="javascript:;"></a>
+            <img class="img-full" src="<%=assertHost%>/img/movie-2/get.jpg"/>
+            <span class="change_text">关注“集财”微信公众号兑换红包</span>
+        </p>
+        <ul>
+            <li>
+                <% if(movieTickets){%>
+                <%
+                for(var i=0;i
+                <movieTickets.length
+                ;i++){
+                aGiftCode=movieTickets[i].giftCode;
+                var aChangeYuan = null;
+                var yClassName='';
+                if(movieTickets[i].type=='TEN_YUAN'){
+                aChangeYuan=10;
+                var yClassName='y10';
+                }else if(movieTickets[i].type=='FIVE_YUAN'){
+                aChangeYuan=5;
+                var yClassName='y5';
+                }else if(movieTickets[i].type=='THIRTY_YUAN'){
+                aChangeYuan=30;
+                var yClassName='y30';
+                };
+                %>
+                <p class="<%=yClassName%>"><span></span><span><%=aGiftCode%></span></p>
+                <%}%>
+                <%}%>
+            </li>
+        </ul>
+        <p class="footer FontColor120 FontSize14 AlginCenter">长按兑换码复制</p>
+    </section>
+</article>
+<% if(isExistUsefulGiftCode==0){%>
+<article class="end">
+    <section>
+        <p style="background: #fbf5da;">活动已结束</p>
+
+        <p style="background: #FBF5DA;">
+            <a onclick="return" href="/activity">
+                <button style="display: block;width: 80%;margin:0 auto;border:none;color:#fff;
+						 	font-size:1.6rem;background: #E34040;height: 4.4rem;">返回
+                </button>
+            </a>
+        </p>
+
+    </section>
+</article>
+<%}%>
+<!--分享部分代码-->
+<section class="shareparent share">
+    <img class="img-full" src="<%=assertHost%>/img/shareBg1.png"/>
+
+    <p>
+        <button class="hidden shareHidden">我知道了</button>
+    </p>
+</section>
+<article class="movieseason_rule">
+    <section class="FontSize14">
+        <h3>活动规则</h3>
+					<pre>
+<b>活动时间</b>
+
+2015年11月12日起，至红包发完为止。
+
+<b>奖励规则</b>
+
+注册加入集财即可领取5元观影红包；
+完成实名认证可领取10元观影红包；
+完成首次购买（不包含万元体验金理财产品）获取30元观影红包；
+每邀请1个好友加入集财并购买集财理财产品即可获得10元观影红包；被邀请的好友会依据上述规则获取奖励。
+
+<b>红包兑换方法</b>
+
+获取到的微信电影红包，在“集财”微信公众号中点击“集财观影季”——“红包兑换”兑换使用红包；
+如有疑问请致电400-005-3300获取帮助。
+
+<b>红包使用规则</b>
+
+微信电影红包可以在微信电影选座购票时抵扣使用。原票面价格小于等于红包金额时，需支付0.01元完成交易。红包有效期三十天，自发出之日起计算。红包不可与其他电影特价活动同时使用。
+					</pre>
+    </section>
+</article>
+<input type="hidden" id="J_appId" value="<%=appId%>"/>
+<input type="hidden" id="J_shareTitle" value="集财请你看大片"/>
+<input type="hidden" id="J_shareLink" value="http://m.jicai.com/movieseason?code=<%=code%>"/>
+<input type="hidden" id="J_shareDesc" value="菜籽专享福利，集财赠送45元电影红包，请你看大片。快来加入集财吧"/>
+<script src="<%=assertHost%>/js/modules/wechartShare-config.js" type="text/javascript" charset="utf-8"></script>
+
+
+</body>
+<script src="<%=assertHost%>/js/modules/movie-2-config.js" type="text/javascript" charset="utf-8"></script>

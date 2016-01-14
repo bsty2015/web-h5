@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<%-layout('blank-layout') -%>
+<html>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/investProductDetail.css"/>
+<body>
+<header>
+    <p class="OrderID">订单号：<span><%=outString(investProDetail.orderId)%></span></p>
+    <a href="/product/detail/<%=investProDetail.productId%>">
+        <p class="title"><%=investProDetail.productName%></p>
+        <ul class="clear">
+            <li class="fl">
+                <p>购买金额（元）</p>
+
+                <p><%=formatCurrency(investProDetail.corpus)%></p>
+            </li>
+            <li class="fr">
+                <p>预计收益（元）</p>
+
+                <p><%=formatCurrency(investProDetail.profit)%></p>
+            </li>
+        </ul>
+    </a>
+
+    <p class="wrap_btn">
+        <button class="btn">订单状态</button>
+    </p>
+    <section>
+        <% if(investProDetail.status !== '已还款'){%>
+        <p>
+            <span><%=formatYMDHMS(investProDetail.investDate)%></span> 购买
+        </p>
+
+        <p>将于<span><%=formatYMDDate(investProDetail.expireDate)%></span> 兑付</p>
+        <%}%>
+        <%if(investProDetail.status == '已还款'){%>
+        <p>
+            <span><%=formatYMDHMS(investProDetail.investDate)%></span> 购买
+        </p>
+
+        <p class="payed">已于<span><%=formatYMDDate(investProDetail.expireDate)%></span> 兑付</p>
+        <%}%>
+    </section>
+</header>
+<footer>
+    <section>
+        <p class="wrap_btn">
+            <button class="btn">支付信息</button>
+        </p>
+        <p id="bank" class="<%=investProDetail.bankCode%>">
+            <%=investProDetail.bankName%>(尾号<%=investProDetail.cardLast%>)
+            <!--<span class="iconfont">&#xe650;</span>-->
+        </p>
+    </section>
+    <section>
+        <p class="wrap_btn">
+            <button class="btn">合同附件</button>
+        </p>
+        <a href="/contract/<%=investProDetail.orderId%>">
+            <p id="contract" class="contract">
+                应收帐款转让及回购协议
+                <span class="iconfont">&#xe650;</span>
+            </p>
+        </a>
+    </section>
+</footer>
+</body>
+
+</html>

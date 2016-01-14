@@ -1,0 +1,19 @@
+<%-layout('blank-layout') -%>
+<html>
+
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/message.css"/>
+
+<body>
+<a class="display-block pTop2 pTopBottom2 pLeftRight2 AlginCenter" href="javascript:;">
+    <span class="FontSize20 FontColor65"><%=messageItem.title%></span>
+
+    <p class="FontSize14 FontColor157 AlginCenter"><%=formatYMDDate(messageItem.sendTime,'yyyy年MM月dd日 HH:mm')%></p>
+</a>
+<section class="mLeftRight2" id="msgContent">
+    <p class="pTopBottom2 FontSize14 FontColor66">
+        <%=messageItem.info%>
+    </p>
+</section>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+/**
+ * time：2015年11月9日10:51:06
+ * user：zhongciuyisheng@live.com
+ * description：荠菜观影季。movie-2.html
+ */
+
+body {
+    width: 100%;
+    font-family: "微软雅黑", "arial, helvetica, sans-serif";
+    background: url(../img/movie-2/body-bg.jpg);
+}
+
+header {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+header p:nth-child(2) {
+    color: #fff;
+    font-size: 2rem;
+    text-indent: 1.4rem;
+    text-align: center;
+}
+
+header p:nth-child(2) span {
+    font-size: 3rem;
+    color: #ffde00;
+    font-weight: bolder;
+}
+
+header p:nth-child(3) {
+    font-size: 1.6rem;
+    color: #fff;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+header p:nth-child(3) span {
+    padding: 1rem;
+    display: inline-block;
+    background: #9c44e6;
+    border-radius: 2rem;
+}
+
+.hb_text {
+    color: #ffde00;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.hb_text a {
+    margin-left: 2.6rem;
+    color: #ffde00;
+    text-decoration: underline;
+}
+
+#cpm {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+
+#cpm section {
+    overflow: auto;
+    background: #fbf5db;
+    border-radius: .8rem;
+    position: absolute;
+    left: 2rem;
+    top: -webkit-calc(50% - 15rem);
+    width: -moz-calc(100% - 4rem);
+    width: -webkit-calc(100% - 4rem);
+    width: calc(100% - 4rem);
+}
+
+#cpm ul {
+    min-height: 5rem;
+}
+
+#cpm .top {
+    position: relative;
+}
+
+#cpm .footer {
+    line-height: 3rem;
+    margin-top: .5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    /*border-top: .12rem solid #ead5b7;*/
+}
+
+#cpm .code {
+    width: 4rem;
+    height: 3.4rem;
+    line-height: 3.4rem;
+    border: none;
+    background: #fbf5db;
+    border-radius: 50%;
+}
+
+#cpm .close {
+    position: absolute;
+    right: -1.8rem;
+    top: .5rem;
+    height: 2rem;
+    width: 2rem;
+    background: url(../img/movie-2/movie-2-close.jpg) no-repeat;
+    background-size: 1.5rem;
+}
+
+#cpm li p {
+    height: 3.4rem;
+    margin: 1rem 2rem;
+    border: .18rem solid #dfd0cc;
+    line-height: 3.4rem;
+    text-align: center;
+    border-radius: 2rem;
+}
+
+#cpm p span:nth-child(1) {
+    padding-right: 2rem;
+    font-size: 1.4rem;
+    color: #fe5c54;
+}
+
+#cpm p span:nth-child(2) {
+    font-size: 1.6rem;
+}
+
+#movie-2-invite {
+    color: #fff;
+    position: relative;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+#movie-2-invite p {
+    height: 5rem;
+    width: 5rem;
+    position: absolute;
+    right: -moz-calc(50% - 120px);
+    right: -webkit-calc(50% - 120px);
+    right: calc(50% - 120px);
+    top: 0px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 5rem;
+    background: #f62d38;
+}
+
+.end {
+    /*display: none;*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background: rgba(0, 0, 0, .5);
+    height: 100%;
+    width: 100%;
+}
+
+.end section {
+    position: absolute;
+    top: -moz-calc(50% - 12rem);
+    top: -webkit-calc(50% - 12rem);
+    top: calc(50% - 12rem);
+    left: -moz-calc(50% - 13rem);
+    left: -webkit-calc(50% - 13rem);
+    left: calc(50% - 13rem);
+    height: 20rem;
+    width: 26rem;
+}
+
+.end p {
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 1.6rem;
+    color: rgb(120, 120, 120);
+    /*border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;*/
+}
+
+.end section img {
+    width: 100%;
+    display: block;
+}
+
+/**
+ * 规则
+ */
+
+.movieseason_rule {
+    margin-top: 12rem;
+    color: #fff;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.movieseason_rule h3 {
+    position: absolute;
+    left: -moz-calc(50% - 5rem);
+    left: -webkit-calc(50% - 5rem);
+    left: calc(50% - 5rem);
+    top: -1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: url(../img/movie-2/body-bg.jpg);
+}
+
+.movieseason_rule section {
+    max-width: 640px;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    word-wrap: break-word;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    border: .1rem solid #bc6cff;
+    margin-top: 2rem;
+    border-radius: .8rem;
+}
+
+.movieseason_rule b {
+    border-bottom: 1px solid #fff;
+    font-size: 1.6rem;
+}
+
+.change_text {
+    text-align: center;
+    display: inline-block;
+    color: #fc745a;
+    width: 100%;
+    padding-top: .5rem;
+    padding-bottom: 1rem;
+    /*border-bottom: .12rem solid #ead5b7;*/
+    font-size: 1.6rem;
+}
+
+/**
+ * 兑换码
+ */
+.y5 {
+    background: url(../img/movie-2/y5.png) no-repeat 2rem center;
+    background-size: 3.4rem;
+}
+
+.y10 {
+    background: url(../img/movie-2/y10.png) no-repeat 2rem center;
+    background-size: 3.4rem;
+}
+
+.y30 {
+    background: url(../img/movie-2/y30.png) no-repeat 2rem center;
+    background-size: 3.4rem;
+}

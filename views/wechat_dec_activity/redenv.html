@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<% layout('blank-layout') -%>
+<html>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/wechat_dec_activity/redenv.css"/>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/share.css"/>
+<script src="<%=assertHost%>/js/modules/ctrShare-confi.js" type="text/javascript" charset="utf-8"></script>
+
+<body>
+<div class="container">
+    <!--可以拆红包container start-->
+    <p class="red-bj"><img src="<%=assertHost%>/img/wechat_Dec_activity/redback.jpg"></p>
+
+    <p class="red-bj2">
+        <img src="<%=assertHost%>/img/wechat_Dec_activity/redback2.jpg">
+        <%if(!userId){%>
+        <a class="cai-img" href="/wechatbind"><img class="change_src" src="<%=assertHost%>/img/wechat_Dec_activity/cai1.png"></a>
+        <%}else{%>
+        <a class="cai-img" href="javascript:;"> <img src="<%=assertHost%>/img/wechat_Dec_activity/cai1.png" class="change_src"></a>
+        <%}%>
+    </p>
+    <!--
+        作者：zhongciyisheng@live.com
+        时间：2015-12-13
+        描述：非微信环境。
+    -->
+    <!--<article class="non_wechat_text" style="display: block">
+        <p>关注微信公众号“集财圈儿”参加活动</p>
+        <p style="margin-top: .5rem;">赢取红包</p>
+    </article>-->
+    <!--
+        作者：zhongciyisheng@live.com
+        时间：2015-12-13
+        描述：活动结束。
+    -->
+    <article style="display: block !important;padding-bottom: 4rem;" class="end_wechat_text">
+        <p>红包已经发完了</p>
+
+        <p>点击查看<a href="/myred">已领取的红包</a></p>
+    </article>
+    <article class="text-detail">
+        <p class="title">活动规则</p>
+				<pre>
+					
+<p>1.活动时间：2015年12月15日开始，到红包发完结束；</p>
+<p>2.用户关注微信公众号“集财圈儿”，点击“领红包”绑定集财帐户参加活动；</p>
+<p>3.活动期间，绑定微信的集财用户：
+    每购买一笔理财产品，可以获得一个30元以内的随机金额现金红包；
+    邀请一个好友注册并完成交易交易，并且邀请人也购买过理财产品（不含万元体验金理财产品），可以获得一个5元以内的随机金额现金红包；
+</p>
+<p>4.获取到的红包在活动页面点击“拆红包”按钮领取。现金红包将通过微信服务号“集财圈儿”发送，请返回微信聊天窗口点击查收；</p>
+<p>5.未绑定微信的集财用户不能领取红包；</p>
+<p>6.如有疑问请致电400-005-3300获取帮助。</p>
+				</pre>
+    </article>
+</div>
+
+<article class="wechat_show_box">
+    <section>
+        <p class="title">恭喜您获得</p>
+
+        <p class="show_num"><strong><img src="<%=assertHost%>/img/wechat_Dec_activity/redmoney.png"/></strong><span>元</span></p>
+
+        <p class="show_msg">购买集财领取红包</p>
+
+        <p class="line"><img class="img-full" src="<%=assertHost%>/img/wechat_Dec_activity/bag2.png"/></p>
+
+        <p class="show_btn">
+            <a href="/product/list">
+                <button>购买集财</button>
+            </a>
+        </p>
+        <a class="show_goto" href="/myred">点击查看<span>我的红包</span></a>
+
+        <p class="text1">红包由微信公众号“集财圈儿”</p>
+
+        <p class="text2">发送给您，请注意查收</p>
+    </section>
+</article>
+<!--检测绑定-->
+<article class="wechat_bind_box">
+    <section>
+        <p class="text">您还没有绑定集财账号，请先去绑定再继续下一步操作。</p>
+
+        <p class="goto">
+            <a href="/wechatbind">
+                <button>去绑定</button>
+            </a>
+        </p>
+    </section>
+</article>
+<!--分享部分代码-->
+<section class="shareparent share">
+    <img class="img-full" src="<%=assertHost%>/img/shareBg1.png"/>
+
+    <p>
+        <button class="hidden shareHidden">我知道了</button>
+    </p>
+</section>
+
+<script src="<%=assertHost%>/js/wechat_Dec_activity/redenv-config.js" type="text/javascript" charset="utf-8"></script>
+<input type="hidden" id="J_appId" value="<%=appId%>"/>
+<input type="hidden" id="J_imgUrl" value="http://m.jicai.com/img/redlog.jpg"/>
+<% if (totalRedAmt != 0) { %>
+<input type="hidden" id="J_shareTitle" value="我抢了<%=totalRedAmt%>元红包，谁能比我多？"/>
+<% } else { %>
+<input type="hidden" id="J_shareTitle" value="集财贺岁，送微信红包"/>
+<% } %>
+<input type="hidden" id="J_shareLink" value="http://m.jicai.com/redreg?code=<%=code%>"/>
+<input type="hidden" id="J_shareDesc" value="小伙伴喊你来集财领红包啦！集财贺岁第一弹，微信现金红包让你抢个痛快。"/>
+<script src="<%=assertHost%>/js/modules/wechartShare-config.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

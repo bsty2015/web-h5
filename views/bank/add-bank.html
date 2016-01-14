@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<%-layout( 'blank-layout') -%>
+<html>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/addBank.css"/>
+
+<body>
+<header class="pTop2 pBottom1 border1-c5 pleft2 clear">
+    <button class="fl addBank-tag FontSize12 height2 bg-green">银行卡</button>
+    <a class="show-bList-btn">
+				<span class="look-btn fr mRight2">
+
+				<img class="look-btn" src="<%=assertHost%>/img/plus.png"/>	查看支持的银行
+
+				</span>
+    </a>
+</header>
+<article>
+    <form data-url="/bank/validcode" action="/bank/validcode" method="post">
+
+        <table border="0" cellspacing="" cellpadding="">
+            <tbody>
+            <tr>
+                <td>
+                    <label for="username">姓名</label>
+                </td>
+                <td>
+                    <input type="text" name="username" id="username" value="<%=outString(bank.username)%>" <%
+                    if(isVerify){%>readonly="readonly"
+                    <%}%>/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="idcardno">身份证号码</label>
+                </td>
+                <td>
+                    <input class="setIDLen" type="text" name="idcardno" id="idcardno"
+                           value="<%=outString(bank.idcardno)%>" <% if(isVerify){%>readonly="readonly"
+                    <%}%>/>
+            </tr>
+            <tr>
+                <td>
+                    <label for="J_cardno">银行卡号</label>
+                </td>
+                <td>
+                    <!--<input type="text" class="card"  id="cardno" value="<%=outString(bank.cardno)%>" placeholder="不支持信用卡" />-->
+                    <!--<input readonly="readonly" type="hidden" name="cardno" id="J_cardno" value="<%=outString(bank.cardno)%>" />-->
+                    <input class="setBankLen" type="tel" name="cardno" id="J_cardno" value="<%=outString(bank.cardno)%>"
+                           placeholder="不支持信用卡"/>
+
+                </td>
+            </tr>
+            </tbody>
+            <tbody>
+            <tr style="height: 0.1rem;background: rgb(219,219,219);">
+                <td style="height: .5rem; margin-left: 2rem;"></td>
+                <td style="height: .5rem;"></td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="phone">手机号</label>
+                </td>
+                <td>
+                    <input class="setInputLen" type="tel" name="phone" id="phone" value="<%=outString(bank.phone)%>"
+                           placeholder="银行预留手机号"/>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <button id="addBankNbtn" class="btn-55-normal mTop2 next-btn">下一步</button>
+        <p class="FontColor120 AlginCenter FontSize10 pTop1">
+            易宝支付提供银行卡绑定服务，点击查看
+            <a class="FontColorGreen" href="/guide">银行卡取消绑定规则</a>
+        </p>
+        <input type="hidden" name="" id="loadingText" value="信息提交中..."/>
+    </form>
+</article>
+<section id="msTip">
+    <input type="text" name="" id="msg" value="<%=outString(msg)%>"/>
+</section>
+<footer class="add-bank-list">
+    <ul>
+        <li class="CTRHiddenWrpa">
+            <a class="CTRHidden FontColor120 FontSize30">
+                <span class="iconfont">&#xe638;</span>
+            </a>
+        </li>
+        <li id="addBList">
+            <h3 class="AlginCenter FontSize15 border1-c5 pTopBottom1">支持银行列表</h3>
+        </li>
+    </ul>
+</footer>
+
+</body>
+<script src="<%=assertHost%>/js/modules/showBankList-config.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=assertHost%>/js/modules/ShowCard-config.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

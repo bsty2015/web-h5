@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<%-layout('blank-layout') -%>
+<html>
+<body>
+<header>
+    <img class="img-full" src="<%=assertHost%>/img/paysuccess.gif" alt=""/>
+    <a id="pay_succ_wrap" href="/product/list" class="display-block">
+        <button class="btn-55-red">继续理财</button>
+    </a>
+</header>
+<p class="FontSize15 AlginCenter FontColor93 mTop2 AlginCenter">
+    您成功投资<%=formatCurrency(investAmt)%>元，买入当日计息，收益到账时间
+    <span class="firstfont FontColorGreen"><%=formatYMDDate(repayDate)%></span>
+</p>
+<input type="hidden" name="requestid" id="requestid" value="<%=requestid%>"/>
+</body>
+<script src="<%=assertHost%>/js/wechat_Dec_activity/pay_suc_change_status-config.js" type="text/javascript" charset="utf-8"></script>
+</html>

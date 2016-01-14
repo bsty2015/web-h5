@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--<script src="<%=assertHost%>/js/less.js" type="text/javascript" charset="utf-8"></script>-->
+<!--<link rel="stylesheet/less" type="text/css" href="<%=assertHost%>/stylesheets/virtualGifts/productstyle.css" />-->
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/virtualGifts/productstyle.css"/>
+<%-layout('blank-layout') -%>
+<html>
+<title>产品信息</title>
+
+<body>
+<header>
+    <h3><%=product.name%></h3>
+    <ul class="clear">
+        <li class="fl">
+            <p>预期年化收益率</p>
+            <em><%=product.interestRate%><span>%</span></em>
+            <% if(product.extraInterestRate> 0){%>
+            <em><span>+</span>&nbsp;<%=product.extraInterestRate%><span>%</span></em>
+            <% } %>
+        </li>
+        <li class="fr">
+            <p>期限（天）</p>
+            <em><%=product.collectDuration%></em>
+        </li>
+    </ul>
+</header>
+<article>
+    <ul class="clear">
+        <li class="fl">
+            <p>总金额（元）</p>
+            <em class="firstfont"><%=formatCurrency(product.amt)%></em>
+        </li>
+        <li class="fr">
+            <p>剩余可购金额（元）</p>
+            <% if(product.status == '销售中'||product.status == '待上架'){%>
+            <em class="firstfont">
+                <%=formatCurrency(product.remianAmt)%>
+            </em>
+            <%}%>
+            <% if(product.status == '兑付中' || product.status == '售完'||product.status == '已兑付'){%>
+            <em class="firstfont">
+                0
+            </em>
+            <%}%>
+        </li>
+    </ul>
+    <a>
+        <span><i class="iconfont">&#xe610;</i>即日起息</span>
+        <span><i class="iconfont">&#xe610;</i>本息保障</span>
+        <span><i class="iconfont">&#xe610;</i>新手专享</span>
+    </a>
+</article>
+<ul class="product_list_column">
+    <li class="clear">
+        <span class="fl">风险评级</span>
+        <i class="fr">超低风险</i>
+    </li>
+    <li class="clear">
+        <a href="/virtual/rule">
+            <span class="fl">活动规则</span>
+            <i class="iconfont fr">&#xe650;</i>
+        </a>
+    </li>
+</ul>
+<p class="guarantee"><img src="<%=assertHost%>/img/virtualGifts/productbg2.gif"/> &nbsp;账户资金交易安全<a>阳光保险</a>承保</p>
+
+<a class="buy_btn" href="/virtual/invest/<%=product.id%>">
+    <button>1元购买</button>
+</a>
+</body>
+
+</html>
+

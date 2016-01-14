@@ -1,0 +1,107 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #0D7947;
+	padding: 0;
+}
+
+#ctr_baidu {
+	height: 0;
+}
+
+.container {
+	max-width: 64rem;
+	margin: 0 auto;
+}
+
+.main {
+	font-family: firstfont;
+	background: url(/img/wechat_Dec_activity/second/probj.png) no-repeat;
+	background-size: cover;
+	padding-top: 12.5rem;
+	padding-bottom: 13.6rem;
+}
+
+.pro-list {
+	width: 95%;
+	margin: 0 auto;
+	/*background: white;*/
+	background: #fffef5;
+	border: 1px solid white;
+	border-radius: 1rem;
+	/*padding: 0.6rem;*/
+	padding-left: 2rem;
+	padding-right: 2rem;
+	margin-top: 2.4rem;
+}
+
+@media only screen and (min-width: 321px) and (max-width: 736px) {
+	.pro-list {
+		margin-top: 6rem;
+	}
+}
+
+.pro-list .detail-list {
+	padding-top: 2rem;
+	padding-bottom: 1.5rem;
+	border-bottom: 1px dashed #d1d1d1;
+}
+
+.pro-list .detail-list:last-child {
+	border: none;
+}
+
+.pro-list .pro-name {
+	color: #E01D2B;
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+	font-weight: bolder !important;
+	font-family: firstfont;
+}
+
+.pro-list .p1 {
+	color: #999999;
+	font-size: 1.2rem;
+}
+
+.pro-list .pro-ul .li0 {
+	width: 32%;
+}
+
+.pro-list .pro-ul .li1 {
+	width: 30%;
+}
+
+.pro-list .pro-ul li:last-child {
+	width: 38%;
+}
+
+.pro-list .text {
+	color: #E01D2B;
+	font-size: 3rem;
+}
+
+.pro-list .pro-ul p {
+	height: 2.5rem;
+	line-height: 2.5rem;
+}
+
+.pro-list .num {
+	color: #999999;
+	font-size: 2rem;
+}
+
+.pro-list .buy a {
+	margin-top: 1.6rem;
+	display: inline-block;
+	color: white;
+	width: 100%;
+	height: 4rem;
+	line-height: 4rem;
+	text-align: center;
+	font-size: 1.6rem;
+	border-radius: 0.5rem;
+	background: #E01D2B;
+}

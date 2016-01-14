@@ -1,0 +1,56 @@
+<!-- 
+  	redreg.html
+  	十二月份微信红包活动注册页面
+  
+  	Created by zhong on 2015-12-10.
+  	Copyright 2015 zhong. All rights reserved.
+ -->
+
+<!DOCTYPE HTML>
+
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/wechat_dec_activity/redreg.css"/>
+
+<% layout('blank-layout') -%>
+
+<p class="ws_wechat_topbg"><img class="img-full" src="<%=assertHost%>/img/wechat_Dec_activity/regbg.jpg"/></p>
+<p class="ws_wechat_sMsg"><span class="firstfont"><%=outString(telephone)%></span>送你一个现金红包</p>
+
+<article class="ws_wechat_con">
+
+    <form action="javascript:;" method="post">
+        <p>
+            <input name="telephone" maxlength="11" type="tel" id="telephone" value="" placeholder="输入手机号"
+                   onkeyup="value=value.replace(/[^\d]/g,'')"/>
+        </p>
+
+        <p class="clear">
+            <input class="imgCode fl" type="text" maxlength="4" name="" id="imgCode" value="" placeholder="输入图片验证码"/>
+            <img class="fl" id="oRandomImg" src=""/>
+        </p>
+
+        <p class="clear">
+            <input maxlength="6" type="tel" name="validateCode" class="msgCode fl" id="validateCode" value=""
+                   placeholder="输入短信验证码" onkeyup="value=value.replace(/[^\d]/g,'')"/>
+            <button class="fl" id="oSendCodeBtn">获取验证码</button>
+        </p>
+        <p>
+            <input maxlength="16" type="password" name="passwd" class="setPsd" id="passwd" value=""
+                   placeholder="设置6~16位密码"/>
+        </p>
+
+        <p>
+            <button id="btn_Confirm">注册</button>
+        </p>
+        <p class="ws_wechat_login"><a href="/login">我已注册，马上登录</a></p>
+
+    </form>
+    <input type="hidden" name="" id="loadingText" value="正在提交中...">
+    <input type="text" name="mmsg" id="mmsg" value="" style="display: none;">
+
+    <section id="msTip">
+        <input type="text" name="" id="msg" value="<%=outString(msg)%>"/>
+    </section>
+
+</article>
+
+<script src="<%=assertHost%>/js/wechat_Dec_activity/reg-config.js" type="text/javascript" charset="utf-8"></script>

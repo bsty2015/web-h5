@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<%-layout('blank-layout') -%>
+<html>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/virtualGifts/expintro.css"/>
+<title>产品信息</title>
+
+<body>
+<img class="img-full" src="<%=assertHost%>/img/virtualGifts/expretell.jpg"/>
+<article class="reg">
+    <form data-url="/register/verifyTelephone" action="/register/verifyTelephone" method="post">
+        <input calss="" type="hidden" name="isExpintro" id="isExpintro" value="true"/>
+        <input class="" type="tel" name="telephone" id="telephone" value="<%=outString(telephone)%>"
+               placeholder="输入手机号码"/>
+        <button id="regTelNextBtn " class="next-btn active">注册</button>
+        <a href="/login">我已注册，马上登录</a>
+        <input type="hidden" name="loadingText" id="loadingText" value="提交中，请稍后..."/>
+    </form>
+</article>
+<article class="rule">
+    <h3>活动规则</h3>
+			<pre>
+1. 本活动自2015年9月16日开始，到2015年10月30日结束；
+2. 从未购买过理财产品的用户在活动期间均可参加本次活动；
+3. 活动期间，用户仅需支付1元购买万元体验金理财产品，即可享受10000元理财体验金；
+4. 本活动涉及理财产品为虚拟产品，预期年化收益率 7%；
+5. 理财体验金不可提现，仅作为理财本金使用。产品到期后，10000元理财体验金系统自动收回，1元本金会兑付到支付时使用的银行卡。体验金理财收益跟随用户下一笔到期的理财产品一起兑付。
+6. 万元体验金收益兑付后，注册礼金跟随下一个到期的理财产品一起兑付；
+7. 本次活动不与其他活动共享，购买万元体验金理财产品不赠送积分；
+8. 如有疑问请致电400-005-3300获取帮助。					
+			</pre>
+    <p class="tip">
+        <span>★</span>为避免理财产品非工作日到期不能及时兑付，产品的 理财期限不限于7天，一般为7天左右。
+    </p>
+</article>
+<section id="msTip">
+    <input type="text" name="msg" id="msg" value="<%=outString(msg)%>"/>
+</section>
+</body>
+<script src="<%=assertHost%>/js/modules/showHidden-config.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=assertHost%>/js/modules/verify-config.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

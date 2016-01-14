@@ -1,0 +1,111 @@
+body {
+    background: #f5f5f5;
+}
+
+article {
+    background: #fff;
+    max-width: 64rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.payAgainBox {
+    padding-bottom: .8rem;
+}
+
+.payAgainBox a {
+    display: block;
+    padding: 0 2rem;
+}
+
+.payAgainBox p {
+    border-bottom: .1rem solid #dddddd;
+}
+
+.payAgainBox em {
+    font-size: 1.3rem;
+    color: #999999;
+    line-height: 3.2rem;
+}
+
+.payAgainBox time {
+    font-size: 1rem;
+    color: #999999;
+    line-height: 3.2rem;
+
+}
+
+.payAgainBox .lTitle {
+    font-size: 1rem;
+    color: #000000;
+    line-height: 2.6rem;
+}
+
+.payAgainBox .lNum {
+    font-size: 1.6rem;
+    color: #666666;
+    padding-bottom: .3rem;
+}
+
+.payAgainBox .lTell {
+    font-size: 1rem;
+    color: #999;
+    padding-bottom: 1.3rem;
+}
+
+.payAgainBox .rNum {
+    padding-top: 2.6rem;
+    color: #F66868;
+    font-size: 1.6rem;
+    padding-bottom: .3rem;
+}
+
+.payAgainBox .rTell {
+    font-size: 1rem;
+    color: #999;
+    padding-bottom: 1.3rem;
+}
+
+.payAgainBox button {
+    display: block;
+    height: 4.4rem;
+    width: 100%;
+    background: #ff7270;
+    border: none;
+    border-radius: 2.2rem;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+/*
+ * --------------旧版本-----------------------------------------------------
+ */
+/*h3 {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.title {
+	font-size: 1.6rem;
+	color: rgb(65, 65, 65);
+	margin-right: 1rem;
+}
+.time {
+	color: rgb(139, 139, 139);
+	font-size: 1.2rem;
+}
+.noPayBox {
+	background: #fff;
+	margin: 1rem;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+}
+.noPayBox ul {
+	width: -webkit-calc(50% - .1rem);
+}
+.Old {
+	border-right: 1px solid #e1e1e1;
+}
+
+.noPayBox li {
+	margin: 0 auto;
+}*/

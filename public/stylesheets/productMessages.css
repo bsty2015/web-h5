@@ -1,0 +1,103 @@
+.product-message-title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+}
+
+.product-message-text {
+    font-size: 1.2rem;
+}
+
+.product-message-per,
+.product-message-day {
+    font-size: 2.2rem;
+}
+
+.product-message-cent {
+    font-size: 2.2rem;
+    font-weight: normal;
+}
+
+.product-raduis-tag {
+    width: 4.6rem;
+    height: 1.6rem;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    text-align: center;
+    position: relative;
+    top: -.8rem;
+    line-height: 1.6rem;
+    border-radius: 1.2rem;
+}
+
+@media only screen and (min-width: 321px) {
+    .product-day-wrap {
+        margin-right: 2rem;
+    }
+}
+
+.product-bg-dpink {
+    background: #ff8177;
+}
+
+.product-bg-yellow {
+    background: #dec976;
+}
+
+.product-bg-green {
+    /*background:linear-gradient(top,#48d5ae,#179d7b);*/
+    background: -webkit-radial-gradient(#48d5ae, #179d7b);
+    border: 1px solid #00CD98;
+    /*background: -webkit-linear-gradient(top,#48d5ae,#179d7b);*/
+}
+
+.product-bg-blue {
+    background: #545168;
+    border: .1rem solid #545168;
+}
+
+.product-bg-dblue {
+    background: #0e88c4;
+    border: .1rem solid #0e88c4;
+}
+
+.prdouct-per2 {
+    font-size: 1.5rem;
+}
+
+.border-right {
+    border-right: 1px solid rgb(197, 197, 197);
+    width: calc(50% - 2rem);
+    width: -webkit-calc(50% - 2rem);
+}
+
+.product-tips-wrap {
+    width: -webkit-calc(100% - 4rem);
+}
+
+.product-tips-wrap span {
+    display: inline-block;
+    width: 25%;
+
+}
+
+.product-event-btn {
+    height: 2rem;
+}
+
+.head-width {
+    width: -webkit-calc(50% - 2rem);
+}
+
+.head-width2 {
+    width: -webkit-calc(50% - 2rem);
+}
+
+.yg-logo {
+    height: 1.6rem;
+}
+
+.yg-logo img {
+    margin-right: .3rem;
+}

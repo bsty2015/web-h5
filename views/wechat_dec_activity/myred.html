@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<% layout('blank-layout') -%>
+<html>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/wechat_dec_activity/myred.css"/>
+<body>
+<div class="container">
+    <p class="myred">我的红包</p>
+
+    <p class="money-num"><%=toDecimal(count)%><span>元</span></p>
+
+    <p class="send-p">红包由微信公众号“集财圈儿”发送给您，请注意查收</p>
+
+    <p class="red-status clear"><a href="javascript:;" class="get-red">获得的红包</a><a href="javascript:;" class="out-red">过期的红包</a>
+    </p>
+    <aside class="red-list">
+        <ul class="get-ul">
+            <% if(getReds == null) { %>
+            <% } else { %>
+            <% for(var i = 0; i< getReds.length; i++) {
+            var type='';
+            var getRed = getReds[i];
+            if(getRed.type=='投资'){
+            type='购买的红包';
+            }else if(getRed.type=='邀请'){
+            type='邀请好友的红包';
+            }else if(getRed.type=='注册'){
+            type='注册的红包';
+            }
+            %>
+            <li class="clear">
+                <div class="fl">
+                    <p class="red-shop"><%=type%></p>
+
+                    <p class="time"><%=formatYMDDate(getRed.createdAt)%></p>
+                </div>
+                <p class="fr num"><%=getRed.amt%>元</p>
+            </li>
+            <% } %>
+            <% } %>
+        </ul>
+        <!--获得红包end-->
+        <ul class="out-ul"><!--过期红包start-->
+            <% if(expiredReds == null) { %>
+            <% } else { %>
+            <% for(var i = 0; i< expiredReds.length; i++) {
+            var expiredRed = expiredReds[i];
+            %>
+            <li class="clear">
+                <div class="fl">
+                    <p class="red-shop"><%=expiredRed.type%></p>
+
+                    <p class="time"><%=formatYMDDate(expiredRed.createdAt)%></p>
+                </div>
+                <p class="fr num"><%=expiredRed.amt%>元</p>
+            </li>
+            <% } %>
+            <% } %>
+        </ul>
+    </aside>
+    <p class="return-p"><a href="/redenv">返回</a></p>
+</div>
+<script src="<%=assertHost%>/js/wechat_Dec_activity/myred-config.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

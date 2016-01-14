@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<% layout( 'blank-layout') -%>
+<html>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/login.css"/>
+<script src="<%=assertHost%>/js/modules/showHidden-config.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=assertHost%>/js/modules/ctrNextBtn-config.js" type="text/javascript" charset="utf-8"></script>
+
+<body>
+<header class="ShowHidden">
+    <img class="img-full head-img" src="<%=assertHost%>/img/log_bg_1.gif"/>
+</header>
+<article>
+    <form data-url="/login" action="javascript:;" method="post" id="login-Form">
+        <ul>
+            <li class="algin">
+                <input class="setInputLen ctr-h-img inpbor-bottom-30 firstfont CTRHidden LogPhone FontSize15 tel"
+                       type="tel" name="telephone" id="" value="<%=outString(telephone)%>" placeholder="请输入手机号"
+                       maxlength="11" onkeyup="value=value.replace(/[^\d]/g,'')"/>
+                <span class="iconfont phone">&#xe60d;</span>
+            </li>
+            <li class="algin">
+                <input class="inpbor-bottom-30 firstfont mTop2 FontSize15 password" type="password" name="passwd" id=""
+                       value="" placeholder="请输入密码" maxlength="16"/>
+                <span class="iconfont lock">&#xe60a;</span>
+            </li>
+            <li>
+                <button id="next" class="btn-55-green loginBtn mTop1">登录</button>
+            </li>
+            <li class="clear">
+                <a class="fl visited120" href="/forgetPage">忘记密码</a>
+                <a href="/regpage" class="fr reglink">还没有账号？<span>马上注册</span></a>
+            </li>
+        </ul>
+    </form>
+    <section id="msTip">
+        <input type="text" name="" id="msg" value="<%=outString(msg)%>"/>
+    </section>
+    <p class="errorTip"></p>
+</article>
+<footer>
+    <ul>
+        <li class="margintop20 AlginCenter">华盛达控股集团旗下互联网理财平台</li>
+        <li class="firstfont AlginCenter">A HSD Holding Group Company</li>
+    </ul>
+</footer>
+<input type="hidden" name="" id="loadingText" value="正在登录中..."/>
+</body>
+<script src="<%=assertHost%>/js/modules/login-config.js" type="text/javascript" charset="utf-8"></script>
+</html>

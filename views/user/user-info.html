@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<%-layout('blank-layout') -%>
+<html>
+
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/uInfo.css"/>
+
+<body>
+<% if(user.isVerify){%>
+<header class="uinfo FontColorWhite already">
+    <p>认证状态</p>
+
+    <p>已认证</p>
+</header>
+<%}%>
+<% if(!user.isVerify){%>
+<header class="uinfo FontColorWhite nAlready">
+    <p>认证状态</p>
+
+    <p>未认证</p>
+</header>
+<%}%>
+<!--  ==========  -->
+<!--  = Banner =  -->
+<!--  ==========  -->
+<% if(user.isVerify){%>
+<article class="alreadyParent">
+    <table border="0" cellspacing="" cellpadding="" class="alreadyTab1">
+        <tr>
+            <td><span>手机号码</span></td>
+            <td class="firstfont"><%=user.telephone%></td>
+        </tr>
+        <tr>
+            <td><span>姓名</span></td>
+            <td><%=outString(user.realName)%></td>
+        </tr>
+        <tr>
+            <td class="noborder"><span>身份证号码</span></td>
+            <td class="noborder firstfont"><%=outString(user.identity)%></td>
+        </tr>
+    </table>
+</article>
+<%}%>
+<!--  ==========  -->
+<!--  = Banner =  -->
+<!--  ==========  -->
+<% if(!user.isVerify){%>
+<article class="alreadyParent">
+    <table border="0" cellspacing="" cellpadding="" class="alreadyTab1">
+        <tr>
+            <td><span>手机号码</span></td>
+            <td class="firstfont"><%=user.telephone%></td>
+        </tr>
+    </table>
+</article>
+<%}%>
+<% if(!user.isVerify){%>
+<article class="alreadyParent mTop1 no">
+    <input type="text" name="tip" id="tip" value="【通过绑定银行卡完成认证】" readonly="readonly"/>
+    <table border="0" cellspacing="" cellpadding="" class="alreadyTab1">
+        <tr>
+            <td><a href="/user/changePassword">修改密码</a></td>
+            <td><a href="/bank/add">立即认证</a></td>
+        </tr>
+    </table>
+</article>
+<%}%>
+<!--  ==========  -->
+<!--  = Banner =  -->
+<!--  ==========  -->
+<% if(user.isVerify){%>
+<p>
+    <a class="display-block AlginCenter FontSize16 FontColorred" href="/user/changePassword">修改密码</a>
+</p>
+<%}%>
+<section id="msTip">
+    <input type="text" name="" id="msg" value="<%=outString(msg)%>"/>
+</section>
+</body>
+
+</html>

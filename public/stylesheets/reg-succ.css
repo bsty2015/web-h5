@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #e31e2e;
+}
+
+.container {
+    display: none;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.container .succ-p img {
+    width: 100%;
+}
+
+.container .succ-info {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: white;
+    padding-bottom: 3rem;
+    line-height: 1.8rem;
+}
+
+/*非微信boxstart*/
+.box {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.box .succ-p img {
+    width: 100%;
+}
+
+.box .succ-info {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: white;
+    padding-bottom: 3rem;
+    line-height: 1.8rem;
+}

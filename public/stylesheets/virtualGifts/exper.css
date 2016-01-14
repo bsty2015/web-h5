@@ -1,0 +1,118 @@
+/*
+ * created by zhongciyisheng@live.com on 2015-9-9 11:43
+ * 产品列表页
+ */
+
+body {
+	background: rgb( 245, 245, 245);
+}
+.maxWidth {
+	max-width: 64rem;
+	margin: 0 auto;
+}
+header {
+	position: relative;
+	max-width: 64rem;
+	margin: 0 auto;
+	margin-bottom: .8rem;
+}
+header button {
+	width: 5.6rem;
+	padding: 0;
+	height: 2rem;
+	background: none;
+	border: 1px solid #fff;
+	color: #fff;
+	border-radius: .4rem;
+	font-size: 1rem;
+	position: absolute;
+	right: 2rem;
+	top: 3rem;
+	z-index: 2;
+}
+footer {
+	background: #fff;
+	font-family: firstfont;
+	max-width: 64rem;
+	margin: 0 auto;
+}
+footer .buy_btn {
+	display: block;
+	padding-top: 2.5rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	font-size: 1.8rem;
+	padding-bottom: 2rem;
+}
+footer .buy_btn .hoted {
+	background: rgb( 74, 144, 226);
+}
+footer .buy_btn .hot {
+	background: rgb( 255, 113, 109);
+}
+footer .buy_btn button {
+	font-size: 1.6rem;
+	height: 4.4rem;
+	border: none;
+	color: #fff;
+	border-radius: .5rem;
+	display: block;
+	width: 100%;
+}
+footer table {
+	width: 100%;
+	margin: 0 auto;
+}
+footer table .first {
+	text-indent: 2rem;
+}
+footer table tr:last-child td: nth-child(2) {
+	font-size: 1.8rem;
+	color: rgb( 120, 120, 120);
+}
+footer table tr:last-child td:first-child,
+td:last-child {
+	color: rgb( 243, 86, 86);
+	font-size: 1.8rem;
+}
+footer table tr:first-child td {
+	/*width: 33.3%;*/
+	
+	padding-top: 2.1rem;
+	padding-bottom: 1.3rem;
+	color: rgb(102, 102, 102);
+	font-size: 1rem;
+}
+footer .titile {
+	border-bottom: .1rem solid rgb( 233, 233, 233);
+	border-top: .1rem solid rgb( 233, 233, 233);
+	padding-left: 2rem;
+	padding-top: 2.7rem;
+	padding-bottom: 2rem;
+}
+footer .titile button {
+	width: 5rem;
+	height: 2rem;
+	padding: 0;
+	border-radius: .3rem;
+	margin-right: 1rem;
+	color: #fff;
+	font-size: 1rem;
+	border: none;
+}
+footer .titile span {
+	color: rgb( 51, 51, 51);
+	font-size: 1.4rem;
+}
+footer .titile .hot {
+	background: rgb( 255, 113, 109);
+}
+footer .titile .cashing {
+	background: rgb( 245, 166, 35);
+}
+footer .titile .hold {
+	background: rgb( 46, 195, 162)
+}
+footer .titile .cash {
+	background: rgb( 74, 144, 226);
+}

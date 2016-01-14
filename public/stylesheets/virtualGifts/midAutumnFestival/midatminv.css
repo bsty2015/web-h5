@@ -1,0 +1,149 @@
+/**
+ * Created by zhongciyisheng@live.com on 2015年9月17日 13:58:14 
+ * 中秋节-老用户分享页
+ */
+
+header,
+article {
+	max-width: 64rem;
+	margin: 0 auto;
+}
+body {
+	font-family: firstfont;
+	background: rgb( 252, 216, 0);
+}
+.mid_red_btn {
+	color: #fff;
+	border: none;
+	display: block;
+	height: 4.4rem;
+	font-size: 1.6rem;
+	border-radius: .5rem;
+	width: calc(100% - 8rem) !important;
+	width: -moz-calc(100% - 8rem) !important;
+	width: -webkit-calc(100% - 8rem) !important;
+	background: rgb( 254, 64, 90);
+	margin: 0 auto;
+	margin-bottom: 2rem;
+}
+/**
+ * 未登录则提示去注册。
+ */
+
+.mid_reg_url {
+	display: block;
+	text-align: center;
+	font-size: 1.4rem;
+	color: rgb( 97, 63, 17);
+}
+/**
+ * 未曾购买时提示信息
+ */
+
+.mid_nbuy_msg {
+	text-align: center;
+	font-size: 1.4rem;
+	color: rgb( 97, 63, 17);
+}
+/**
+ * 邀请列表
+ */
+
+.mid_invite_list_box {
+	margin-top: 2rem;
+	padding: 0 1rem;
+}
+.mid_invite_list_box section {
+	border: .1rem solid rgb( 97, 63, 17);
+	border-radius: .5rem;
+	padding-bottom: 3rem;
+}
+.mid_invite_list_box section p:nth-child(1) {
+	color: rgb( 97, 63, 17);
+	font-size: 1.4rem;
+	height: 3.8rem;
+	line-height: 3.8rem;
+	text-align: center;
+}
+.mid_invite_list_box section strong {
+	font-size: 3rem;
+	height: 5.7rem;
+	font-weight: bold;
+	display: block;
+	margin: 0 2rem;
+	border-bottom: 1px solid rgb( 97, 63, 17);
+	text-align: center;
+	line-height: 5.7rem;
+	color: rgb( 254, 64, 90);
+}
+.mid_invite_list_box section p:nth-child(3) {
+	color: rgb( 97, 63, 17);
+	font-size: 1.8rem;
+	height: 5.7rem;
+	line-height: 5.7rem;
+	text-align: center;
+}
+.mid_invite_list_box table {
+	width: calc(100% - 4rem);
+	margin: 0 auto;
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+	color: rgb( 97, 63, 17);
+}
+.mid_invite_list_box table td:first-child {
+	text-indent: 1rem;
+}
+.mid_rule_box {
+	width: -webkit-calc(100% - 8rem) !important;
+	width: -moz-calc(100% - 8rem);
+	width: calc(100% - 8rem) !important;
+	padding-top: 3rem;
+}
+.mid_rule_box section {
+	position: relative;
+	padding: 2rem;
+	word-wrap: break-word;
+	border: .1rem solid rgb( 97, 63, 17);
+	border-radius: .5rem;
+}
+.mid_rule_box section pre {
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+	padding-top: 2rem;
+}
+.mid_rule_box h3 {
+	position: absolute;
+	top: -.8rem;
+	left: calc(50% - 24rem);
+	font-size: 1.6rem;
+	font-weight: bold;
+	height: 2.3rem;
+	text-align: center;
+	line-height: 2.3rem;
+	width: 11.9rem;
+	background: rgb( 252, 216, 0);
+}
+/**
+ * =========------------------ 中秋结束 ------------================*
+ */
+
+.midEnd {
+	color: #4A4A4A;
+	font-size: 2rem;
+	border: 1px solid #4A4A4A;
+	border-radius: .3rem;
+	line-height: 2.8rem;
+	padding: 1rem 2rem;
+	margin: 0 1rem;
+}
+.midEnd button {
+	display: inline-block;
+	height: 4rem;
+	font-size: 1.6rem;
+	border: none;
+	width: 100%;
+	margin-top: 2rem;
+	border-radius: .3rem;
+	background: rgb( 254, 64, 90);
+	color: #fff;
+}

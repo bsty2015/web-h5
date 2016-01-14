@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<%-layout( 'blank-layout') -%>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/pay-not-list.css"/>
+
+<body>
+<% if(products.length == 0){%>
+<i style="font-size: 10rem;color: #c1c1c1;display: block;text-align: center;margin-top:2rem"
+   class="iconfont FontColor120">&#xe642;</i>
+
+
+<% }else{
+for(var i=0;i
+<products.length
+;i++){
+var product = products[i];
+expiresDate = Number(product.investDate)+900000;
+%>
+<article class="payAgainBox firstfont">
+    <a href="/user/invest/repayInvest/<%=product.orderId%>">
+        <p class="clear">
+            <em class="fl">订单号：
+                <sapn><!--span内写订单号--><%=product.orderId%></sapn>
+            </em>
+            <time class="fr">将于<span><%=formatDateStr(expiresDate,'HH:mm')%></span>过期</time>
+        </p>
+        <section class="clear">
+            <ul class="fl">
+                <li class="lTitle"><%=product.productName%></li>
+                <li class="lNum"><%=formatCurrency(product.corpus)%></li>
+                <li class="lTell">购买本金（元）</li>
+            </ul>
+            <ul class="fr">
+                <li class="rNum"><%=formatCurrency(product.profit)%></li>
+                <li class="rTell">到期收益（元）</li>
+            </ul>
+        </section>
+        <button>立即支付</button>
+    </a>
+</article>
+<%}%>
+<%}%>
+
+<section id="msTip">
+    <input type="text" name="" id="msg" value="<%=outString(msg)%>"/>
+</section>
+</body>
+<script src="<%=assertHost%>/js/modules/payNotList-config.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=assertHost%>/js/modules/showTime-config.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

@@ -1,0 +1,226 @@
+/*
+ * user: wushuang
+ * time: 2016-01-08
+ * des : 第三期活动中ypdct.html的样式表
+ */
+
+html {
+	background: #CD2934;
+	padding-bottom: 0;
+}
+
+body {
+	max-width: 64rem;
+	position: relative;
+}
+
+#ctr_baidu {
+	height: 0;
+}
+
+.ws_ypdct_header .btn_wrap,
+.ws_ypdct_header .text_wrap {
+	position: relative;
+}
+
+.ws_ypdct_header .btn_wrap button {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: none;
+	color: #fff;
+	width: 20rem;
+	height: 4.8rem;
+	font-size: 1.7rem;
+	margin-left: -10rem;
+	margin-top: -3.2rem;
+	background: #FFAE00;
+	border-radius: 2.4rem;
+}
+
+.ws_ypdct_header .text_wrap p {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	color: #fff;
+	font-size: 1.4rem;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+
+.ws_ypdct_header .text_wrap span {
+	color: #FFAE00;
+	font-size: 1.6rem;
+}
+
+.ws_mask {
+	z-index: 99;
+	display: none;
+	position: fixed;
+	background: rgba(0, 0, 0, .8);
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.ws_mask .ws_buy {
+	position: absolute;
+	left: 1.5rem;
+	max-width: 60rem;
+	top: calc(50% - 19rem);
+	top: -moz-calc(50% - 19rem);
+	top: -webkit-calc(50% - 19rem);
+	background: #fff;
+	width: -moz-calc(100% - 4rem);
+	width: -webkit-calc(100% - 4rem);
+	width: calc(100% - 4rem);
+	border-radius: .8rem;
+	border: .5rem solid #1A8953;
+}
+
+.ws_mask .ws_buy2 {
+	top: calc(50% - 12rem);
+	top: -moz-calc(50% - 12rem);
+	top: -webkit-calc(50% - 12rem);
+}
+
+.ws_mask .ws_buy img {
+	display: block;
+	margin: 0 auto;
+	height: 7rem;
+	width: 12rem;
+}
+
+.ws_mask .ws_buy h3 {
+	font-size: 1.6rem;
+	color: #1A8953;
+	padding-top: 2.5rem;
+	padding-bottom: 2.6rem;
+	text-align: center;
+}
+
+.ws_mask .ws_buy i {
+	display: inline-block;
+	margin-right: 1rem;
+	color: #D8D8D8;
+}
+
+.ws_mask .ws_buy span {
+	display: inline-block;
+	color: #E01D2B;
+	font-weight: bold !important;
+}
+
+.ws_mask .ws_buy li {
+	/*text-indent: 2rem;*/
+	padding-left: 5rem;
+	font-family: firstfont;
+	line-height: 1.8rem;
+	font-size: 1.4rem;
+	color: #7B7B7A;
+	font-weight: bold !important;
+}
+
+.ws_mask .ws_buy ul {
+	padding-top: 2rem;
+}
+
+.ws_mask .ws_buy p {
+	/*margin-left: 4rem;
+			margin-right: 4rem;*/
+	border-top: 1px dashed #ECE3DC;
+	margin-top: 2rem;
+}
+
+.ws_mask .ws_buy .text {
+	margin-left: 0;
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.ws_mask .ws_buy p a {
+	display: inline-block;
+	width: 17rem;
+	height: 4.4rem;
+	font-size: 1.6rem;
+	line-height: 4.4rem;
+	margin-top: 2rem;
+	/*margin-bottom: 2rem;*/
+	color: #fff;
+	border-radius: 2.2rem;
+	text-align: center;
+	background: #E01D2B;
+}
+
+.ws_mask .ws_buy .ws_box {
+	border: 1px solid #DDDDDD;
+	padding: 1rem;
+	border-radius: .5rem;
+	margin: 0 2rem 0 2rem;
+}
+
+.ws_mask div div:nth-child(1) strong,
+.ws_mask div div:nth-child(1) span {
+	line-height: 2rem;
+}
+
+.ws_mask div div:nth-child(1) strong {
+	color: #E01D2B;
+}
+
+.ws_mask div div:nth-child(1) span {
+	color: #DDDDDD;
+}
+
+.text_wrap .nowchat,
+.text_wrap .end {
+	display: none;
+}
+
+.ws_mask div div:nth-child(2) strong {
+	color: #E01D2B;
+}
+
+.last {
+	border: none !important;
+	text-align: center;
+	color: #fff;
+	line-height: 1.6rem;
+	font-size: 1.2rem;
+	position: relative;
+	bottom: -5rem;
+}
+
+#rule_wrap {
+	position: relative;
+}
+
+#rule {
+	border: .1rem solid #FFD5D3;
+	padding: 2rem 1rem 2rem 1rem;
+	border-radius: .8rem;
+	margin: 4rem 2rem 2rem 2rem;
+	color: #fff;
+	font-size: 1.2rem;
+}
+
+#rule_wrap h3 {
+	position: absolute;
+	top: -0.8rem;
+	text-align: center;
+	left: -moz-calc(50% - 5rem);
+	left: -webkit-calc(50% - 5rem);
+	left: calc(50% - 5rem);
+	width: 10rem;
+	height: 2rem;
+	z-index: 2;
+	background: #CD2934;
+	font-size: 1.6rem;
+	color: #FFD5D3;
+}
+
+#rule li {
+	line-height: 1.8rem;
+}

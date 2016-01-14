@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<% layout('blank-layout') -%>
+<html>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/invitation.css"/>
+<body id="invest_body">
+<header id="invitation_header">
+    <img class="img-full" src="<%=assertHost%>/img/invitation/in_pic4.png"/>
+
+    <form id="invitationForm" action="javascript:;" data-url="/register/thirdRegister" method="post">
+        <input type="tel" id="telephone" name="telephone" value="" placeholder="请输入手机号"/>
+        <section class="message_invition">
+            <input type="tel" name="validateCode" id="code" value="" placeholder="短信验证码"/>
+            <button id="invitationSendCode">发送验证码</button>
+        </section>
+        <input type="password" name="passwd" id="passwd" value="" placeholder="请输入密码"/>
+
+        <p class="agree">我已阅读并同意<a href="/useragreement">集财用户服务协议</a></p>
+        <a id="regParent" href="javascript:;">
+            <button id="invitationReg">
+                立即注册
+            </button>
+        </a>
+        <a href="/login">
+            <p>
+                我已注册马上登录
+            </p>
+        </a>
+        <img class="img-full" src="<%=assertHost%>/img/invitation/in_pic (6).png"/>
+    </form>
+    <section class="cash">
+        <!--<span>注册即送</span><span>50</span>元礼金 +<span>1000</span>积分-->
+        <!--尊享最高15%年化收益-->
+    </section>
+</header>
+<article id="invitation_center">
+    <section>
+        <i class="iconfont">&#xe652;</i>
+        <ul>
+            <li>
+                <span class="iconfont">&#xe625;</span>
+                <span class="iconfont">&#xe625;</span>
+                <span class="iconfont">&#xe625;</span>
+            </li>
+            <li>
+                <button>集财是谁</button>
+            </li>
+            <li>
+                <p>一个更懂你的理财平台</p>
+
+                <p>
+                    集财是一个以前沿技术和大数据 共同支撑起来的新型的移动理财平台。 集财由华盛达控股集团为您呈现。
+                </p>
+            </li>
+            <li>
+                <img src="<%=assertHost%>/img/invitation/in_pic (2).png"/>
+                <img src="<%=assertHost%>/img/invitation/in_pic (3).png"/>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <p>
+            <button>为何选择集财?</button>
+        </p>
+        <p>看集财有什么不一样</p>
+        <ul>
+            <li>
+                <p>购买即日起息</p>
+
+                <p>购任意理财当日就有利息 财富增值不打折</p>
+            </li>
+            <li>
+                <p>门槛低至500元</p>
+
+                <p>哪怕只有五百块 也可以轻松开启理财之旅</p>
+            </li>
+            <li>
+                <p>零手续费更轻松</p>
+
+                <p>只需购买等着收钱就OK 完全没有手续费</p>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <p>
+            <button>集财安全吗?</button>
+        </p>
+        <p>和银行一样让你放心</p>
+        <ul>
+            <li class="safety_invitation">
+                <p>银行级风控</p>
+
+                <p>多重深度尽调 将风险隔离于无形</p>
+            </li>
+            <li class="safety_invitation second">
+                <p>资金安全保障</p>
+
+                <p>第三方支付托管 同卡进出 风险保证金 增信机构 共同保障资金安全</p>
+            </li>
+        </ul>
+    </section>
+    <section class="wx">
+        <img src="<%=assertHost%>/img/other/wx.jpg"/>
+
+        <p>识别图中二维码&nbsp;关注集财公众号</p>
+    </section>
+    <section>
+        <p class="AlginCenter pTop2 FontColor120">理财有风险，投资需谨慎</p>
+    </section>
+</article>
+<section id="msTip">
+    <input type="text" name="" id="msg" value="<%=outString(msg)%>"/>
+</section>
+<input type="hidden" name="" id="loadingText" value="正在提交,请稍后..."/>
+</body>
+<script src="<%=assertHost%>/js/modules/invitation-config.js" type="text/javascript" charset="utf-8"></script>
+</html>

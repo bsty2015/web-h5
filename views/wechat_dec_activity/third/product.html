@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<% layout('blank-layout') -%>
+<html>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/wechat_dec_activity/third/product.css" />
+	<body>
+		<div class="container">
+			<img src="/img/wechat_Dec_activity/third/hdlb-bg.png" class="img-full">
+				<article class="pro-box">
+					<% if(products != null){ %>
+						<% for(var i = 0 ; i < products.length; i++){
+							var statusName = '';
+							var product = products[i];
+							 if(product.status =='销售中'){
+						        statusName ="热 卖";
+						        }
+							%>
+					<p class="pro-name"><span class="hot"><%=statusName%></span><%=product.name%></p>
+					<p class="divider"></p>
+					<ul class="pro-ul clear">
+						<li class="li1 fl">预期年化收益率</li>
+						<li class="li2 fl">理财期限 (天)</li>
+						<li class="li3 fl">剩余可购金额（元）</li>
+						<li class="li-color fl li1 li-font"><%=product.rate + product.extraRate%>%</li>
+						<li class="li2 fl li-font"><%=product.duration%></li>
+						<li class="li-color fl li3 li-font"><%=formatCurrency(product.remainAmt)%></li>
+					</ul>
+					<a class="buy-a" href="/user/invest/<%=product.id%>">立即购买</a>
+					<% } %>
+					<% } %>
+				</article>
+		</div>
+		
+		<script src="/js/wechat_Dec_activity/third/productThird-config.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+
+body {
+    width: 100%;
+    background: #4d3492;
+}
+
+#regSucParent {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+#regSucCenter {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+#mobile {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    top: 200px;
+    z-index: 2;
+    width: 100%;
+}
+
+#money {
+    position: absolute;
+    left: 0px;
+    display: none;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+.setBlock img {
+    display: block;
+    width: 100%;
+}

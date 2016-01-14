@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #f16164;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 640px;
+    background: url(../img/invitation/joinbg.png) no-repeat center center;
+    background-size: 100%;
+    height: 100%;
+}
+
+.container .login-succ {
+    text-align: center;
+    padding: 3rem;
+    padding-top: 4rem;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.container .sm {
+    text-align: center;
+}
+
+.container .sm img {
+    width: 50%;
+}
+
+.container .focus {
+    text-align: center;
+    color: white;
+    font-size: 1.4rem;
+    margin: 2rem 0rem;
+    letter-spacing: 0.1px;
+}
+
+/*footer strat*/
+.footer {
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.footer a {
+    display: block;
+    text-align: center;
+    line-height: 4.6rem;
+    font-size: 1.8rem;
+    height: 4.6rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 0.6rem;
+    border-radius: 5px;
+}
+
+.footer .buy {
+    margin-bottom: 1.5rem;
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(#1beccc), to(#21f1bf));
+    /*background:url(../img/invitation/buttom.png) no-repeat;*/
+
+    color: white;
+}
+
+.footer .down-app {
+    color: white;
+    border: 1px solid white;
+
+}

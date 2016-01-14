@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<%-layout( 'blank-layout') -%>
+<html>
+
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/bingdingBank.css"/>
+
+<body>
+<header>
+    <img class="img-full" src="<%=assertHost%>/img/pay_bg2.gif"/>
+</header>
+<article class="pTop2 AlginCenter FontSize18 FontColorGreen">
+    <p class="FontColorB3">我们已经将验证码发送到您的手机</p>
+
+    <p class="firstfont FontColorGreen"><span><%=phone%></span>
+    </p>
+</article>
+<section>
+    <form data-url="/invest/payConfirm" id="bankcodeform" class="AlginCenter" action="/invest/payConfirm" method="post">
+        <input class="height3 FontSize14 pay-code-input getcode" type="tel" name="validatecode" id="paycode" value=""
+               placeholder="请输入验证码"/>
+        <input type="hidden" name="loadingText" id="loadingText" value="交易确认中，请稍后..."/>
+</section>
+<section>
+    <a class="FontSize14 FontColor120 display-block AlginCenter visited120" id="repetSend" href="javascript:void();"
+       data-url="/invest/repeatCode">
+        重新发送
+				<span id="time" class="firstfont FontColorGreen">
+				</span>
+    </a>
+</section>
+<button id="rePay" class="btn-55-normal mTop2">下一步</button>
+</form>
+<section id="msTip">
+    <%if(isNotEmpty(msg)){%>
+    <input type="text" name="" id="msg" value="<%=msg%>"/>
+    <%}%>
+</section>
+<script src="<%=assertHost%>/js/modules/getcode-config.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=assertHost%>/js/modules/showHidden-config.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

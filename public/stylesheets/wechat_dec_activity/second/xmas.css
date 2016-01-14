@@ -1,0 +1,365 @@
+/*
+ * user：无双
+ * time：2015-12-22 17:35:39
+ * des：微信活动之圣诞节活动
+ */
+
+html,
+body {
+	/*background: #FFFBEC;*/
+	padding: 0;
+	margin: 0;
+	font-family: "微软雅黑", "arial, helvetica, sans-serif";
+}
+
+#ctr_baidu {
+	/*
+	 * 这是百度的，
+	 * 会影响页面，
+	 * 所以把它高度设置为0
+	 */
+	height: 0;
+}
+
+.xmas_center {
+	position: relative;
+}
+
+.xmas_center_text {
+	padding-top: 6rem;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	left: 0;
+}
+
+.xmas_center_text button {
+	display: block;
+	height: 4.8rem;
+	width: -moz-calc(100% - 18rem);
+	width: -webkit-calc(100% - 18rem);
+	width: calc(100% - 18rem);
+	background: rgb( 255, 174, 0);
+	border-radius: 2.2rem;
+	font-size: 1.8rem;
+	color: #fff;
+	border: none;
+	margin: 0 auto;
+}
+
+.xmas_center_text p {
+	padding-top: 2rem;
+	text-align: center;
+	font-size: 1.4rem;
+	line-height: 2rem;
+	color: #fff;
+}
+
+.xmas_center_text p span {
+	display: inline-block;
+	color: rgb( 255, 174, 0);
+	font-weight: bold !important;
+	font-family: firstfont;
+}
+
+.xmas_rule {
+	position: relative;
+	padding: 1rem;
+	margin-top: 2rem;
+	color: rgb(65, 65, 65);
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+	border: .1rem solid #FD665E;
+	border-radius: .8rem;
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+.xmas_rule h3 {
+	position: absolute;
+	top: -1rem;
+	width: 8rem;
+	text-align: center;
+	left: -moz-calc(50% - 4rem);
+	left: -webkit-calc(50% - 4rem);
+	left: calc(50% - 4rem);
+	background: #FFFBEC !important;
+	background: none;
+	z-index: 3;
+	color: #FD665E;
+	font-size: 1.6rem;
+}
+
+.xmas_rule p {
+	line-height: 1.6rem;
+	margin-top: 1.2rem;
+}
+
+.xmas_rule p
+/*.xmas_rule span {
+	font-family: firstfont;
+	color: #FD665E;
+	font-weight: bold !important;
+}*/
+
+
+/*================show我是性感的分割线=====================*/
+
+.xmas_reg_show {
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 20;
+	background: red;
+}
+
+.xmas_reg_show section {
+	/*display: none;*/
+	position: fixed;
+	top: 20%;
+	left: 0;
+	z-index: 20;
+	text-align: center;
+	border: .5rem solid #1A8B54;
+	border-radius: 1rem;
+	width: -moz-calc(100% - 4rem);
+	margin-left: 2rem;
+	width: -webkit-calc(100% - 4rem);
+	width: calc(100% - 4rem);
+	background: #fff;
+}
+
+.xmas_reg_show .title {
+	font-size: 1.6rem;
+	color: #1A8953;
+	text-align: center;
+	margin-top: 2.6rem;
+}
+
+.xmas_reg_show .get strong {
+	font-size: 5rem;
+	color: #F42734;
+}
+
+.xmas_reg_show .get .num {
+	padding: 1rem 0;
+	margin: 1.7rem 3rem;
+	border-radius: .9rem;
+	border: .1rem solid #DDDDDD;
+}
+
+.xmas_reg_show .get span {
+	font-size: 2rem;
+	color: #F42734;
+}
+
+.xmas_reg_show div p {
+	padding-bottom: .5rem;
+	color: #1A8953;
+	font-size: 1.6rem;
+	text-align: left;
+	margin-left: 5rem;
+}
+
+.xmas_reg_show div li {
+	font-size: 1.2rem;
+	text-align: left;
+	line-height: 1.6rem;
+	margin-left: 5rem;
+}
+
+.xmas_reg_show li span {
+	font-size: 1.2rem !important;
+}
+
+.xmas_reg_show hr {
+	height: 0;
+	border: none;
+	margin-top: 1rem;
+	margin-left: 3rem;
+	margin-right: 3rem;
+	border-bottom: 1px dotted #DDDDDD;
+}
+
+.xmas_reg_show .get button {
+	display: block;
+	height: 4.4rem;
+	background: #E01D2B;
+	color: #fff;
+	font-size: 1.6rem;
+	border-radius: 2.2rem;
+	width: -moz-calc(100% - 10rem);
+	width: -webkit-calc(100% - 10rem);
+	width: calc(100% - 10rem);
+	margin: 1rem auto;
+	border: none;
+}
+
+
+/*================show我是性感的分割线=====================*/
+
+.xmas_reg_show .all .mTop2 {
+	text-align: center;
+	margin-left: 0;
+}
+
+.xmas_reg_show .all ul {
+	margin: 1.7rem 3rem;
+	border-radius: .9rem;
+	border: .1rem solid #DDDDDD;
+}
+
+.xmas_reg_show .all li {
+	list-style: none;
+	margin-left: 1rem;
+}
+
+.xmas_reg_show .all li p {
+	text-align: left;
+	padding: 0;
+	margin: 0;
+}
+
+.xmas_reg_show .all .text {
+	color: #E01D2B;
+	font-size: 1.4rem;
+}
+
+.xmas_reg_show .all .li2 {
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+}
+
+.xmas_reg_show .all .date {
+	color: #aaa;
+	font-size: 1.4rem;
+}
+
+.xmas_reg_show .all .inner {
+	margin: 0;
+}
+
+.xmas_reg_show .all .hnum {
+	padding-top: 1.2rem;
+}
+
+.xmas_reg_show .all .hnum strong {
+	font-size: 3rem;
+	color: #E01D2B;
+}
+
+.xmas_reg_show .all .hnum span {
+	font-size: 2rem;
+	margin-right: 1rem;
+	color: #E01D2B;
+}
+
+.xmas_reg_show .all button {
+	display: block;
+	height: 4.4rem;
+	background: #E01D2B;
+	color: #fff;
+	font-size: 1.6rem;
+	border-radius: 2.2rem;
+	width: -moz-calc(100% - 10rem);
+	width: -webkit-calc(100% - 10rem);
+	width: calc(100% - 10rem);
+	margin: 1rem auto;
+	border: none;
+}
+
+.xmas_reg_show .bag {
+	border: none;
+	background: url(/img/wechat_Dec_activity/xmas/HB-bg.png) no-repeat;
+	background-size: cover;
+	color: #fff;
+}
+
+.xmas_reg_show .bag p:nth-child(1) {
+	margin-top: 2.6rem;
+	font-size: 1.6rem;
+}
+
+.xmas_reg_show .bag p:nth-child(2) {
+	color: #FBEE94;
+	font-size: 1.6rem;
+	margin-top: 4.7rem;
+}
+
+.xmas_reg_show .bag p:nth-child(2) span {
+	font-size: 7.6rem;
+}
+
+.xmas_reg_show .bag p:nth-child(3) {
+	margin-top: 6rem;
+}
+
+.xmas_reg_show .bag p:nth-child(3) button {
+	display: inline-block;
+	height: 4.4rem;
+	color: #fff;
+	font-size: 1.6rem;
+	width: -moz-calc(100% - 8rem);
+	width: -webkit-calc(100% - 8rem);
+	width: calc(100% - 8rem);
+	background: #BB1921;
+	border-radius: 2.2rem;
+	border: none;
+	margin-bottom: 2rem;
+}
+
+.xmas_reg_show .not img {
+	height: 5rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.xmas-end,
+.xmas-iswx,
+.xmas-nonwx {
+	display: none;
+}
+
+#xmas_reg_show2 {
+	display: none;
+}
+
+#xmas_reg_show {
+	display: none;
+}
+
+ul li {
+	color: #1F1F1F;
+	list-style-type: disc;
+}
+
+button {
+	outline-style: none;
+}
+
+.xmas_set_style {
+	display: inline-block;
+	color: #CA2A34;
+	font-size: 1.4rem;
+	font-weight: bold !important;
+}
+
+#xmas_set_bg {
+	position: fixed;
+	background: rgba(0, 0, 0, .8);
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 19;
+	display: none;
+	height: 100%;
+}
+
+.ws_xmas_des {
+	position: relative;
+	bottom: -5rem;
+	color: #fff;
+	font-size: 1.3rem;
+}

@@ -1,0 +1,176 @@
+/*
+ * created by zhongciyisheng@live.com on 2015-9-9 11:43
+ * 产品详情
+ */
+
+/*@color153: rgb(153,153,153);*/
+body {
+	font-family: firstfont;
+	max-width: 64rem;
+	margin: 0 auto;
+	background: rgb( 243, 244, 246);
+}
+header {
+	border-bottom: .1rem solid rgb( 233, 233, 233);
+	margin-bottom: 1.8rem;
+	margin-top: .8rem;
+	background: #fff;
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+header .order {
+	color: rgb( 51, 51, 51);
+	font-size: 1.2rem;
+	font-weight: bolder;
+	padding-top: 2.2rem;
+	padding-bottom: .87rem;
+	border-bottom: .1rem solid rgb( 233, 233, 233);
+}
+header h3 {
+	color: rgb( 51, 51, 51);
+	font-size: 1.4rem;
+	font-weight: bolder;
+	padding-top: .83rem;
+}
+header .column {
+	padding-top: 1.6rem;
+	padding-bottom: 1.2rem;
+	border-bottom: .1rem solid rgb( 233, 233, 233);
+}
+header .column p {
+	color153: rgb(153,153,153);
+}
+header .column span {
+	margin-top: .4rem;
+	color: rgb( 102, 102, 102);
+	font-size: 1.8rem;
+}
+header .column .get {
+	color: rgb( 246, 104, 104);
+}
+header .tag {
+	padding: 1.7rem 0 1.6rem 0;
+}
+header .tag button {
+	border: none;
+	background: rgb( 255, 114, 112);
+	color: #fff;
+	height: 2rem;
+	padding: 0;
+	width: 6rem;
+	border-radius: .3rem;
+}
+header .list {
+	padding-bottom: 1.8rem;
+}
+header .blank {
+	height: 2.4rem;
+	width: .1rem;
+	margin-left: 0.85rem;
+	background: rgb( 218, 218, 218);
+}
+header .already {
+	background: url(../../img/invest-product-detail/1.png) no-repeat left bottom;
+	background-size: 1.7rem;
+}
+header .text {
+	color153: rgb(153,153,153);
+	background: url(../../img/invest-product-detail/2.png) no-repeat left bottom;
+	text-indent: 2.4rem;
+	height: 1.8rem;
+	background-size: 1.7rem;
+}
+/*
+ * 底部
+ */
+
+footer {
+	background: rgb( 243, 244, 246);
+	padding: 0 1rem;
+}
+footer section {
+	margin-bottom: 1rem;
+	background: #fff;
+	border-radius: .5rem;
+}
+footer section p {
+	padding: 1rem 0 .36rem 1rem;
+	border-bottom: .1rem solid rgb( 233, 233, 233);
+}
+footer section button {
+	border: none;
+	background: rgb( 255, 114, 112);
+	color: #fff;
+	height: 2rem;
+	padding: 0;
+	width: 6rem;
+	border-radius: .3rem;
+}
+footer section li p {
+	padding: 0;
+	padding-left: 4.6rem;
+	height: 4.7rem;
+	line-height: 4.7rem;
+	font-size: 1.4rem;
+	color: rgb( 102, 102, 102);
+	border: none;
+	background: url(../../img/bankbg/BOC.png) no-repeat 1rem center;
+}
+footer section li {
+	height: 4.7rem;
+}
+footer section li .rule {
+	background: url(../../img/hetong.png) no-repeat 1rem center;
+}
+footer section li .BOCO {
+	background: url(../../img/bankbg/BOCO.png) no-repeat 1rem center;
+}
+footer section li .ICBC {
+	background: url(../../img/bankbg/ICBC.png) no-repeat 1rem center;
+}
+footer section li .BOC {
+	background: url(../../img/bankbg/BOC.png)no-repeat 1rem center;
+}
+footer section li .CCB {
+	background: url(../../img/bankbg/CCB.png)no-repeat 1rem center;
+}
+footer section li .POST {
+	background: url(../../img/bankbg/POST.png)no-repeat 1rem center;
+}
+footer section li .ECITIC {
+	background: url(../../img/bankbg/ECITIC.png)no-repeat 1rem center;
+}
+footer section li .CEB {
+	background: url(../../img/bankbg/CEB.png)no-repeat 1rem center;
+}
+footer section li .HXB {
+	background: url(../../img/bankbg/HXB.png)no-repeat 1rem center;
+}
+footer section li .CMBCHINA {
+	background: url(../../img/bankbg/CMBCHINA.png)no-repeat 1rem center;
+}
+footer section li .CIB {
+	background: url(../../img/bankbg/CIB.png)no-repeat 1rem center;
+}
+footer section li .SPDB {
+	background: url(../../img/bankbg/SPDB.png)no-repeat 1rem center;
+}
+footer section li .PINGAN {
+	background: url(../../img/bankbg/PINGAN.png)no-repeat 1rem center;
+}
+footer section li .GDB {
+	background: url(../../img/bankbg/GDB.png)no-repeat 1rem center;
+}
+footer section li .CMBC {
+	background: url(../../img/bankbg/CMBC.png)no-repeat 1rem center;
+}
+footer section li .ABC {
+	background: url(../../img/bankbg/ABC.png)no-repeat 1rem center;
+}
+footer section li i {
+	height: 4.7rem;
+	padding-right: 1rem;
+	line-height: 4.7rem;
+	font-size: 1.6rem;
+	color: rgb( 102, 102, 102);
+}

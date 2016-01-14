@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<article>
+    <ul>
+        <% for(var i=0;i
+        <products.length
+        ;i++){
+        var product = products[i];
+        var className = '';
+        var statusName = '';
+        if(product.status =='销售中'){
+        className = 'plist-tag-red alignM';
+        statusName ="热 卖";
+        }else if(product.status =='待上架'){
+        className = 'plist-tag-blue alignM';
+        statusName ="预 售";
+        }else if(product.status =='售完'||product.status =='兑换中' ||product.status =='兑付中'){
+        className = 'plist-tag-gray alignM';
+        statusName ="已售完";
+        }else if(product.status =='已兑换' || product.status =='已兑付'){
+        className = 'plist-tag-green alignM';
+        statusName ="已兑付";
+        }
+        %>
+        <li>
+            <a class="plist-wrap" href="/product/detail/<%=product.id%>">
+                <button class="plist-tag <%=className%>"><%=statusName%></button>
+                <span class="plist-title alignM"><%=product.name%></span>
+                <ul class="clear">
+                    <li class="fl">
+                        <p class="plist-text">预期年化收益率</p>
+
+                        <p>
+                            <span class="plist-per"><%=product.rate%></span><span class="plist-percent">%</span>
+                            <%if(product.extraRate >0){%>
+                            <span class="plist-per">+</span>
+                            <span class="plist-per FontSize18"><%=product.extraRate%></span><span class="plist-percent">%</span>
+                            <%}%>
+                        </p>
+                    </li>
+                    <li class="fl">
+                        <p class="plist-text">理财期限(天)</p>
+
+                        <p class="plist-day"><%=product.duration%></p>
+                    </li>
+                    <li class="fl">
+                        <p class="plist-text">剩余可购金额(元)</p>
+
+                        <p class="plist-num"><%=formatCurrency(product.remainAmt)%></p>
+                    </li>
+                </ul>
+            </a>
+        </li>
+        <%}%>
+    </ul>
+</article>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+/*
+ * created by zhongciyisheng@live.com on 2015-09-09
+ * 这里是交易、购买页面。
+ */
+
+.setMaxWidth {
+	max-width: 64rem;
+	margin: 0 auto;
+}
+body {
+	background: rgb( 240, 240, 240);
+}
+.pur_header {
+	font-family: firstfont;
+	max-width: 64rem;
+	margin: 0 auto;
+	padding-top: 3.8rem;
+	color: #fff;
+	background:linear-gradient(top, #6053be, #5683c9);
+	background: -webkit-linear-gradient(top, #6053be, #5683c9);
+	h3 {
+		font-size: 2rem;
+		text-indent: 2rem;
+	}
+	p {
+		font-size: 1rem;
+		padding-left: 2rem;
+		padding-right: 2rem;
+		padding-bottom: 3.9rem;
+		padding-top: 1rem;
+		background: url(../../img/bingdingbg.png) no-repeat right bottom;
+		background-size: auto 100%;
+		.tag {
+			background: #fff;
+			border-radius: 2rem;
+			color: #5d62c2;
+			padding: .2rem .6rem;
+		}
+	}
+}
+.pur_footer {
+	form {
+		font-family: firstfont;
+		.setMaxWidth;
+		h3 {
+			background: #fff;
+			height: 4rem;
+			border-bottom: .1rem solid rgb(239, 239, 239);
+			button {
+				background: rgb(51, 163, 241);
+				border: none;
+				color: #fff;
+				height: 2.2rem;
+				width: 6.6rem;
+				margin-left: 2rem;
+				border-radius: .3rem;
+				margin-top: 1.3rem;
+			}
+		}
+		.bank {
+			color: rgb( 113, 113, 113);
+			border-bottom: .1rem solid rgb(239, 239, 239);
+			@setHeight: 5.6rem;
+			display: block;
+			background: #fff;
+			height: @setHeight;
+			padding-left: 2rem;
+			padding-right: 2rem;
+			p {
+				height: @setHeight;
+				line-height: @setHeight;
+				text-indent: 3rem;
+				font-size: 1.6rem;
+			}
+			i {
+				height: @setHeight;
+				line-height: @setHeight;
+				text-indent: 3rem;
+				font-size: 1.6rem;
+			}
+			.BOCO {
+				background: url(../../img/bankbg/BOCO.png) no-repeat left center;
+			}
+			.ICBC {
+				background: url(../../img/bankbg/ICBC.png) no-repeat left center;
+			}
+			.BOC{
+				background: url(../../img/bankbg/BOC.png)no-repeat left center;
+			}
+			.CCB{
+				background: url(../../img/bankbg/CCB.png)no-repeat left center;
+			}
+			.POST{
+				background: url(../../img/bankbg/POST.png)no-repeat left center;
+			}
+			.ECITIC{
+				background: url(../../img/bankbg/ECITIC.png)no-repeat left center;
+			}
+			.CEB{
+				background: url(../../img/bankbg/CEB.png)no-repeat left center;
+			}
+			.HXB{
+				background: url(../../img/bankbg/HXB.png)no-repeat left center;
+			}
+			.CMBCHINA{
+				background: url(../../img/bankbg/CMBCHINA.png)no-repeat left center;
+			}
+			.CIB{
+				background: url(../../img/bankbg/CIB.png)no-repeat left center;
+			}
+			.SPDB{
+				background: url(../../img/bankbg/SPDB.png)no-repeat left center;
+			}
+			.PINGAN{
+				background: url(../../img/bankbg/PINGAN.png)no-repeat left center;
+			}
+			.GDB{
+				background: url(../../img/bankbg/GDB.png)no-repeat left center;
+			}
+			.CMBC{
+				background: url(../../img/bankbg/CMBC.png)no-repeat left center;
+			}
+			.ABC{
+				background: url(../../img/bankbg/ABC.png)no-repeat left center;
+			}
+			
+		}
+		section {
+			background: #fff;
+			margin-top: .8rem;
+			padding-left: 2rem;
+			height: 5.6rem;
+			label {
+				height: 5.6rem;
+				color: rgb( 113, 113, 113);
+				font-size: 1.6rem;
+				line-height: 5.6rem;
+			}
+			input {
+				border: none;
+				height: 5.6rem;
+				color: rgb(59, 59, 59);
+				font-size: 1.6rem;
+				text-indent: 1rem;
+			}
+		}
+		ul {
+			padding-left: 2rem;
+			padding-right: 2rem;
+			padding-top: 2rem;
+			p {
+				font-size: 1.2rem;
+				span {
+					color: rgb( 254, 114, 28);
+				}
+				i {
+					font-size: 1.4rem;
+					color: rgb( 51, 163, 241);
+				}
+			}
+		}
+		.buyNextBtn {
+			padding: 0 2rem;
+			padding-top: 2rem;
+			button {
+				display: block;
+				height: 4rem;
+				width: 100%;
+				border: none;
+				margin: 0 auto;
+				border-radius: 4rem;
+				background: rgb( 51, 163, 241);
+				color: #fff;
+				font-size: 1.8rem;
+			}
+		}
+		.agree{
+			text-align: center;
+			a{
+				color: #00CD98;
+			}
+		}
+	}
+}

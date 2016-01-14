@@ -1,0 +1,108 @@
+/*
+ * time 	：2015年12月10日
+ * user 	：无双
+ * des  	：十二月份微信活动注册页面css文件
+ * email 	：zhongciyisheng@live.com
+ */
+html{
+	padding-bottom: 0;
+}
+body{
+	background:#e11c2b;
+	padding-bottom: 0;
+}
+.ws_wechat_con {
+	background: #e11c2b;
+	/*min-height: 50rem;*/
+	max-width: 64rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ws_wechat_sMsg {
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -9rem;
+	color: #fff;
+	font-size: 1.4rem;
+}
+
+.ws_wechat_con {
+	width: 100%;
+}
+
+.ws_wechat_con p {
+	padding-left: 25px;
+	padding-right: 25px;
+	width: -moz-calc(100% - 50px);
+	margin-bottom: 1rem;
+	width: -webkit-calc(100% - 50px);
+	width: calc(100% - 50px);
+	height: 4.4rem;
+}
+
+.ws_wechat_con input,
+.ws_wechat_con button {
+	border-radius: 0;
+	font-size: 1.6rem;
+	text-indent: 2rem;
+	border: none;
+	width: 100%;
+	height: 4.4rem;
+}
+
+.ws_wechat_con .imgCode {
+	width: calc(100% - 11rem);
+	width: -moz-calc(100% - 11rem);
+	width: -webkit-calc(100% - 11rem);
+}
+
+#oRandomImg {
+	width: 11rem;
+	height: 4.4rem;
+}
+
+.ws_wechat_con .msgCode {
+	width: calc(100% - 11rem);
+	width: -moz-calc(100% - 11rem);
+	width: -webkit-calc(100% - 11rem);
+}
+
+#oSendCodeBtn {
+	font-size: 1.4rem;
+	background: rgb( 165, 165, 165);
+	text-align: center;
+	text-indent: 0;
+	color: #fff;
+	width: 11rem;
+	height: 4.4rem;
+	border: none;
+}
+
+#btn_Confirm {
+	font-size: 1.6rems;
+	text-indent: 0;
+	background: rgb( 255, 172, 42);
+	color: #fff;
+	border-radius: .5rem;
+}
+#mmsg {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 4.4rem;
+	margin-left: 0;
+	background: rgb( 254, 64, 90);
+	color: #fff;
+	text-align: center;
+	font-size: 1.6rem;
+	border-radius: 0;
+}
+.ws_wechat_login{text-align: right;}
+.ws_wechat_login a{
+	color:#fff;
+	font-size: 1.4rem;
+}

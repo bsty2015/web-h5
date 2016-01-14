@@ -1,0 +1,102 @@
+/* ========== */
+/* = 注册页面协议 = */
+/* ========== */
+
+.reg-agree {
+    font-size: 1.4rem;
+    color: rgb(152, 152, 152);
+    margin-top: 2.8rem;
+    text-align: center;
+}
+
+.reg-agree .iconfont {
+    font-size: 1.8rem;
+    margin-right: 0rem;
+}
+
+.reg-active {
+    color: #00CD98;
+}
+
+.reg-active-bg {
+    background: #00CD98;
+}
+
+/* ========== */
+/* = 注册页面输入框 = */
+/* ========== */
+
+.inpbor-bottom-30 {
+    font-size: 1.5rem;
+    color: rgb(93, 93, 93);
+    line-height: 3rem;
+}
+
+/* ========== */
+/* = regcode.html = */
+/* ========== */
+
+.regCodeTell {
+    color: rgb(93, 93, 93);
+}
+
+.regcode {
+    text-align: center;
+}
+
+.regcode input {
+    /*width: 2rem;*/
+
+    text-align: center;
+    display: inline-block;
+    height: 3rem;
+    /*margin: .5rem;*/
+
+    color: rgb(93, 93, 93);
+    border: none;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+/* ========== */
+/* = regpassword.html = */
+/* ========== */
+
+.wrapPassword {
+    position: relative;
+}
+
+.regSetPassword {
+    height: 3rem;
+}
+
+.regShowPassword {
+    font-size: 2.5rem;
+    color: rgb(206, 206, 206);
+    position: absolute;
+    right: 4rem;
+    top: 1rem;
+    height: 1.3rem;
+    background: url(/img/password.png) center no-repeat;
+    width: 2rem;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.regShowPasswordActive {
+    font-size: 2.5rem;
+    color: rgb(206, 206, 206);
+    position: absolute;
+    right: 4rem;
+    top: 1rem;
+    background: url(/img/passwordActive.png) center no-repeat;
+    height: 1.3rem;
+    width: 2rem;
+    background-size: cover;
+    -webkit-background-size: cover;
+}
+
+body {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}

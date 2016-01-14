@@ -1,0 +1,94 @@
+<!--<!DOCTYPE html>-->
+<%- layout('blank-layout') -%>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/reg.css"/>
+<script src="<%=assertHost%>/js/modules/showHidden-config.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=assertHost%>/js/modules/ctrNextBtn-config.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=assertHost%>/js/modules/movie-config.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/share.css"/>
+<script src="<%=assertHost%>/js/modules/ctrShare-confi.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/movie.css"/>
+<html>
+
+<body>
+
+<input type="hidden" name="" id="loadingText" value="正在提交中..."/>
+<input type="text" name="mmsg" id="mmsg" value=""/>
+
+<p>
+    <img class="img-full" src="<%=assertHost%>/img/mpz/mpz.png" alt="百度活动"/>
+</p>
+<article>
+    <%if(isLogin==undefined){%>
+    <form id="url" action="Javascript:;" data-url="/moviereg" method="post">
+        <p>
+            <input type="tel" name="telephone" id="telephone" maxlength="11" value="" placeholder="输入手机号"/>
+        </p>
+
+        <p class="pTop1 code">
+            <input type="tel" name="validateCode" maxlength="6" id="validateCode" value="" placeholder="短信验证码"/>
+            <button class="send-code">
+                发送验证码
+            </button>
+        </p>
+        <p class="pTop1 pBottom1">
+            <input type="password" name="passwd" id="passwd" value="" maxlength="16" placeholder="设置6~16位密码"/>
+        </p>
+
+        <p class="clear">
+            <a href="javascript:;">
+                <button class="reg-btn">注册</button>
+            </a>
+            <a class="fr FontColorWhite mRight2 FontSize16" href="/login">已有账号，马上登录</a>
+        </p>
+        <section id="msTip">
+            <input type="text" name="" id="msg" value="<%=outString(msg)%>"/>
+        </section>
+    </form>
+    <%}else{%>
+    <%if(source=='movie'){%>
+    <%if(isInvest==true){%>
+    <P>
+        <a href="/user/message">
+            <button class="look-btn">查看电影红包</button>
+        </a>
+    </p>
+    <%}else{%>
+    <P>
+        <a href="/product/list">
+            <button class="look-btn">购买理财领红包</button>
+        </a>
+    </p>
+    <%}%>
+    <%}else{%>
+    <P>
+        <a class="showShare" href="javascript:;">
+            <button class="look-btn">邀请好友看电影</button>
+        </a>
+    </p>
+    <%}%>
+    <%}%>
+</article>
+<article>
+			<pre>
+				<h3>活动规则</h3>
+1. 活动时间：10月23日至10月31日；
+2. 活动期间，新用户（尚未购买过集财理财产品的用户）购买集财理财产品（不包括万元体验金理财产品），即可获得微信电影红包；
+3. 用户首笔购买月度理财产品可得10元微信电影红包，用户首笔购买季度理财产品可得30元微信电影红包。每个集财用户最多可获得1个微信电影红包；
+4. 万元体验金理财产品不参加本次活动。新用户购买万元体验金理财产品后再购买月度或季度理财产品，将不会获得电影红包奖励；
+5. 交易完成后，微信电影红包会以短信形式发送到用户注册手机号。用户也可以在集财用户消息中心查看获取到的微信电影红包；
+6. 获取到的微信电影红包，在集财微信公众号中点击“观影季”——“红包兑换”兑换使用红包；
+7. 微信电影红包可以在微信电影选座购票时抵扣使用。原票面价格小于等于红包金额时，需支付0.01元完成交易。红包有效期三十天，自发出之日起计算。红包不可与其他电影特价活动同时使用；
+8. 本次活动不参与礼金兑付。如有疑问请致电400-005-3300获取帮助。
+			</pre>
+</article>
+<!--分享部分代码-->
+<section class="shareparent share">
+    <img class="img-full" src="<%=assertHost%>/img/shareBg1.png"/>
+
+    <p>
+        <button class="hidden shareHidden">我知道了</button>
+    </p>
+</section>
+</body>
+
+</html>

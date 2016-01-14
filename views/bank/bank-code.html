@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<%-layout( 'blank-layout') -%>
+<html>
+
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/addBank.css"/>
+
+<body>
+
+
+<header>
+    <img class="img-full" src="<%=assertHost%>/img/pay_bg2.gif"/>
+</header>
+<article>
+
+    <form data-url="/bank/sendCode" id="bankcodeform" action="/bank/sendCode" method="post">
+        <ul>
+            <li class="algin">
+                <p class="regCodeTell FontSize18 AlginCenter">我们已将验证码发送至您的手机</p>
+
+                <p class="FontColorGreen FontSize18 AlginCenter firstfont">
+                    <%=phone %>
+                </p>
+            </li>
+            <li class="regcode mTopBottom2">
+                <input class="bank-code-ctr ctr-h-img getcode inpbor-bottom-30 FontSize15" type="tel"
+                       name="validatecode" id="" value="" placeholder="请输入验证码"/>
+            </li>
+            <li class="begin-input">
+                <!--<button class="btn-39-green"><span class="iconfont">&#xe615;</span>重新发送<span >36</span><span>s</span>
+                </button>-->
+                <!--<input class="btn-39-green" type="submit" name="" id="repetSend" value="重新发送36(s)" />-->
+                <a id="repetSend" class="FontColor120 FontSize14 display-block visited120 AlginCenter bg-no"
+                   href="javascript:;" data-url="/bank/repeatCode">
+                    重新发送
+                    <span id="time" class="firstfont FontColorGreen"></span>
+                </a>
+                <input type="hidden" name="loadingText" id="loadingText" value="信息提交中..."/>
+                <button id="bankCodeNextBtn" class="btn-55-green mTop2">下一步</button>
+            </li>
+        </ul>
+    </form>
+</article>
+<section id="msTip">
+    <input type="text" name="" id="msg" value="<%=outString(msg)%>"/>
+</section>
+<script src="<%=assertHost%>/js/modules/getcode-config.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=assertHost%>/js/modules/showHidden-config.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

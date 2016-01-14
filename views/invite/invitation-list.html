@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<%-layout( 'blank-layout') -%>
+<html class="bg-white">
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/invitation.css"/>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/share.css"/>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/invite.css">
+<body>
+<header class="header">
+    <div class="left-div">
+        <ul>
+            <li class="remenber">我的邀请记录</li>
+            <li>
+                <button class="button">查看奖励规则</button>
+            </li>
+        </ul>
+    </div>
+    <div class="right-div">
+        <img src="<%=upai%>" class="img-click">
+    </div>
+</header>
+<!--浮层弹窗start-->
+<!-- NEW creat by zhongciyisheng@live.com on 2015年10月23日15:23:31 修改了遮罩-->
+<ul id="mask" class="ws_mask">
+    <li class="img-mask">
+        <img src="<%=upai%>"/>
+
+        <p class="FontSize15">邀请好友扫码加入集财</p>
+    </li>
+</ul>
+<!--浮层弹窗end-->
+<section class="rule">
+
+    <ul>
+        <li>
+            <h3>集财菜籽计划规则</h3>
+        </li>
+        <li>
+            <p>
+                <span>1</span> 、推荐好友注册
+                <br/> 送2000积分；
+            </p>
+        </li>
+        <li>
+            <p>
+                <span>2</span> 、推荐好友交易
+                <br/> 首次送8000积分；
+                <br/> 再次交易按照交易金额和期限不同，积分算法如下：
+                <br/> 月度产品：积分＝购买金额 / 12；
+                <br/> 季度产品：积分＝购买金额 / 4；
+                <br/> 半年产品：积分＝购买金额 / 2；
+                <br/> 全年产品：积分＝购买金额；
+                <br/> 新手产品：固定送1000积分；
+                <br/>
+            </p>
+        </li>
+        <li>
+            <p>
+                <span>3</span>、单个推荐好友交易满10000元
+                <br/> 送10元礼金；
+            </p>
+        </li>
+        <li>
+            <p>
+                <span>4</span>、每5个好友交易满10000元
+                <br/> 送50元礼金；
+            </p>
+        </li>
+        <li>
+            <p>
+                <span>5</span>、满20个好友交易满10000元
+                <br/> 送专享1%年化收益增幅。
+            </p>
+        </li>
+    </ul>
+</section>
+<article class="pTop2">
+    <table border="0" cellspacing="" cellpadding="" width="100%">
+        <tr>
+            <th>日期</th>
+            <th>手机号</th>
+            <th>操作</th>
+            <th style="background: none;">奖励</th>
+        </tr>
+        <% for(var i=0;i
+        <invites.length
+        ;i++){
+        var invite = invites[i];
+        %>
+        <tr>
+            <td class="firstfont"><%=formatYMDDate(invite.inviteDate)%></td>
+            <td class="firstfont"><%=invite.telephone%></td>
+            <td><% if(invite.isInvest){%>是<%}else{%>否<%}%></td>
+            <td class="FontColorred"><span class="firstfont"><%=invite.award%></span>积分</td>
+        </tr>
+        <%}%>
+    </table>
+    <a class="show showShare" href="javascript:void();">
+        <button class="btn-55-green mTop2 shareButton btn-red">立即邀请</button>
+    </a>
+</article>
+<!--分享部分代码-->
+<section class="shareparent share">
+    <img class="img-full" src="<%=assertHost%>/img/shareBg1.png"/>
+
+    <p>
+        <button class="shareHidden">我知道了</button>
+    </p>
+</section>
+
+<script src="<%=assertHost%>/js/modules/ctrShare-confi.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=assertHost%>/js/modules/showHidden-config.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+	

@@ -1,0 +1,95 @@
+body {
+    background: rgb(245, 245, 245);
+}
+
+nav {
+    background: #fff;
+}
+
+nav a {
+    width: 20%;
+    font-size: 1.4rem;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    display: inline-block;
+    padding: 1.54rem 0;
+    font-weight: 900;
+}
+
+nav .active {
+    border-bottom: .3rem solid rgb(255, 114, 112);
+}
+
+footer {
+    margin-bottom: 4rem;
+    margin-top: 1rem;
+}
+
+footer a {
+    position: relative;
+    color: rgb(153, 153, 153);
+    background: #fff;
+    display: block;
+    border-bottom: .1rem solid rgb(221, 221, 221);
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    padding: 1.5rem 0;
+}
+
+footer a:first-child {
+    text-indent: 2rem;
+}
+
+footer a .iconfont {
+    font-size: 1.6rem;
+    position: absolute;
+    right: 2rem;
+}
+
+footer ul {
+    display: none;
+}
+
+footer .active {
+    display: block;
+}
+
+footer li {
+    padding: 1.7rem 0;
+    margin-left: 2rem;
+    border-bottom: .1rem solid rgb(221, 221, 221);
+    position: relative;
+    font-size: 1rem;
+    color: rgb(102, 102, 102);
+}
+
+footer li:last-child {
+    border-bottom: none;
+}
+
+footer li span {
+    font-family: firstfont;
+    font-size: 1.0rem;
+    color: rgb(246, 104, 104);
+    position: absolute;
+    right: 2rem;
+}
+
+#back {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    z-index: 2;
+    background: #00CD98;
+}
+
+#back button {
+    background: #00CD98;
+    display: block;
+    width: 100%;
+    font-size: 1.8rem;
+    color: #fff;
+    border: none;
+    height: 4rem;
+}

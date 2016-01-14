@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<%-layout( 'blank-layout') -%>
+<html>
+
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/productMessages.css"/>
+<body>
+<% var BottomBtnHtml='';
+var className = '';
+if (product.status == '销售中') {
+className = 'product-bg-dpink pTopBottom2 pleft2 FontColorWhite';
+} else if (product.status == '待上架') {
+className = 'product-bg-dblue pTopBottom2 pleft2 FontColorWhite';
+} else if (product.status =='售完'||product.status =='兑换中' ||product.status =='兑付中') {
+className = 'product-bg-blue pTopBottom2 pleft2 FontColorWhite';
+} else if (product.status == '已兑换' ||product.status =='已兑付') {
+className = 'product-bg-green pTopBottom2 pleft2 FontColorWhite';
+}
+%>
+<header class="<%=className%>">
+
+    <h3 class="firstfont product-message-title"><%=product.name%></h3>
+    <ul class="clear">
+        <li class="fl head-width">
+            <p class="product-message-text">预期年化收益率</p>
+            <section class="clear">
+                <p class="fl firstfont"><span
+                        class="product-message-per firstfont"><%=product.interestRate%></span><span
+                        class="product-message-cent firstfont">%</span>
+                    <span class="product-message-per FontColorWhite"></span>
+                </p>
+                <% if(product.extraInterestRate> 0){%>
+                <p class="fl firstfont product-raduis-tag product-bg-yellow"><span>+</span>&nbsp;<span><%=product.extraInterestRate%></span>&nbsp;<span
+                        class="prdouct-per2">%</span>
+                </p>
+                <% } %>
+            </section>
+        </li>
+        <li class="fl mLeft2 product-day-wrap head-width2">
+            <p class="product-message-text">期限（天）</p>
+
+            <p class="product-message-day firstfont">
+                <%=product.collectDuration%>
+            </p>
+        </li>
+    </ul>
+</header>
+<article class="pTopBottom2 border5">
+    <ul class="clear pLeftRight2">
+        <li class="fl border-right">
+            <p class="FontColor120 product-message-num FontSize12">总金额（元）</p>
+
+            <p class="FontColor120 FontSize24 firstfont">
+                <%=formatCurrency(product.amt)%>
+            </p>
+        </li>
+        <li class="fl mLeft2">
+            <p class="FontColor120 FontSize12">剩余可购金额（元）</p>
+            <% if(product.status == '销售中'||product.status == '待上架'){%>
+            <p class="FontColorGreen FontSize24 firstfont">
+                <%=formatCurrency(product.remianAmt)%>
+            </p>
+            <%}%>
+            <% if(product.status == '兑付中' || product.status == '售完'||product.status == '已兑付'){%>
+            <p class="FontColorred FontSize24 firstfont">
+                0
+            </p>
+            <%}%>
+
+        </li>
+    </ul>
+    <p class="FontColorGreen mLeftRight2 mTop2 product-tips-wrap"><span
+            class="interest iconfont">&#xe629;即日起息</span><span class="guarantee iconfont">&#xe629;本息保障</span>
+        <% if(product.extraInterestRate> 0){%>
+        <span class="give iconfont">&#xe629;平台加送</span>
+        <% } %>
+        <% if(product.isNew=='是'){%>
+        <span class="Enjoy iconfont">&#xe629;新手专享</span>
+        <%}%>
+    </p>
+</article>
+<footer class="clear">
+    <ul>
+        <li class="FontSize18 FontColor120 clear pLeftRight2 pTopBottom1plus border1-c5">
+            <span class="fl">风险评级</span><!--<span class="iconfont fr">&#xe633;</span>--><span
+                class="FontColorGreen mLeftRight2 fr">超低风险</span>
+        </li>
+        <a href="/product/assetdetail/<%=product.id%>" class="diplay-block">
+            <li class="FontSize18 FontColor120 clear pLeftRight2 pTopBottom1plus border1-c5">
+
+                <span class="fl">更多详情</span><span class="iconfont fr">&#xe633;</span>
+
+                <!--<span class="FontColorGreen mLeftRight2 fr">超低风险</span>-->
+            </li>
+        </a>
+    </ul>
+    <%if(product.activity != null){%>
+    <!--<button class="product-event-btn fl FontSize12">活动</button>-->
+    <p class="product-event-text fl AlginCenter pleft4 FontColorred FontSize17">
+        <span><%=outString(product.activity)%></span>
+
+    </p>
+    <%}%>
+</footer>
+<p class="mTop1plus AlginCenter yg-logo FontColor120 FontSize12"><img src="<%=assertHost%>/img/yg.png"/>账户资金交易安全由阳光保险承保
+</p>
+<section>
+    <% if(product.status == '销售中'){%>
+    <%if(product.remianAmt <=0){%>
+    <a href="javascript:;">
+        <%}else{%>
+        <a href="/user/invest/<%=product.id%>">
+            <%}%>
+            <button class="bottom-btn product-bg-dpink">
+                <span class="bottom-buy-text">购买</span>&nbsp;<span>/</span>&nbsp;<span><%=product.limitAmt%></span><span>元起购</span>
+            </button>
+        </a>
+        <%}%>
+        <% if(product.status == '待上架'){%>
+        <input type="hidden" id="J_remainTime" value="<%=product.date%>"/>
+        <a href="javascript:;">
+            <button class="bottom-btn product-bg-dblue preBuy">
+                <img class="height2 alignM" src="<%=assertHost%>/img/Fill2.png"/>&nbsp;
+							<span class="FontSize16 alignM outTime">
+
+							</span>
+            </button>
+        </a>
+        <%}%>
+        <% if(product.status == '已兑换' || product.status == '已兑付'){%>
+        <a href="javascript:;">
+            <button class="bottom-btn bg-green">
+                <span class="FontSize24 FontColorWhite">已兑付</span>
+            </button>
+        </a>
+        <%}%>
+        <% if(product.status =='售完'||product.status =='兑换中' ||product.status =='兑付中'){%>
+        <a href="javascript:;">
+            <button class="bottom-btn product-bg-blue outBuy">
+                <span class="FontSize24 FontColorWhite">已售完</span>
+            </button>
+        </a>
+        <%}%>
+
+</section>
+<section id="msTip">
+    <input type="text" name="" id="" value="<%=outString(msg)%>" readonly="readonly"/>
+</section>
+
+</body>
+</html>
+<script src="<%=assertHost%>/js/modules/showTime-config.js" type="text/javascript" charset="utf-8"></script>

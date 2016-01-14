@@ -1,0 +1,78 @@
+* {
+	box-sizing: border-box;
+}
+body{
+	background: #F5F5F5;
+	font-family: ;
+}
+.img-full{
+	display: block;
+	width: 100%;
+}
+.pro-box{
+	background: white;
+	padding-bottom: 1rem;
+	padding-top: 2.5rem;
+}
+.pro-name{
+	padding-left: 1rem;
+	color:#666666;
+	font-size: 1.4rem;
+}
+.pro-name .hot{
+	display: inline-block;
+	height:1.9rem;
+	font-size: 1.2rem;
+	width: 4.8rem;
+	margin-right: 1rem;
+	color: white;
+	background: #E01D2B;
+	text-align: center;
+	line-height: 1.9rem;
+	margin-top: -1rem;
+	border-radius: 0.5rem;
+}
+.pro-ul{
+	padding-left: 1rem;
+	width: 100%;
+}
+.pro-ul li{
+	color: #666;
+	font-size: 1.2rem;
+	margin-bottom: 1.2rem;
+}
+.pro-ul li.li1{
+	width: 33%;
+}
+.pro-ul li.li2{
+	width: 30%;
+}
+.pro-ul li.li3{
+	width: 37%;
+}
+.pro-ul .li-color{
+	color: #E01D2B;
+	font-size: 2rems;
+}
+.pro-ul .li-font{
+	font-family: firstfont;
+	font-size: 1.8rem;
+}
+.buy-a{
+	font-size: 1.6rem;
+	color: white;
+	background:#E01D2B ;
+	display: block;
+	text-align: center;
+	line-height: 4rem;
+	height: 4rem;
+	margin: 1rem ;
+	
+}
+.divider{
+	width: 100%;
+	height: 1px;
+	margin: 0 auto;
+	margin: 1.5rem 0;
+	border-bottom: 1px dashed #DDDDDD;
+}

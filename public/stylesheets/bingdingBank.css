@@ -1,0 +1,195 @@
+header {
+    position: relative;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    background: -webkit-linear-gradient(top, #15b28a, #00cd98);
+}
+
+header button {
+    width: 7.9rem;
+    height: 2.2rem;
+    color: #00CD98;
+    background: #fff;
+    font-size: 1.2rem;
+    border-radius: 1.1rem;
+    border: 1px solid #00CD98;
+    margin-left: 1rem;
+}
+
+.per {
+    margin-left: 1rem;
+}
+
+.h-bingdingbang-text {
+    padding-top: 1rem;
+}
+
+@media only screen and (min-width: 320px) {
+    .head-bingding-bg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 6rem;
+    }
+}
+
+@media only screen and (min-width: 100px) and (max-width: 320px) {
+    .head-bingding-bg {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 5rem;
+    }
+}
+
+.bingding-tag {
+    color: #FFFFFF;
+    height: 2rem;
+    border-radius: .3rem;
+    margin-bottom: .8rem;
+    margin-top: 1.4rem;
+    margin-left: 2rem;
+}
+
+.bingding-tag-bgGray {
+    background: #adadad;
+    border: 1px solid #adadad;
+}
+
+.bingding-tag-bgGreen {
+    background: #65bc1d;
+    border: 1px solid #65bc1d;
+}
+
+label {
+    width: 30%;
+}
+
+input {
+    border: none;
+    width: 60%;
+}
+
+.fisrt-bank {
+    position: relative;
+}
+
+.bingdingbank-logo {
+    /*background: url(../img/bankbg/abc.png)0 center no-repeat;*/
+
+    position: relative;
+}
+
+.bingdingbank-logo img {
+    position: absolute;
+    left: 0rem;
+    top: 1.5rem;
+}
+
+.bingding-num {
+    color: #fe721c;
+}
+
+.bingding-set-color {
+    color: #65bc1d;
+}
+
+.bingding-agree {
+    color: #13b58b;
+}
+
+/* = paycode.html = */
+
+.pay-code-input {
+    margin-top: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 2rem;
+}
+
+.set-input {
+    /*border: 1px solid red;*/
+
+    width: 3rem;
+    height: 3rem;
+}
+
+.pay-code-ul {
+    margin: 0 -webkit-calc(50% - 9.6rem);
+}
+
+.pay-code-relative {
+    text-align: center;
+    position: relative;
+}
+
+.pay-code-absolute {
+    position: absolute;
+    left: .8rem;
+    top: -2rem;
+}
+
+header {
+    padding: 0;
+    background: none;
+}
+
+.BankText {
+    font-size: 1.6rem;
+    color: #0079ff;
+    margin-top: 1rem;
+}
+
+.BankText2 {
+    font-size: 1.2rem;
+    color: rgb(120, 120, 120);
+}
+
+.showHidden {
+    height: 100%;
+    display: none;
+    position: absolute;
+    padding: 2rem;
+    padding-top: 10rem;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+body {
+    overflow: scroll;
+}
+
+.set-right {
+    position: relative;
+    top: 1rem;
+}
+
+.my-bank-listbg {
+    position: relative;
+    top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.add-bank-btn {
+    display: block;
+    height: 4rem;
+    background: #fff;
+    /*color: rgb(120,120,120);*/
+    font-size: 1.6rem;
+    /*border: 1px solid rgb(120,120,120);*/
+    width: -webkit-calc(100% - 4rem);
+    width: calc(100% - 4rem);
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-radius: 3px;
+}
+
+.add-bank-wrap {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    background: #fff;
+}

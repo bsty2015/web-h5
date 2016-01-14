@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<% layout('blank-layout') -%>
+<html>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/wechatbind.css"/>
+<body>
+<div class="box"
+<% if(isLogin){%>style="display: none" <%}%>>
+<p class="logo-p"><img src="<%=assertHost%>/img/wechat_Dec_activity/logo.png"></p>
+
+<p class="text">尚未登录集财<br>填写您的集财账户信息绑定当前微信</p>
+<aside>
+    <form action="javascript:;" class="bind-form" method="post">
+        <p class="bind-p"><input type="tel" placeholder="输入手机号" name="telephone" class="tel" maxlength="11"
+                                 onkeyup="value=value.replace(/[^\d]/g,'')"></p>
+
+        <p class="bind-p"><span></span></p>
+
+        <p class="bind-p"><input type="password" placeholder="输入密码" class="password" name="passwd" maxlength="16"></p>
+
+        <p class="submit-p">
+            <button class="bind-btn bind-ok">绑定</button>
+        </p>
+        <p class="info-p"><a class="forget-pass" href="/forgetPage">忘记密码</a></p>
+
+        <p id="ws_set_center"><br/>
+            <a class="reg-a FontSize14" href="/toReg">还没账号，立即注册</a>
+        </p>
+
+        <div>
+
+        </div>
+    </form>
+</aside>
+</div><!--box end -->
+
+<div class="container"
+<% if(!isLogin){%>style="display: none" <%}%>>
+<p class="logo-p"><img src="<%=assertHost%>/img/wechat_Dec_activity/logo.png"></p>
+
+<p class="text">您的微信尚未绑定集财账户<br>是否与下面集财账户绑定</p>
+<aside>
+    <form action="javascript:;" class="bind-form" method="post">
+        <p class="bind-p"><input type="tel" placeholder="输入手机号" class="tel" value="<%=telephone%>" maxlength="11"></p>
+
+        <p class="submit-p">
+            <button class="bind-btn bind-yes">是的，现在绑定</button>
+        </p>
+        <p class="submit-p">
+            <button class="nobind-btn">不，绑定其他集财账户</button>
+        </p>
+    </form>
+</aside>
+</div>
+<!--<p class="bind-succ">绑定成功</p>-->
+<section id="msTip">
+    <input type="text" name="" id="msg" value="<%=outString(msg)%>"/>
+</section>
+<p class="errorTip"></p>
+<script src="<%=assertHost%>/js/wechat_Dec_activity/wechatbind-config.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

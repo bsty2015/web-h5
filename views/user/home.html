@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/ucenter.css"/>
+
+<body class="bg-219">
+<header>
+    <h3>总资产（元）</h3>
+
+    <p class="num">
+        <%=formatCurrency(user.totalAssetAmt)%>
+    </p>
+    <section>
+        <ul class="clear">
+            <li class="fl">
+                <p class="ucenter-text">今日收益 (元)</p>
+
+                <p class="ucenter-num firstfont">
+                    <%=formatCurrency(user.todayTotalProfit)%>
+                </p>
+            </li>
+            <li class="fl mLeft2">
+                <p class="ucenter-text">累计收益 (元)</p>
+
+                <p class="ucenter-num firstfont">
+                    <%=formatCurrency(user.totalprofitAmt)%>
+                </p>
+            </li>
+        </ul>
+    </section>
+</header>
+<table border="0" cellspacing="" cellpadding="">
+    <tbody>
+    <tr>
+        <td class="uBg1">
+            <a href="/user/info" class="noborder">账户信息
+                <span class="iconfont FontColor120 fr">&#xe633</span>
+                <!--<span class="firstfont fr">50</span>-->
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<table border="0" cellspacing="" cellpadding="">
+    <tbody>
+    <tr>
+        <td class="uBg2">
+            <a href="/user/unpay" class="clear">未完成订单
+                <span class="iconfont FontColor120 fr">&#xe633</span>
+                <span class="firstfont setposition fr FontColorBf"><%=user.unpayNum%></span>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td class="uBg3">
+            <a href="/user/productList">资产
+                <span class="iconfont FontColor120 fr">&#xe633</span>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td class="uBg4">
+            <a href="/user/cash">礼金
+                <span class="iconfont FontColor120 fr">&#xe633</span>
+                <span class="fr setposition FontColorred firstfont">￥<%=user.cashAmt%></span>
+            </a>
+
+        </td>
+    </tr>
+    <tr>
+        <td class="uBg5">
+            <a href="/user/credit">积分
+                <span class="iconfont FontColor120 fr">&#xe633</span>
+                <span class="firstfont setposition fr FontColorBf"><%=user.creditsNum%></span>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td class="uBg6">
+            <a href="/bank/list" class="noborder" href="javascript:;">银行卡
+                <span class="iconfont FontColor120 fr">&#xe633</span>
+                <span class="firstfont setposition fr FontColorBf"><%=user.cardNum%></span>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<table border="0" cellspacing="" cellpadding="">
+    <tbody>
+    <tr>
+        <td class="uBg7">
+            <a href="/inviteList" class="">邀请好友
+                <span class="iconfont FontColor120 fr">&#xe633</span>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td class="uBg8">
+            <a href="/user/message" class="noborder">消息
+                <span class="iconfont FontColor120 fr">&#xe633</span>
+                <%if(user.isExistMsg){%>
+                <span class="FontColorred setposition fr firstfont iconfont">&#xe625;</span>
+                <%}%>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<table border="0" cellspacing="" cellpadding="">
+    <tbody>
+    <tr>
+        <td>
+            <a class="setposition2 FontColorred noborder" href="/signout">退出账号</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<section id="msTip">
+    <input type="text" name="" id="msg" value="<%=outString(msg)%>"/>
+</section>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<%-layout('blank-layout') -%>
+<!--  ==========  -->
+<!--  = 产品列表 =  -->
+<!--  ==========  -->
+<html>
+<!--<link rel="stylesheet/less" type="text/css" href="<%=assertHost%>/stylesheets/virtualGifts/exper.css" />-->
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/virtualGifts/exper.css"/>
+<title>万元理财金计划</title>
+
+<body>
+<header>
+    <img class="img-full" src="<%=assertHost%>/img/virtualGifts/details.jpg"/>
+    <a href="/virtual/rule">
+        <button>查看规则</button>
+    </a>
+</header>
+<footer>
+    <% if(products.length=='0'||products=='undefined'){ %>
+    <!--<i style="font-size: 10rem;color: #c1c1c1;display: block;text-align: center;margin-top:2rem"
+       class="iconfont FontColor120">&#xe642;</i>-->
+    <img class="img-full" src="<%=assertHost%>/img/virtualGifts/saleout.jpg"/ >
+    <% } else { %>
+    <% for(var i=0;i
+    <products.length
+    ;i++){
+    var product = products[i];
+    var className = '';
+    var statusName = '';
+    if(product.status =='销售中'){
+    className = 'plist-tag-red alignM';
+    statusName ="热 卖";
+    }else if(product.status =='待上架'){
+    className = 'plist-tag-blue alignM';
+    statusName ="预 售";
+    }else if(product.status =='售完'||product.status =='兑换中' ||product.status =='兑付中'){
+    className = 'plist-tag-gray alignM';
+    statusName ="已售完";
+    }else if(product.status =='已兑换' || product.status =='已兑付'){
+    className = 'plist-tag-green alignM';
+    statusName ="已兑付";
+    }else if(product.status == '待还款'){
+    statusName = "持有中";
+    }else if(product.status == '已还本金'){
+    statusName = "兑付本金";
+    }else if(product.status == '已还款' && product.repayprofitDate != undefined){
+    statusName = "兑付收益";
+    }
+    %>
+
+    <p class="titile">
+        <!--
+            作者：zhongciyisheng@live.com
+            时间：2015-09-09
+            描述：button 有 4 种状态，更改class名字即可，分别
+            hot：热卖、
+            cashing：兑现
+            hold：持有、
+            cash：兑付收益
+        -->
+        <% if(product.isSale == 1) {%>
+        <button class="hold">
+            <%=statusName%>
+        </button>
+        <% } else { %>
+        <button class="hot">
+            <%=statusName%>
+        </button>
+        <% } %>
+        <span><%=product.name%></span>
+    </p>
+    <table border="0" cellspacing="" cellpadding="">
+        <tr>
+            <td class="first">预期年化收益率</td>
+            <td>理财期限 (天)</td>
+            <td>剩余可购金额（元）</td>
+        </tr>
+        <tr>
+            <td class="first"><%=product.rate%>%
+                <% if(product.extraRate >0){ %>
+                <span>+</span>
+                <%=product.extraRate%>%
+                <%}%>
+            </td>
+            <td class="FontSize20"><%=product.duration%></td>
+            <td><%=product.remainAmt%></td>
+        </tr>
+    </table>
+    <% if(product.isSale == 1) {%>
+    <a class="buy_btn" href="/virtual/productDetail/<%=product.irId%>">
+        <button class="hoted">立即查看</button>
+    </a>
+    <% } else { %>
+    <a class="buy_btn" href="/virtual/detail/<%=product.id%>">
+        <!--
+            作者：zhongciyisheng@live.com
+            时间：2015-09-09
+            描述：button 有 2 种状态，更改class名字即可，分别
+            hot：热卖、
+            hoted:兑现、持有、兑付、收益
+        -->
+        <button class="hot">立即购买</button>
+    </a>
+    <% } %>
+    <% } %>
+    <% } %>
+</footer>
+</body>
+
+</html>

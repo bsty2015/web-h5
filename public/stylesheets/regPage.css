@@ -1,0 +1,141 @@
+/*
+ * time:2015年11月4日16:30:16.
+ * user：zhongciyisheng@live.com
+ * tips：新的注册页面。注册只在一个页面完成。
+ */
+
+body {
+    background: rgb(245, 245, 245);
+}
+
+.reg_page_form {
+    padding-top: 16px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.reg_page_form input {
+    border: none;
+    width: -webkit-calc(100% - 2rem);
+    width: -moz-calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    display: block;
+    height: 44px;
+    text-indent: 3.3rem;
+    margin-left: 2rem;
+    font-size: 12px;
+}
+
+#btn_Confirm {
+    display: block;
+    width: -webkit-calc(100% - 4rem);
+    width: -moz-calc(100% - 4rem);
+    width: calc(100% - 4rem);
+    margin: 0 auto;
+    border-radius: .3rem;
+    margin-top: 29px;
+    border: none;
+    background: #ddd;
+    color: #fff;
+    height: 44px;
+    font-size: 1.4rem;
+}
+
+.reg_page_form_top,
+.reg_page_form_center {
+    position: relative;
+    background: #fff;
+    border: 1px solid rgb(221, 221, 221);
+    border-left: none;
+    border-right: none;
+}
+
+.reg_page_form_center {
+    margin-top: 16px;
+}
+
+.reg_page_form_center button {
+    background: #ddd;
+    border: none;
+    font-size: 1.2rem;
+    position: absolute;
+    padding: 0;
+    right: 2rem;
+    line-height: 30px;
+    bottom: 52px;
+    text-align: center;
+    border-radius: 15px;
+    height: 30px;
+    background: rgb(221, 221, 221);
+    width: 83px;
+    color: #fff;
+}
+
+.reg_page_form_top span {
+    position: absolute;
+    height: 35px;
+    width: 83px;
+    right: 2rem;
+    bottom: 5px;
+    background: rgb(221, 221, 221);
+}
+
+.reg_page_form_top span img {
+    width: 100%;
+    height: 100%;
+}
+
+.reg_page_form_top .tel {
+    border-bottom: 1px solid rgb(221, 221, 221);
+    background: url(../img/regpage/SJ.png) no-repeat 0 center;
+    background-size: 25px 25px;
+}
+
+.reg_page_form_center .msgCode {
+    border-bottom: 1px solid rgb(221, 221, 221);
+    background-size: 25px 25px;
+}
+
+.imgCode {
+    background: url(../img/regpage/YZM.png) no-repeat 0 center;
+    background-size: 25px 25px;
+}
+
+.msgCode {
+    background-size: 25px 25px;
+    background: url(../img/regpage/DX.png) no-repeat 0 center;
+}
+
+.setPsd {
+    background-size: 25px 25px;
+    background: url(../img/regpage/MM.png) no-repeat 0 center;
+    background-size: 25px 25px;
+}
+
+.reg_page_form em {
+    position: absolute;
+    right: 2rem;
+    bottom: 0;
+    height: 44px;
+    width: 44px;
+}
+
+.reg_page_form em img {
+    height: 18px;
+    margin-top: 10px;
+}
+
+#mmsg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.4rem;
+    margin-left: 0;
+    background: rgb(254, 64, 90);
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    border-radius: 0;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/Index.css"/>
+<script src="<%=assertHost%>/js/modules/msgTip-config.js" type="text/javascript" charset="utf-8"></script>
+
+<body>
+<article>
+    <% for(var i=0;i
+    <banners.length
+            ;i++){
+            var banner=banners[i];
+            %>
+        <p>
+            <a class="exper" href="<%=banner.link%>">
+                <img class="img-full" src="<%=banner.imageName%>"/>
+            </a>
+        </p>
+        <%}%>
+</article>
+</body>
+<script src="<%=assertHost%>/js/modules/IndexImgCtr-config.js" type="text/javascript" charset="utf-8"></script>
+</html>

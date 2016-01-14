@@ -1,0 +1,200 @@
+.addBank-tag {
+    height: 2rem;
+    /*background: rgb(172, 172, 172);*/
+
+    background: #00CD98;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    border-radius: .3rem;
+    /*border: 1px solid rgb(172, 172, 172);*/
+
+    border: 1px solid #00CD98;
+}
+
+.look-btn {
+    height: 1.6rem;
+    color: rgb(120, 120, 120);
+    font-size: 1.4rem;
+}
+
+.bankcode-btn {
+    color: #fff;
+    background: #00CD98;
+    font-size: 1.4rem;
+    border-radius: .4rem;
+    height: 3.1rem;
+    border: 1px solid #00CD98;
+}
+
+.input-code {
+    height: 3.1rem;
+    width: 4em;
+}
+
+table {
+    width: 100%;
+    padding-left: 2rem;
+}
+
+tr {
+    border-bottom: 1px solid rgb(197, 197, 197);
+}
+
+td:nth-child(1) {
+    text-indent: 2rem;
+    height: 5rem;
+    width: 11rem;
+}
+
+table input {
+    width: 100%;
+    border: none;
+    background:;
+    padding: 0;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 2px;
+    font-size: 1.6rem;
+    font-family: firstfont;
+    color: rgb(59, 59, 59) !important;
+}
+
+table label {
+    font-size: 1.6rem;
+    color: rgb(120, 120, 120);
+}
+
+/*-------add-bank的银行卡列表--------*/
+
+.add-bank-list {
+    display: none;
+    /*background: #ccc;*/
+}
+
+.add-bank-list ul {
+    height: auto;
+    width: -webkit-calc(100% - 4rem);
+    background: rgba(0, 0, 0, .5);
+    padding: 2rem;
+    top: 0;
+    position: absolute;
+}
+
+.add-bank-list .bank-bg {
+    height: 3rem;
+    width: 3rem;
+    position: relative;
+    top: .6rem;
+    background-size: 2.6rem;
+    -webkit-background-size: 2.6rem;
+}
+
+.add-bank-list li {
+    background: #FFFFFF;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.add-bank-list span span {
+    font-family: firstfont;
+}
+
+.CTRHiddenWrpa {
+    position: relative;
+}
+
+.CTRHidden {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    position: absolute;
+    right: -0.2rem;
+    color: #444;
+    top: -1.2rem;
+}
+
+/* ========== */
+/* = Banner = */
+/* ========== */
+
+.setbg {
+    background: #f3f4f6;
+}
+
+#blist {
+    padding: .1rem 1rem 0 1rem;
+}
+
+.blistp {
+    position: relative;
+    background: #fff;
+    border-radius: .5rem;
+    height: 13.6rem;
+}
+
+.btitle {
+    position: absolute;
+    top: 2.4rem;
+    left: 6.6rem;
+}
+
+.bnum {
+    position: absolute;
+    top: 4.8rem;
+    left: 6.6rem;
+}
+
+.bimg {
+    height: 3.8rem;
+    position: absolute;
+    left: 1rem;
+    top: 2.8rem;
+}
+
+.alin {
+    width: 90%;
+    position: absolute;
+    top: 8.8rem;
+    left: 1rem;
+    border: .05rem solid #dddddd;
+}
+
+.tip {
+    position: absolute;
+    top: 10rem;
+}
+
+.tip .tipS {
+    display: inline-block;
+    text-align: center;
+    line-height: 1.7rem;
+    color: #fff;
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+    height: 1.7rem;
+    width: 6.8rem;
+    margin-right: .3rem;
+    background: #ff7e0e;
+}
+
+.text {
+    color: rgb(145, 145, 145);
+    font-size: 1.2rem;
+}
+
+.text span {
+    font-family: firstfont;
+    line-height: 1.9rem;
+}
+
+.subBtn button {
+    background: none;
+    border-radius: 2.8rem !important;
+    color: #2fadff !important;
+    border-color: #2fadff !important;
+}
+
+.subBtn p {
+    color: rgb(120, 120, 120);
+}

@@ -1,0 +1,122 @@
+html {
+    background: #f5f5f5;
+}
+
+header {
+    position: relative;
+    height: 12.2rem;
+    background: #ff7270;
+}
+
+header .property_list {
+    display: block;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+header .property_list li:nth-child(2) {
+    padding-top: 1rem;
+}
+
+header .toRight {
+    font-weight: normal;
+    position: absolute;
+    right: 3rem;
+    top: 5rem;
+}
+
+header .symbol {
+    display: inline-block;
+    padding-top: .2rem;
+    padding-right: .2rem;
+    padding-left: .2rem;
+    width: 1.2rem;
+    margin-right: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    background: #ffa8a8;
+}
+
+nav {
+    background: #fff;
+}
+
+nav a {
+    padding: 1.5rem 0;
+    font-size: 1.4rem;
+    font-weight: 900;
+    color: #333333;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+}
+
+nav .active {
+    color: #ff7270;
+    border-bottom: .3rem solid #ff7270;
+}
+
+.invest_have section,
+.invest_not section {
+    border-radius: .5rem;
+    background: #fff;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+}
+
+.invest_have .title,
+.invest_not .title {
+    border-bottom: .1rem solid #dddddd;
+}
+
+.invest_have .title p,
+.invest_not .title p {
+    font-size: 1rem;
+    padding: 1rem 0;
+    color: #999999;
+}
+
+.invest_have .title p:nth-child(1),
+.invest_not .title p:nth-child(1) {
+    margin-left: 1rem;
+}
+
+.invest_have .title p:nth-child(2),
+.invest_not .title p:nth-child(2) {
+    margin-right: 1rem;
+}
+
+.invest_have .content,
+.invest_not .content {
+    padding: 1rem;
+}
+
+.invest_have h4,
+.invest_not h4 {
+    font-size: 1.4rem;
+    color: rgb(51, 51, 51);
+}
+
+.invest_have .content,
+.invest_not .content {
+    color: rgb(102, 102, 102);
+    font-size: 1.6rem;
+}
+
+.invest_have .text,
+.invest_not .text {
+    font-size: 1rem;
+    color: rgb(102, 102, 102);
+}
+
+.invest_have .not_text,
+.invest_not .not_text {
+    font-size: 1rem;
+    color: rgb(153, 153, 153);
+}
+
+.invest_not .not_num {
+    color: #f66868;
+}
+
+/*.invest_not{display: none;}*/

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<%-layout( 'blank-layout') -%>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/cash.css"/>
+<html>
+
+
+<body>
+<article id="cash">
+    <% for(var i=0;i
+    <details.length
+    ;i++){
+    var item = details[i];
+    //未兑付
+    if(item.status == 1){
+    %>
+    <section>
+        <ul>
+            <li><%=item.source%></li>
+            <li>￥<span class="firstfont"><%=formatCurrency(item.amt)%></span></li>
+        </ul>
+        <p><span class="firstfont"><%=formatYMDDate(item.date)%></span>获得</p>
+        <a class="dotted"></a>
+    </section>
+
+    <%}else{%>
+    <section class="visited">
+        <ul>
+            <li><%=item.source%></li>
+            <li>￥<span class="firstfont"><%=formatCurrency(item.amt)%></span></li>
+        </ul>
+        <!--<img src="/img/cashbg2.png"/>-->
+        <p><span class="firstfont"><%=formatYMDDate(item.date)%></span>获得,已于<span class="firstfont"><%=formatYMDDate(item.repayDate)%></span>兑付
+        </p>
+        <span id="fil"></span>
+        <a class="dotted"></a>
+    </section>
+    <%}}%>
+</article>
+</body>
+</html>

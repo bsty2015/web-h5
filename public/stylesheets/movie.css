@@ -1,0 +1,114 @@
+/**
+ * created by zhongciyisheng@live.com on 2015年10月9日 18:38:26
+ * = 观影季  =
+ */
+
+body {
+    background: #000;
+    font-family: "microsoft yahei", "arial, helvetica, sans-serif", "Helvetica Neue";
+}
+
+article {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+input {
+    border: none;
+    height: 4.4rem;
+    width: 100%;
+    font-size: 1.4rem;
+    border-radius: .5rem;
+    text-align: center;
+    display: block;
+    width: calc(100% - 4rem);
+    width: -webkit-calc(100% - 4rem);
+    width: -moz-calc(100% - 4rem);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button {
+    margin-bottom: 2rem;
+    border: none;
+    font-size: 1.6rem;
+    height: 4.4rem;
+    color: #fff;
+    /*margin-top: 2rem;*/
+
+    margin-bottom: 2rem;
+    width: -webkit-calc(100% - 4rem);
+    width: -moz-calc(100% - 4rem);
+    width: calc(100% - 4rem);
+    /*background: rgb( 254, 64, 90);*/
+
+    background: rgb(165, 165, 165);
+    border-radius: .5rem;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article pre {
+    position: relative;
+    color: #DFDFDF;
+    border: 1px solid rgb(192, 170, 145);
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: .5rem;
+    word-wrap: break-word;
+}
+
+article pre h3 {
+    position: absolute;
+    top: -.9rem;
+    left: 50%;
+    margin-left: -5rem;
+    width: 10rem;
+    background: #000000;
+    text-align: center;
+}
+
+/**
+ * form
+ */
+
+form .code {
+    position: relative;
+}
+
+form .code button {
+    position: absolute;
+    right: 2rem;
+    padding: 0;
+    top: 1rem;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 8.3rem;
+    height: 4.4rem;
+    font-size: 1.2rem;
+    /*background: rgb( 4, 150, 254);*/
+
+    background: rgb(165, 165, 165);
+}
+
+#mmsg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.4rem;
+    background: rgb(254, 64, 90);
+    color: #fff;
+    text-align: center;
+    font-size: 1.6rem;
+    border-radius: 0;
+}
+
+.look-btn {
+    background: rgb(254, 64, 90);
+}

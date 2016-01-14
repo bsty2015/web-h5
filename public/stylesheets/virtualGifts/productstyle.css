@@ -1,0 +1,125 @@
+/*
+ * created by zhongciyisheng@live.com on *2015-9-8 14:34
+ */
+
+body {
+	background: #e9e9e9;
+}
+article,
+section,
+body,
+footer,
+header,
+aside,
+nav,
+{
+	max-width: 64rem;
+	margin: 0 auto;
+}
+header {
+	font-family: firstfont;
+	padding: 2.8rem 2rem 2.2rem 2rem;
+	background: #ff716d;
+}
+header h3 {
+	font-size: 1.6rem;
+	color: #fff;
+}
+header ul {
+	padding-top: 1rem;
+}
+header p {
+	padding-top: .3rem;
+	color: #fff;
+	font-size: 1.2rem;
+}
+header em {
+	color: #fff;
+	font-size: 2rem;
+	line-height: 2.6rem;
+}
+article {
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-bottom: 1rem;
+	background: #fff;
+}
+article ul {
+	background: url(../../img/virtualGifts/productbg.gif) no-repeat center;
+}
+article p {
+	padding-top: 2rem;
+	color: rgb(153, 153, 153);
+}
+article em {
+	padding-top: .5rem;
+	line-height: 2rem;
+	font-size: 1.6rem;
+	color: rgb(102, 102, 102);
+	;
+}
+article .fr em {
+	color: rgb(255, 113, 109);
+}
+article a {
+	display: block;
+	padding-top: 1rem;
+}
+article a span {
+	color: rgb(245, 150, 12);
+	display: inline-block;
+	width: 24%;
+}
+.product_list_column {
+	background: #fff;
+	border: .1rem solid rgb(221, 221, 221);
+	margin-top: 1rem;
+}
+.product_list_column li {
+	padding-left: 2rem;
+	padding-right: 2rem;
+	height: 4.4rem;
+	line-height: 4.4rem;
+}
+.product_list_column li a {
+	display: block;
+	height: 4.4rem;
+}
+.product_list_column li:first-child {
+	border-bottom: .1rem solid rgb(221, 221, 221);
+}
+.product_list_column span {
+	color: rgb(102, 102, 102);
+	font-size: 1.4rem;
+}
+.product_list_column i {
+	color: rgb(153, 153, 153);
+	font-size: 1.4rem;
+	font-style: normal;
+}
+.guarantee {
+	font-size: 1.1rem;
+	color: rgb(93, 93, 93);
+	padding-left: 1.8em;
+	text-align: center;
+	margin-top: 2.2rem;
+	/*background: url(../../img/virtualGifts/productbg2.gif) no-repeat calc(50% - 23em) center;*/
+	
+	a {
+		color: rgb(245, 150, 12);
+	}
+}
+.buy_btn {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.buy_btn button {
+	width: 100%;
+	height: 4.8rem;
+	border: none;
+	background: #ff716d;
+	color: #fff;
+	font-size: 1.6rem;
+}

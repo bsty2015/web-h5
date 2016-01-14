@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<%-layout('blank-layout') -%>
+<html>
+
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/showMessage.css"/>
+
+<body>
+<nav class="clear">
+    <a class="fl <%if(type =='all'){%>active<%}%>" href="/user/dealDetail?type=all">全部</a>
+    <a class="fl <%if(type =='corpus'){%>active<%}%>" href="/user/dealDetail?type=corpus">本金</a>
+    <a class="fl <%if(type =='profit'){%>active<%}%>" href="/user/dealDetail?type=profit">收益</a>
+    <a class="fl <%if(type =='cash'){%>active<%}%>" href="/user/dealDetail?type=cash">礼金</a>
+    <a class="fl <%if(type =='pay'){%>active<%}%>" href="/user/dealDetail?type=pay">兑付</a>
+</nav>
+<footer>
+    <%
+    var initDate = '';
+    var isClosed = false;
+    var isOpen = true;
+    var len = details.length;
+    var isFirstItem = false;
+    var isActivity = 'active';
+    for(var i=0;i
+    <len
+    ;i++){
+    var item = details[i];
+    var info = '';
+    if(type =='all'){
+    info = item.info;
+    }else if(type =='corpus'){
+    info = item.productName;
+    item.status ='1';
+    }else if(type =='profit'){
+    info = item.productName;
+    item.status ='1';
+    }else if(type =='cash'){
+    info = item.source;
+    item.status ='1';
+    }else if(type =='pay'){
+    info = item.info;
+    }
+    var date = formatYMDDate(item.date);
+
+    if( initDate == '' ){
+    isFirstItem = true;
+    }else{
+    isFirstItem = false;
+    isActivity = '';
+    }
+    if(initDate==date){
+    isOpen = false;
+    isClosed = false;
+    }else if(initDate != ''){
+    isOpen = true;
+    isClosed = true;
+    }
+    %>
+    <%if(isClosed){%>
+    </ul>
+    </section>
+    <%}%>
+    <%
+    if(isOpen){
+    %>
+    <section>
+        <a class="firstfont <%=isActivity%>" href="javascript:;" data-switch="<%if(isFirstItem){%>on<%}else{%>off<%}%>"><%=date%><span
+                class="iconfont"><%if(isFirstItem){%>&#xe64e;<%}else{%>&#xe650;<%}%></span></a>
+        <ul class="<%=isActivity%>">
+            <%}%>
+            <li><%=info%><span><%if(item.status =='1'){%>+<%}else{%>-<%}%><%=formatCurrency(item.amt)%></span></li>
+            <%if((i+1)==len){%>
+        </ul>
+    </section>
+    <%}%>
+
+    <%
+    initDate = date;
+    }%>
+    <% if(details.length=='0'||details=='undefined'){%>
+    <i style="font-size: 10rem;color: #c1c1c1;display: block;text-align: center;margin-top:2rem"
+       class="iconfont FontColor120">&#xe642;</i>
+    <%}%>
+</footer>
+<section id="back">
+    <a href="/user/home"">
+    <button>返回</button>
+    </a>
+</section>
+</body>
+<script src="<%=assertHost%>/js/modules/dealDail-config.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

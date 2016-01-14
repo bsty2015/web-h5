@@ -1,0 +1,932 @@
+html {
+    font-weight: normal !important;
+    width: 100%;
+    font-size: 62.5%;
+    padding-bottom: 4rem;
+}
+
+* {
+    font-weight: normal !important;
+}
+
+/* ========== */
+/* = product-list = */
+/* ========== */
+/*a {
+	color: #00CD98;
+}*/
+.plist-wrap {
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    display: block;
+    padding-top: 2rem;
+    border-bottom: .5rem solid #dbdbdb;
+}
+
+.plist-wrap ul {
+    border-top: 1px solid #e9e9e9;
+    margin-top: .6rem;
+    padding-top: .6rem;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 320px) {
+    .plist-wrap {
+        padding-left: 1rem;
+    }
+
+    .plist-wrap li:nth-child(2) {
+        margin-left: 1rem;
+    }
+
+    .plist-wrap li:nth-child(3) {
+        margin-left: 1rem;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 334px) {
+    .plist-wrap li:nth-child(2) {
+        margin-left: 1rem;
+    }
+
+    .plist-wrap li:nth-child(3) {
+        margin-left: 1rem;
+    }
+}
+
+@media only screen and (min-width: 335px) and (max-width: 360px) {
+    .plist-wrap li:nth-child(2) {
+        margin-left: 1.6rem;
+    }
+
+    .plist-wrap li:nth-child(3) {
+        margin-left: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 361px) and (max-width: 370px) {
+    .plist-wrap li:nth-child(2) {
+        margin-left: 2.6rem;
+    }
+
+    .plist-wrap li:nth-child(3) {
+        margin-left: 2.6rem;
+    }
+}
+
+@media only screen and (min-width: 371px) and (max-width: 640px) {
+    .plist-wrap li:nth-child(2) {
+        margin-left: 3rem;
+    }
+
+    .plist-wrap li:nth-child(3) {
+        margin-left: 3rem;
+    }
+}
+
+/*@media only screen and (min-width: 371px) and (max-width: 1200px) {
+	.plist-wrap ul {f
+		-webkit-column-count: 3;
+	}
+}*/
+
+.plist-tag {
+    width: 5rem;
+    height: 2rem;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    /*line-height: 2rem;*/
+
+    border-radius: .3rem;
+}
+
+.plist-tag-red {
+    background: #fa695d;
+    border-color: #fa695d;
+    border: 1px solid #FA695D;
+}
+
+.plist-tag-gray {
+    background: rgb(145, 145, 145);
+    border-color: rgb(145, 145, 145);
+    border: .1rem solid rgb(145, 145, 145);
+}
+
+.plist-tag-green {
+    background: #00CD98;
+    border-color: #00CD98;
+    border: .1rem solid #00CD98;
+}
+
+.plist-tag-blue {
+    background: #0e88c4;
+    border-color: #0e88c4;
+    border: .1rem solid #0e88c4;
+}
+
+.plist-title {
+    color: #414141;
+    font-size: 1.8rem;
+    vertical-align: middle;
+    color: rgb(65, 65, 65);
+    /*font-weight: bold;*/
+
+    padding-left: 1rem;
+}
+
+.plist-text {
+    color: #787878;
+    font-size: 1.2rem;
+}
+
+.plist-per {
+    color: #f35656;
+    font-size: 2.2rem;
+    /*font-weight: bold;*/
+
+    font-family: firstfont;
+}
+
+.plist-percent {
+    color: #F35656;
+    font-size: 1.6rem;
+    font-family: firstfont;
+}
+
+.plist-day {
+    color: #787878;
+    font-size: 2.2rem;
+    /*font-weight: bold;*/
+
+    font-family: firstfont;
+}
+
+.plist-num {
+    color: #f35656;
+    font-size: 2.2rem;
+    font-family: firstfont;
+}
+
+.sold-out {
+    color: #00CD98;
+}
+
+/*=======提示信息弹出========*/
+
+#msTip {
+    display: none;
+    /*width: 20rem;*/
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding: 0;
+}
+
+#msTip input {
+    /*opacity: .7;*/
+
+    border: .1rem solid #ff6a69;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 3rem;
+    width: 100%;
+    display: inline-block;
+    line-height: 3rem;
+    font-size: 1.4rem;
+    color: #FFFFFF;
+    background: #ff6a69;
+}
+
+/* ========== */
+/* = public = */
+/* ========== */
+/*========此处为银行卡列表样式表=========*/
+
+.ABC {
+    background-size:;
+    -webkit-background-size: 3rem;
+    background: url(/img/bankbg/ABC.png) no-repeat;
+}
+
+.BOC {
+    -webkit-background-size: 3rem;
+    background-size: 3rem;
+    background: url(/img/bankbg/BOC.png) no-repeat;
+}
+
+.BOCO {
+    -webkit-background-size: 3rem;
+    background-size: 3rem;
+    background: url(/img/bankbg/BOCO.png) no-repeat;
+}
+
+.CCB {
+    background-size: 3rem;
+    -webkit-background-size: 3rem;
+    background: url(/img/bankbg/CCB.png) no-repeat;
+}
+
+.CEB {
+    background-size: 3rem;
+    -webkit-background-size: 3rem;
+    background: url(/img/bankbg/CEB.png) no-repeat;
+}
+
+.CIB {
+    background-size: 3rem;
+    -webkit-background-size: 3rem;
+    background: url(/img/bankbg/CIB.png) no-repeat;
+}
+
+.CMBC {
+    background-size: 3rem;
+    -webkit-background-size: 3rem;
+    background: url(/img/bankbg/CMBC.png) no-repeat;
+}
+
+.CMBCHINA {
+    background-size: 3rem;
+    -webkit-background-size: 3rem;
+    background: url(/img/bankbg/CMBCHINA.png) no-repeat;
+}
+
+.ECITIC {
+    background-size: 3rem;
+    -webkit-background-size: 3rem;
+    background: url(/img/bankbg/ECITIC.png) no-repeat;
+}
+
+.GDB {
+    background-size: 3rem;
+    -webkit-background-size: 3rem;
+    background: url(/img/bankbg/GDB.png) no-repeat;
+}
+
+.HXB {
+    background-size: 3rem;
+    -webkit-background-size: 3rem;
+    background: url(/img/bankbg/HXB.png) no-repeat;
+}
+
+.ICBC {
+    background-size: 3rem;
+    -webkit-background-size: 3rem;
+    background: url(/img/bankbg/ICBC.png) no-repeat;
+}
+
+.PINGAN {
+    background-size: 3rem;
+    -webkit-background-size: 3rem;
+    background: url(/img/bankbg/PINGAN.png) no-repeat;
+}
+
+.POST {
+    background-size: 3rem;
+    -webkit-background-size: 3rem;
+    background: url(/img/bankbg/POST.png) no-repeat;
+}
+
+.SPDB {
+    background-size: 3rem;
+    -webkit-background-size: 3rem;
+    background: url(/img/bankbg/SPDB.png) no-repeat;
+}
+
+.visited120:visited {
+    color: rgb(120, 120, 120) !important;
+}
+
+.visitedWhite:visited {
+    color: #FFFFFF;
+}
+
+.visitedgreen:visited {
+    color: #00CD98;
+}
+
+.visitedred:visited {
+    color: #FA695D !important;
+}
+
+input[type=text]::-ms-clear,
+input[type=tel]::-ms-clear,
+input[type=number]::-ms-clear {
+    display: none;
+}
+
+::-webkit-textfield-decoration-container {
+}
+
+::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+input {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/*a:visited {
+	color: rgb(120, 120, 120);
+}*/
+
+.alignM {
+    vertical-align: middle;
+}
+
+.bg-red {
+    background: #FA695D;
+    border: 1px solid #FA695D;
+}
+
+.bg-60 {
+    background: #60acf0 !important;
+    border: 1px solid #60acf0 !important;
+}
+
+.bg-no {
+    background: none;
+}
+
+.borderGreen1 {
+    border-radius: 3px;
+    border: 1px solid #00CD98;
+}
+
+.height2 {
+    height: 2rem;
+}
+
+.height2plus {
+    height: 2.5rem;
+    line-height: 2.5rem;
+}
+
+.height3 {
+    height: 3rem;
+}
+
+.height4 {
+    height: 4rem;
+}
+
+.height5 {
+    height: 5rem;
+}
+
+.radius3 {
+    border-radius: .3rem;
+}
+
+.radius4 {
+    border-radius: .4rem;
+}
+
+.radius5 {
+    border-radius: .5rem;
+}
+
+.bottom-buy-text {
+    font-size: 2.4rem;
+}
+
+.bottom-btn-66 {
+    font-size: 2.4rem;
+    position: fixed;
+    bottom: 0;
+    height: 5rem;
+    width: -webkit-calc(100% - .2rem);
+    color: #fff;
+}
+
+.bottom-btn-green {
+    background: #00CD98;
+    border: 1px solid #00CD98;
+    border-color: #00CD98;
+}
+
+.bottom-btn {
+    color: #fff;
+    width: 100%;
+    height: 5rem;
+    display: block;
+    background: #fa695d;
+    border: 1px solid #FA695D;
+    position: fixed;
+    bottom: 0;
+}
+
+.product-event-btn {
+    background: #FA695D;
+    color: #fff;
+    font-size: 1.4rem;
+    border: .1rem solid #FA695D;
+    border-radius: .3rem;
+    height: 2.2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.product-event-text {
+    color: #a6a6a6;
+    font-size: 1.4rem;
+    width: -webkit-calc(80% - 2rem);
+    margin-top: 2rem;
+}
+
+.display-block {
+    display: block;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.width-25 {
+    width: 25%;
+}
+
+.width-33 {
+    width: 33.3%;
+}
+
+.bg-219 {
+    background: rgb(219, 219, 219);
+}
+
+.bg-white {
+    background: #fff;
+}
+
+.border5 {
+    border-bottom: .5rem solid rgb(219, 219, 219);
+}
+
+.borderT5 {
+    border-top: .5rem solid rgb(219, 219, 219);
+}
+
+.border1-c5 {
+    border-bottom: .1rem solid #c5c5c5;
+}
+
+.border1-ef {
+    border-bottom: .1rem solid #efefef;
+}
+
+.bgfa698d {
+    background: #FA695D;
+}
+
+.fontweight {
+    font-weight: bold;
+}
+
+.firstfont {
+    font-family: firstfont;
+}
+
+.secondfont {
+    font-family: secondfont;
+}
+
+@font-face {
+    font-family: firstfont;
+    src: url('../fonts/apple_1.ttf');
+}
+
+@font-face {
+    font-family: secondfont;
+    src: url('../fonts/apple_2.ttf');
+}
+
+.margintop20 {
+    margin-top: 2rem;
+}
+
+.FontSize12 {
+    font-size: 1.2rem;
+}
+
+.FontSize13 {
+    font-size: 1.3rem;
+}
+
+.FontSize14 {
+    font-size: 1.4rem;
+}
+
+.FontSize15 {
+    font-size: 1.5rem;
+}
+
+.FontSize16 {
+    font-size: 1.6rem;
+}
+
+.FontSize17 {
+    font-size: 1.7rem;
+}
+
+.FontSize18 {
+    font-size: 1.8rem;
+}
+
+.FontSize20 {
+    font-size: 2rem;
+}
+
+.FontSize24 {
+    font-size: 2.4rem;
+}
+
+.FontSize26 {
+    font-size: 2.6rem;
+}
+
+.FontSize30 {
+    font-size: 3rem;
+}
+
+.FontSize40 {
+    font-size: 4rem;
+}
+
+.AlginCenter {
+    text-align: center;
+}
+
+.FontColorGreen {
+    color: #00cd98;
+}
+
+.FontColorLblue {
+    color: #83bdef;
+}
+
+.FontColor98 {
+    color: #989898;
+}
+
+.FontColor65 {
+    color: #414141;
+}
+
+.FontColor66 {
+    color: rgb(66, 66, 66);
+}
+
+.FontColor93 {
+    color: rgb(93, 93, 93);
+}
+
+.FontColor157 {
+    color: #9d9d9d;
+}
+
+.FontColor152 {
+    color: rgb(152, 152, 152);
+}
+
+.FontColor129 {
+    color: #818181;
+}
+
+.FontColorB3 {
+    color: #3b3b3b;
+}
+
+.FontColorWhite {
+    color: #fff;
+}
+
+.FontColor120 {
+    color: rgb(120, 120, 120);
+}
+
+.FontColor98 {
+    color: #989898
+}
+
+.FontColor66 {
+    color: rgb(66, 66, 66)
+}
+
+.FontColor130 {
+    color: rgb(130, 130, 130);
+}
+
+.FontColor160 {
+    color: rgb(160, 160, 160);
+}
+
+.FontColor168 {
+    color: rgb(168, 168, 168);
+}
+
+.FontColor157 {
+    color: #9d9d9d;
+}
+
+.bg-191 {
+    background: rgb(191, 191, 191);
+}
+
+.bg-f5 {
+    background: #f5f5f5;
+}
+
+.bg-120 {
+    border-radius: .3rem;
+    background: rgb(120, 120, 120);
+    border: 1px solid rgb(120, 120, 120);
+}
+
+.bg-green {
+    background: #00CD98;
+    border: 1px solid #00CD98;
+    border-radius: .3rem;
+}
+
+.bg-gblue {
+    background: #9cca36;
+    border: 1px solid #9CCA36;
+}
+
+.FontColorred {
+    color: #FA695D;
+}
+
+.mLeftRight2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.pTopBottom1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.mTopBottom2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.mTop1 {
+    margin-top: 1rem;
+}
+
+.mTop1plus {
+    margin-top: 1.5rem;
+}
+
+.mTopplus {
+    margin-top: .5rem;
+}
+
+.mTop2 {
+    margin-top: 2rem;
+}
+
+.mLeft1 {
+    margin-left: 1rem;
+}
+
+.mLeft2 {
+    margin-left: 2rem;
+}
+
+.mRight1 {
+    margin-right: 1rem;
+}
+
+.mRight2 {
+    margin-right: 2rem;
+}
+
+.mBottom2 {
+    margin-bottom: 2rem;
+}
+
+.pLeftRight2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.pTopBottom2 {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.pTopBottom1plus {
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+}
+
+.pleft2 {
+    padding-left: 2rem;
+}
+
+.pleft4 {
+    padding-left: 4rem;
+}
+
+.pTop2 {
+    padding-top: 2rem;
+}
+
+.pTop1 {
+    padding-top: 1rem;
+}
+
+.pBottom2 {
+    padding-bottom: 2rem;
+}
+
+.pBottom1 {
+    padding-bottom: 1rem;
+}
+
+.reT1 {
+    margin-top: 1rem;
+}
+
+/* ========== */
+/* = IMG宽度设置 = */
+/* ========== */
+
+.img-full {
+    width: 100%;
+    border: none;
+    vertical-align: bottom;
+    max-width: 64rem;
+    margin: 0 auto;
+    display: block;
+}
+
+.img-full50 {
+    width: 50%;
+    border: none;
+    vertical-align: bottom;
+    max-width: 64rem;
+    margin: 0 auto;
+    display: block;
+}
+
+/* ========== */
+/* = 设置公共按钮 = */
+/* ========== */
+/* all */
+
+.input::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.input::-moz-placeholder {
+    color: #f00;
+}
+
+/* firefox 19+ */
+
+.input:-ms-input-placeholder {
+    color: #fff;
+}
+
+/* ie */
+
+input:-moz-placeholder {
+    color: #fff;
+}
+
+.btn-55-green {
+    font-size: 2.2rem;
+    height: 55px;
+    color: #FFFFFF;
+    display: block;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 5px;
+    background: #00CD98;
+    border: 1px solid #00CD98;
+    width: calc(100% - 6.2rem);
+    width: -webkit-calc(100% - 6.2rem);
+}
+
+.btn-55-red {
+    font-size: 2.2rem;
+    height: 55px;
+    color: #FFFFFF;
+    display: block;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 5px;
+    background: #FA695D;
+    border: 1px solid #FA695D;
+    width: calc(100% - 6.2rem);
+    width: -webkit-calc(100% - 6.2rem);
+}
+
+.btn-55-normal {
+    font-size: 2.2rem;
+    height: 55px;
+    color: #5D5D5D;
+    line-height: 55px;
+    display: block;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid #A6A6A6;
+    width: calc(100% - 6.2rem);
+    width: -webkit-calc(100% - 6.2rem);
+}
+
+.btn-39-green {
+    font-size: 1.6rem;
+    height: 3.9rem;
+    color: #FFFFFF;
+    display: block;
+    line-height: 3.9rem;
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 5px;
+    background: #00CD98;
+    border: 1px solid #00CD98;
+    width: calc(100% - 6.2rem);
+    width: -webkit-calc(100% - 6.2rem);
+}
+
+.btn-39-normal {
+    font-size: 1.6rem;
+    height: 3.9rem;
+    color: #5D5D5D;
+    line-height: 3.9rem;
+    display: block;
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-radius: 5px;
+    background: #fff;
+    border: 1px solid #A6A6A6;
+    width: calc(100% - 6.2rem);
+    width: -webkit-calc(100% - 6.2rem);
+}
+
+/* ========== */
+/* = 设置input底下有框 = */
+/* ========== */
+
+.inpbor-bottom-30 {
+    border: none;
+    height: 3rem;
+    color: #5D5D5D;
+    display: block;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+    border-bottom: 1px solid #D8D8D8;
+    width: calc(100% - 7rem);
+    text-align: center;
+    width: -webkit-calc(100% - 7rem);
+}
+
+/* = about.html = */
+
+.about-tag-num {
+    border-radius: 1rem;
+    padding: .2rem .5rem;
+    background: #FA695D;
+}
+
+/* = 消除点击出现边框 = */
+/* 1.去除android a/button/input标签被点击时产生的边框 2.去除ios a标签被点击时产生的半透明灰色背景 */
+
+a,
+button,
+input {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+}
+
+/*===处理转屏===*/
+body {
+
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none
+
+}
+
+/*------百度数据样式控制-----*/
+#ctr_baidu img {
+    height: 0;
+    width: 0;
+}

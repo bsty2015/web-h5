@@ -1,0 +1,25 @@
+.shareparent {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.shareparent p {
+    text-align: center;
+}
+
+.shareparent button {
+    height: 4rem;
+    width: 70%;
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    background: none;
+    border: .1rem solid #fff;
+    color: #fff;
+    border-radius: .3rem;
+}

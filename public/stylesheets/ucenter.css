@@ -1,0 +1,214 @@
+html,
+body {
+    background: #dbdbdb;
+    width: 100%;
+    font-size: 62.5%;
+    /*margin-bottom: 7rem;*/
+}
+
+.firstfont {
+    font-family: firstfont;
+}
+
+.secondfont {
+    font-family: secondfont;
+}
+
+@font-face {
+    font-family: firstfont;
+    src: url('../fonts/apple_1.ttf');
+}
+
+@font-face {
+    font-family: secondfont;
+    src: url('../fonts/apple_2.ttf');
+}
+
+header {
+    color: #fff;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    background: #FA695D;
+    padding-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+.num {
+    font-size: 3.6rem;
+    font-family: firstfont;
+}
+
+.ucenter-num {
+    font-size: 2rem;
+}
+
+.ucenter-text {
+    font-size: 1.4rem;
+}
+
+.clear li:nth-child(1) {
+    margin-top: 2rem;
+    border-right: 1px solid #fff;
+    width: -webkit-calc(50% - 2rem);
+}
+
+.clear li:nth-child(2) {
+    margin-top: 2rem;
+    margin-right: 2rem;
+}
+
+.FontColor120 {
+    color: rgb(120, 120, 120);
+}
+
+.FontColorred {
+    color: #FA695D;
+}
+
+.FontSize18 {
+    font-size: 1.8rem;
+}
+
+.FontColor91 {
+    color: #bfbfbf;
+}
+
+.border5 {
+    border-bottom: .5rem solid rgb(219, 219, 219);
+}
+
+.mLeft2 {
+    margin-left: 2rem;
+}
+
+.pleft2 {
+    padding-left: 2rem;
+}
+
+.pTopBottom1 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.right2 {
+    right: 2rem;
+}
+
+.right4 {
+    right: 4rem;
+}
+
+.border1-c5 {
+    border-bottom: .1rem solid #c5c5c5;
+}
+
+.icon-blue {
+    color: #71d0fe;
+}
+
+.icon-yellow {
+    color: #feaa71;
+}
+
+.icon-green {
+    color: #00cd98;
+}
+
+.u-icon {
+    height: 2.6rem;
+    width: 2.6rem;
+}
+
+/*=================================================*/
+
+table {
+    /*overflow: hidden;*/
+    position: relative;
+    margin-bottom: 1rem;
+    background: #fff;
+    width: 100%;
+    border-bottom: .1rem solid #bfbfbf;
+    border-top: .1rem solid #bfbfbf;
+}
+
+td a {
+    border-bottom: .1rem solid #efefef;
+    text-indent: 4rem;
+    height: 5.6rem;
+    font-size: 1.6rem;
+    margin-left: 2rem;
+    display: block;
+    color: #717171;
+    line-height: 5.6rem;
+}
+
+table a span:nth-child(1) {
+    padding-right: 2rem;
+    /*left: 4rem;*/
+}
+
+.setposition {
+    position: absolute;
+    right: 4rem;
+    text-indent: 0;
+}
+
+.setposition2 {
+    padding-right: 6rem;
+    text-align: center;
+}
+
+.FontColorBf {
+    color: #bfbfbf;;
+}
+
+.noborder {
+    border: none;
+}
+
+.uBg1 {
+    background: url(../img/UCenterICON/person.png) 2rem center no-repeat;
+}
+
+.uBg2 {
+    background: url(../img/UCenterICON/nosuccess.png) 2rem center no-repeat;
+}
+
+.uBg3 {
+    background: url(../img/UCenterICON/money.png) 2rem center no-repeat;
+}
+
+.uBg4 {
+    background: url(../img/UCenterICON/gifts.png) 2rem center no-repeat;
+}
+
+.uBg5 {
+    background: url(../img/UCenterICON/jifen.png) 2rem center no-repeat;
+}
+
+.uBg6 {
+    background: url(../img/UCenterICON/bank.png) 2rem center no-repeat;
+}
+
+.uBg7 {
+    background: url(../img/UCenterICON/please.png) 2rem center no-repeat;
+}
+
+.uBg8 {
+    background: url(../img/UCenterICON/news.png) 2rem center no-repeat;
+}
+
+td {
+    background-size: 3rem !important;
+}

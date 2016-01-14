@@ -1,0 +1,113 @@
+.safetyTitle {
+    max-width: 64rem;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+article {
+    max-width: 64rem;
+    margin: 0 auto;
+}
+
+.safetyIco {
+    position: relative;
+    /*left: -1.2rem;*/
+
+    height: 4rem;
+}
+
+.safetyTitle span {
+    display: inline-block;
+    line-height: 4rem;
+    font-size: 1.8rem;
+    color: #9ed438;
+    padding-left: 1rem;
+}
+
+.safetyText {
+    line-height: 2rem;
+    padding: 0 2rem;
+}
+
+.safetyTP {
+    background: #f8f8f8;
+    padding: 0 2rem;
+}
+
+.safetyTP h3 {
+    font-size: 1.8rem;
+    height: 3rem;
+    color: rgb(65, 65, 65);
+    text-indent: 6rem;
+}
+
+.safetyTP1 {
+    padding-top: 2rem;
+}
+
+.safetyTP p {
+    padding-bottom: 2rem;
+    padding-left: 6rem;
+    font-size: 1.2rem;
+}
+
+.safetyTP p {
+    background: url(../img/iSubPic/bank12.jpg) 1.5rem 0 repeat-y;
+}
+
+.safetyTP h3 {
+    background: url(../img/iSubPic/bank2.jpg) no-repeat;
+    background-size: 3rem;
+}
+
+.safetyTP0 {
+    padding-top: 2rem;
+}
+
+.safetyTP0 h3 {
+    background: url(../img/iSubPic/bank2.jpg) no-repeat;
+    background-size: 3rem;
+}
+
+.safetyTP1 h3 {
+    background: url(../img/iSubPic/bank3.jpg) no-repeat;
+    background-size: 3rem;
+}
+
+.safetyTP2 h3 {
+    background: url(../img/iSubPic/bank4.jpg) no-repeat;
+    background-size: 3rem;
+}
+
+.safetyTP3 h3 {
+    background: url(../img/iSubPic/bank5.jpg) no-repeat;
+    background-size: 3rem;
+}
+
+.safetyB {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.safetyB section {
+    width: calc(100% - 12rem);
+    height: 12rem;
+    padding-left: 11rem;
+    background: url(../img/iSubPic/bank7.jpg) 1rem center no-repeat;
+    background-size: 10rem;
+    border: .1rem solid #00CD98;
+}
+
+.safetyB section:nth-child(2) {
+    width: calc(100% - 12rem);
+    height: 12rem;
+    padding-left: 11rem;
+    background: url(../img/iSubPic/bank8.jpg) 1rem center no-repeat;
+    background-size: 10rem;
+    border: .1rem solid #00CD98;
+}
+
+.safetyB h3 {
+    position: relative;
+    left: 2rem;
+}

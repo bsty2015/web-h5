@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<%-layout('blank-layout') -%>
+<html>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/virtualGifts/details.css"/>
+<body>
+<header>
+    <p class="order">订单号：<span><%=outString(investProDetail.orderId)%></span></p>
+
+    <h3><%=investProDetail.productName%></h3>
+    <ul class="column clear">
+        <li class="fl">
+            <p>购买金额（元）</p>
+
+            <p><%=formatCurrency(investProDetail.corpus)%></p>
+        </li>
+        <li class="fr">
+            <p>预计收益（元）</p>
+
+            <p><%=formatCurrency(investProDetail.profit)%></p>
+        </li>
+    </ul>
+    <p class="tag">
+        <button>订单状态</button>
+    </p>
+    <ul class="list">
+        <% if(investProDetail.status == '待还款'){ %>
+        <li>
+            <p class="text already"><span><%=formatYMDHMS(investProDetail.investDate)%></span>&nbsp;&nbsp;购买</p>
+
+            <p class="blank"></p>
+        </li>
+        <li>
+            <p class="text">将于<span><%=formatYMDDate(investProDetail.expireDate)%></span> 兑付本金</p>
+        </li>
+        <% } %>
+        <% if(investProDetail.status == '已还本金'){ %>
+        <li>
+            <p class="text already"><span><%=formatYMDHMS(investProDetail.investDate)%></span>&nbsp;&nbsp;购买</p>
+
+            <p class="blank"></p>
+        </li>
+        <li>
+            <p class="text already">已于<span><%=formatYMDDate(investProDetail.expireDate)%></span> 兑付本金</p>
+        </li>
+        <% } %>
+        <% if(investProDetail.status == '已还款' && investProDetail.repayProfitDate != undefined){ %>
+        <li>
+            <p class="text already"><span><%=formatYMDHMS(investProDetail.investDate)%></span>&nbsp;&nbsp;购买</p>
+
+            <p class="blank"></p>
+        </li>
+        <li>
+            <p class="text already">已于<span><%=formatYMDDate(investProDetail.expireDate)%></span> 兑付本金</p>
+        </li>
+        <li>
+            <p class="blank"></p>
+
+            <p class="text already">已于<span><%=formatYMDDate(investProDetail.repayProfitDate)%></span> 兑付收益</p>
+        </li>
+        <% } %>
+    </ul>
+</header>
+<footer>
+    <section>
+        <p>
+            <button>支付信息</button>
+        </p>
+        <ul>
+            <li>
+                <a class="clear" href="javascript:;">
+                    <p class="fl <%=investProDetail.bankCode%>">
+                        <%=investProDetail.bankName%>(尾号<%=investProDetail.cardLast%>)</p>
+                    <i class="iconfont fr">&#xe650;</i>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <p>
+            <button>附件</button>
+        </p>
+        <ul>
+            <li>
+                <a class="clear" href="/virtual/rule">
+                    <p class="fl rule">活动规则</p>
+                    <i class="iconfont fr">&#xe650;</i>
+                </a>
+            </li>
+        </ul>
+    </section>
+</footer>
+</body>
+
+</html>
+<table border="0" cellspacing="" cellpadding="">
+    <tr>
+        <td></td>
+    </tr>
+</table>

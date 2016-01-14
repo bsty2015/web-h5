@@ -1,0 +1,67 @@
+<!--<!DOCTYPE HTML>-->
+<%-layout( 'blank-layout') -%>
+<html>
+<!--<title>积分</title>-->
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/integral.css"/>
+
+<body>
+<input id="getID" type="hidden" name="" value="<%=userId%>"/>
+<!--
+    作者：zhongciyisheng@live.com
+    时间：2015-07-17
+    描述：上面的input是获取数据。。
+-->
+<header>
+    <p class="FontColorWhite FontSize14 pTop2 mLeft2">累计积分</p>
+    <ul class="clear pBottom2">
+        <li class="fl FontColorWhite integralL alignM firstfont"></li>
+        <li class="fl FontColorWhite integralR alignM">
+            <button class="integralCtr">如何获取积分?</button>
+        </li>
+    </ul>
+</header>
+<nav id="nav" class="integralNav bg-white">
+    <p class="clear">
+        <a class="fl get active">获得的积分</a>
+        <a class="fl change ">已兑换</a>
+    </p>
+</nav>
+<section id="rule">
+    <ul>
+        <li>
+					<pre>
+						<a href="javascript:;" class="iconfont hidden">&#xe638;</a>
+<span class="title">积分获取规则</span>
+1.注册送1000积分;
+2.新手产品:固定送1000积分;
+3.交易积分算法;
+  月度产品:积分=购买金额 / 6;
+  季度产品:积分=购买金额 / 2;
+  半年产品:积分=购买金额 ;
+  全年产品:积分=购买金额 * 2;
+4.首次交易原始积分双倍计算（新手产品不参加）。
+<span class="title">推荐好友获取积分</span>
+1.推荐好友注册，送2000积分;
+2.推荐好友首次交易，送8000积分（新手产品不参加）;
+3.推荐好友再次交易，送好友积分的50%;
+4.推荐好友单笔交易满10000元，送10元礼金;
+5.每第5个推荐好友单笔交易满10000元，送50元礼金;
+6.满20个推荐好友单笔交易满10000元，送专享1%年化收益增幅。
+					</pre>
+        </li>
+    </ul>
+</section>
+<footer>
+    <article class="pTop1 integralGet test">
+
+    </article>
+    <article class="pTop1 integralChange test">
+
+    </article>
+
+</footer>
+
+<script src="<%=assertHost%>/js/modules/integral-config.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

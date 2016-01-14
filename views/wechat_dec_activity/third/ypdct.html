@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<% layout('blank-layout') -%>
+<!-- 
+      ypdct.html
+      	第三期活动
+      
+      Created by wushuang on 2016-01-08.
+      Copyright 2016 wushuang. All rights reserved.
+ -->
+<link rel="stylesheet" type="text/css" href="/stylesheets/wechat_dec_activity/third/ypdct.css"/>
+	<header class="ws_ypdct_header">
+		<img class="img-full" src="/img/wechat_Dec_activity/third_ws/tbg.jpg" />
+		<section class="btn_wrap">
+			<img class="img-full" src="/img/wechat_Dec_activity/third_ws/cbg.jpg" />
+			<%if(isEnough){%>
+			<p id="ws_end_ctr">
+				<%if(userId){%>
+				<a id="changeLink" href="javascript:;">
+					<%if(amt > 0){%>
+					<button>查看我的红包</button>
+					<%}else{%>
+					<button>拆红包</button>	
+					<%}%>
+				</a>
+				<%}else{%>
+				<a href="/wechatbind">
+					<button>拆红包</button>
+				</a>
+				<%}%>					
+			</p>
+						<!--
+            	作者：zhongciyisheng@live.com
+            	时间：2016-01-12
+            	描述： 活动结束时。。。
+            -->
+			<%}else{%>
+				<p id="ws_end_ctr">
+				<%if(userId){%>
+				<a id="changeLink" href="javascript:;">
+					<%if(amt > 0){%>
+					<button>查看我的红包</button>
+					<%}else{%>
+					<button>查看我的红包</button>	
+					<%}%>
+				</a>
+				<%}else{%>
+				<a href="/wechatbind">
+					<button>查看我的红包</button>
+				</a>
+				<%}%>					
+			</p>
+				<%}%>
+		</section>
+		<section class="text_wrap">
+			<img class="img-full" src="/img/wechat_Dec_activity/third_ws/cbg2.jpg" />
+			<%if(isEnough){%>
+			<p data-text = "end_close" class="wechat">
+			购买集财年度理财产品 <br />
+			领取<span class="firstfont">200</span>元大红包
+		</p>
+			<p class="nowchat">
+			关注微信公众号<span class="firstfont">“集财圈儿”</span><br />
+			参加活动，领取红包
+		</p>
+		<%}else{%>
+			<p class="end">
+				亲，活动已经结束了。
+			</p>
+			<%}%>
+		</section>
+		<section>
+			<img class="img-full" src="/img/wechat_Dec_activity/third_ws/fbg.jpg" />
+		</section>
+		
+	</header>
+	<%if(isEnough){%>
+	<%if(userId){%>
+	<article class="ws_mask">
+		<%if(amt == 0){%>
+		<section class="ws_buy">
+			<h3>购买年度理财产品领取红包</h3>
+			<p style="margin-top: 0;border: none;"><img src="/img/wechat_Dec_activity/third_ws/bbg.png" /></p>
+			<ul>
+				<li><i class="iconfont">&#xe625;</i>买500元，领<span>20元红包</span>。</li>
+				<li><i class="iconfont">&#xe625;</i>买1000元，领<span>50元红包</span>。</li>
+				<li><i class="iconfont">&#xe625;</i>买5000元，领<span>200元红包</span>。</li>
+			</ul>
+			<p class="text">
+				<a href="/xmasThird/product">购买</a>
+			</p>
+			<p class="last">
+				红包由微信公众号“集财圈儿”<br />
+				发送给您，请注意查收
+			</p>
+		</section>
+	<%}else{%>
+		<section class="ws_buy ws_buy2">
+			
+			<h3>我的红包</h3>
+			<div class="clear ws_box firstfont">
+				<div class="fl">
+					<strong class="FontSize14 bagtext">集财年度产品红包</strong><br />
+					<span class="FontSize12"><%=formatYMDDate(date)%></span>
+				</div>
+				<div class="fr">
+					<strong class="FontSize30"><%=amt%></strong>
+					<span class="FontSize12">元</span>
+				</div>
+			</div>
+			<p id="xmas-close" class="text">
+				<a href="javascript:;">返回</a>
+			</p>
+				<p class="last">
+				红包由微信公众号“集财圈儿”<br />
+				发送给您，请注意查收
+			</p>
+		</section>
+	<%}%>	
+	</article>
+		<%}%>
+	<%}else{%>
+		<%if(userId){%>
+			<article class="ws_mask">
+				<section class="ws_buy ws_buy2">
+			<%if(amt == 0){%>
+			<h3>没有已领取的红包</h3>
+			<%}else{%>
+			<h3>我的红包</h3>
+			<%}%>
+				<%if(amt > 0){%>
+			<div class="clear ws_box firstfont">
+
+				<div class="fl">
+					<strong class="FontSize14 bagtext">集财年度产品红包</strong><br />
+					<span class="FontSize12"><%=formatYMDDate(date)%></span>
+				</div>
+				<div class="fr">
+					<strong class="FontSize30"><%=amt%></strong>
+					<span class="FontSize12">元</span>
+				</div>
+			</div>
+				<%}%>
+			<p id="xmas-close" class="text">
+				<%if(amt == 0){%>
+				<a  id="changeLink" href="javascript:;">返回</a>
+				<%}else{%>
+				<a id="changeLink" href="javascript:;">返回</a>					
+				<%}%>
+			</p>
+				<p class="last">
+				红包由微信公众号“集财圈儿”<br />
+				发送给您，请注意查收
+			</p>
+		</section>
+			</article>
+		<%}%>
+		<%}%>
+		
+		<article id="rule_wrap">
+			<h3>活动规则</h3>
+			<ol class="firstfont" id="rule">
+				<!--规则-->
+				<li>1. 集财贺岁第三弹活动2016年1月13日开始，2016年1月23日结束。红包发完活动提前结束；</li>
+				<li>2. 关注微信公众号“集财圈儿”，点击“领红包”绑定集财帐户后才可以参加活动；</li>
+				<li>3. 活动期间用户从活动页面进入，购买指定年度理财产品：<br />
+					单笔购买满500元，领取20元红包；<br />
+					单笔购买满1000元，领取50元红包；<br />
+					单笔购买满5000元，领取200元红包；
+				</li>
+				<li>4. 红包通过微信公众号“集财圈儿”发送，未绑定集财帐户的微信不能领取红包；</li>
+				<li>5. 活动期间每个用户最多领取1个微信红包。微信红包24小时内未领取会被退回，被退回的红包集财会择时重发；</li>
+				<li>6. 如有疑问请致电400-005-3300获取帮助。</li>
+			</ol>
+		</article>
+<script src="/js/wechat_Dec_activity/third/ypdct-config.js" type="text/javascript" charset="utf-8"></script>
+

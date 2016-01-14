@@ -1,0 +1,135 @@
+* {
+	box-sizing: border-box;
+}
+body{
+	background: #E31E2E;
+}
+.container{
+	max-width: 64rem;
+	margin: 0 auto;
+}
+.container .myred{
+	width: 100%;
+	color: white;
+	padding-top: 2rem;
+	text-align: center;
+	font-size: 1.6rem;
+}
+.container .money-num{
+	width: 100%;
+	text-align: center;
+	color: #FFDF00;
+	font-weight: bold !important;
+	font-size: 3.5rem;
+	margin-top: 0.8rem;
+	
+}
+.container .money-num span{
+	font-size: 1.6rem;
+	font-weight: normal;
+}
+.container .send-p{
+	text-align: center;
+	width: 100%;
+	color: white;
+	font-size: 1.2rem;
+	margin-top: 0.8rem;
+}
+.container .red-status{
+	padding: 1.5rem 1.5rem;
+}
+.container .red-status a{
+	display:block;
+	width: 50%;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	font-size: 1.4rem;
+}
+.container .red-status a:first-child{
+	float: left;
+	border-top-left-radius: .5rem;
+	border-bottom-left-radius: .5rem;
+}
+.container .red-status a:last-child{
+	
+	border-left:none;
+	border-top-right-radius: .5rem;
+	border-bottom-right-radius: .5rem;
+	float: left;
+}
+.container .get-red{
+	color: #E31E2E;
+	background: white;
+}
+.container .out-red{
+	color:white;
+	border: 1px solid white;
+}
+.container .red-list{
+	margin: 0 1.5rem;
+	padding: 0 1.5rem;
+	border: 1px soli white;
+	border-radius: .5rem;
+	background: white;
+}
+.container .red-shop{
+	padding-top: 1rem;
+	color: #333333;
+	font-size: 1.4rem;
+}
+.container .red-list li{
+	padding-bottom: 0.5rem;
+	border-bottom: 1px dashed #DFD2CB;
+}
+.container .red-list li:last-child{
+	border-bottom: none;
+	padding-bottom: 8rem;
+}
+.container .time{
+	color: #999999;
+	line-height: 2rem;
+	font-size: 1.2rem;
+}
+.container .num{
+	color: #E31E2E;
+	font-weight: bold !important;
+	font-size: 2rem;
+	margin-top: 1.5rem;
+}
+.container .out-ul{
+	display: none;
+}
+.container .return-p{
+	margin: 1.5rem 3rem;
+	text-align: center;
+}
+.container .return-p a{
+	background: #FF752A;
+	display: block;
+	color: white;
+	text-align: center;
+	width: 100%;
+	height: 4rem;
+	line-height: 4rem;
+	font-size: 1.6rem;
+	border-radius: .5rem;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

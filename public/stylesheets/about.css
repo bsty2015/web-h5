@@ -1,0 +1,151 @@
+html,
+body {
+    background: rgb(219, 219, 219);
+}
+
+/*article img {
+	position: relative;
+	top: -.2rem;
+}*/
+
+article a {
+    background: #FFFFFF;
+}
+
+article .text,
+article .icon {
+    position: relative;
+    top: .5rem;
+}
+
+/* ========== */
+/* = 关于集财页面 = */
+/* ========== */
+
+.aboutContent {
+    padding-bottom: 2rem;
+}
+
+.aboutContent h3 {
+    padding-top: 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #616161;
+}
+
+.aboutContent p:nth-child(n+2) {
+    padding: .5rem 3rem;
+}
+
+/* ========== */
+/* = 客户服务 = */
+/* ========== */
+
+.severContent li {
+    width: -webkit-calc(50% - 2.1rem);
+    color: #616161;
+    padding-left: 2rem;
+}
+
+.severContent ul li:nth-child(1) {
+    border-right: 1px solid #979797;
+}
+
+.severContent ul {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* ========== */
+/* = Banner = */
+/* ========== */
+table {
+    /*overflow: hidden;*/
+    position: relative;
+    margin-bottom: 1rem;
+    background: #fff;
+    width: 100%;
+    border-bottom: .1rem solid #bfbfbf;
+    border-top: .1rem solid #bfbfbf;
+}
+
+td a {
+    border-bottom: .1rem solid #efefef;
+    text-indent: 3rem;
+    height: 5.6rem;
+    font-size: 1.6rem;
+    margin-left: 2rem;
+    display: block;
+    color: #717171;
+    line-height: 5.6rem;
+}
+
+table a span:nth-child(1) {
+    padding-right: 2rem;
+    /*left: 4rem;*/
+}
+
+.setposition {
+    position: absolute;
+    right: 4rem;
+    text-indent: 0;
+}
+
+.setposition2 {
+    padding-right: 6rem;
+    text-align: center;
+}
+
+.FontColorBf {
+    color: #bfbfbf;;
+}
+
+.noborder {
+    border: none;
+}
+
+.uBg1 {
+    background: url(../img/abouticon/about.png) 2rem center no-repeat;
+}
+
+.uBg2 {
+    background: url(../img/abouticon/sever.png) 2rem center no-repeat;
+}
+
+.uBg3 {
+    background: url(../img/abouticon/fqa.png) 2rem center no-repeat;
+}
+
+.uBg4 {
+    background: url(../img/abouticon/active.png) 2rem center no-repeat;
+}
+
+.uBg5 {
+    background: url(../img/abouticon/share.png) 2rem center no-repeat;
+}
+
+.uBg6 {
+    background: url(../img/abouticon/think.png) 2rem center no-repeat;
+}
+
+.uBg7 {
+    background: url(../img/UCenterICON/please.png) 2rem center no-repeat;
+}
+
+td {
+    background-size: 2.4rem !important;
+}
+
+/**
+ * 底部信息
+ */
+footer {
+    font-family: firstfont;
+    max-width: 64rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+footer p {
+    text-align: center;
+}

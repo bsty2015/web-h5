@@ -1,0 +1,355 @@
+<!DOCTYPE HTML>
+<%-layout('blank-layout') -%>
+<html>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/agreen.css"/>
+<body>
+<h2 class="user-agree-h2 FontColor219 FontSize16 pTop2">应收账款转让及回购协议</h2>
+<article class="contract-arcticle1 mTop1">
+    <p>
+        应收账款转让人（甲方）：
+        <span><%=outString(contract.debtUser)%></span>
+    </p>
+
+    <p>
+        应收账款受让人（乙方）：
+        <span><%=outString(contract.creditUser)%></span>
+    </p>
+
+    <p>
+        证件号码：
+        <span class="firstfont"><%=outString(contract.identity)%></span>
+    </p>
+
+    <p>
+        定义：<span>如上下文无其他解释，本文相关定义如下。</span>
+    </p>
+
+    <p>
+        原债务人：<span>基于接受基础交易中的服务或货物而应当支付对价的独立法人。</span>
+    </p>
+
+    <p>
+        保理方：<span>在工商管理部门登记的，拥有商业保理资质的独立法人。</span>
+    </p>
+
+    <p>
+        应收账款受让人：<span>受让保理公司保理的应收账款的自然人。</span>
+    </p>
+
+    <p>
+        鉴于：<span><!----></span>
+    </p>
+
+    <p>
+        原债权人与甲方签署的编号为【<span class="firstfont"><%=outString(contract.contractNO)%></span>】的《安邦汇银保理业务合同》，将应收账款转让给甲方，由甲方为原债权人提供
+        国内保理服务。 现经甲乙双方协商一致，甲方将上述受让的应收账款再转让给乙方，为保证本业务的顺利进行，双方约定如下：
+    </p>
+</article>
+<article class="contract-arcticle2">
+    <ul>
+        <li>
+            <h3>
+                <span class="firstfont">1</span>
+                、 产品简介
+            </h3>
+
+            <p>
+                本合同产品为应收账款转让及应收账款委托管理业务，即乙方在本合同有效期及延续期间受让甲方的应收账款，
+                并委托甲方代为管理和催收应收账款，本合同约定回购期限到期后由甲方向乙方回购本合同转让的应收账款。
+            </p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">2</span>
+                、 应收账款转让标的
+            </h3>
+
+            <p>
+                甲方向乙方转让的标的为：甲方与原债权人签订的编号为<span><%=outString(contract.contractNO)%></span>的《安邦汇银保理业务合同》
+                中受让的应收账款，即原债权人应当向原债务人收取的应收账款，合计为人民币<span class="firstfont"><%=outString(contract.debtAmt)%></span>元。
+            </p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">3</span>
+                、转让产品名称
+            </h3>
+
+            <p><%=outString(contract.productName)%></p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">4</span>
+                、 应收账款转让金额
+            </h3>
+
+            <p>
+                甲方向乙方转让的应收账款金额为人民币<span class="firstfont"><%=outString(contract.investAmt)%></span>元，
+                融资期限为<%=formatYMDDate(contract.sDate,'yyyy年MM月dd日')%>至<%=formatYMDDate(contract.eDate,'yyyy年MM月dd日')%>。
+            </p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">5</span>
+                、 转让资金支付方式
+            </h3>
+
+            <p>乙方应当通过集财手机网站（<span class="firstfont">m.jicai.com</span>）规定的支付方式一次性支付转让款。</p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">6</span>
+                、 应收账款回购
+            </h3>
+
+            <p>
+                <span class="firstfont">6.1</span>
+                、融资期满后，甲方应当向乙方溢价回购本合同约定的应收账款，甲方溢价回购范围包括融资金额、
+                回购溢价款、罚息、违约金等。溢价率为年化<span><%=outString(contract.rate)%>%</span>，溢价金额计算方式为按日计算，
+                以应收账款转让日为起点计算，到期一次性支付回购融资金额及溢价金额。
+            </p>
+
+            <p>
+                <span class="firstfont">6.2</span>
+                、甲方到期将回购资金支付到指定账户即完成回购义务，集财将乙方所得融资金额及回购溢价款自动转存至乙方的购买使用银行卡内。
+            </p>
+
+            <p>
+                <span class="firstfont">6.3</span>
+                、应收账款管理及催收服务<br/>
+                本合同项下应收账款管理及催收服务是指对于甲方向乙方转让的应收账款，甲方应当尽到管理义务。 同时甲方应当尽到催收义务，原债务人所承担的债务到期后应当及时催收。
+            </p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">7</span>
+                、甲方的权利和义务
+            </h3>
+
+            <p>
+                <span class="firstfont">7.1</span>
+                、依法收取乙方支付的融资价款。
+            </p>
+
+            <p>
+                <span class="firstfont">7.2</span>
+                、确保所转让的应收账款的真实、合法、有效、完全有权决定处分该应收账款，并自愿承担相关法律责任。
+            </p>
+
+            <p>
+                <span class="firstfont">7.3</span>
+                、根据本协议约定出具本合同项下应收账款已依法转让给乙方的书面声明。
+            </p>
+
+            <p>
+                <span class="firstfont">7.4</span>
+                、为乙方依法受让、追收及实现所转让应收账款提供必要的协助。
+            </p>
+
+            <p>
+                <span class="firstfont">7.5</span>
+                、在转让应收账款到期日按约定无条件溢价回购该特定应收账款。
+            </p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">8</span>
+                、乙方的权利义务
+            </h3>
+
+            <p>
+                <span class="firstfont">8.1</span>
+                、按本协议约定的时间和方式向甲方支付融资金额。
+            </p>
+
+            <p>
+                <span class="firstfont">8.2</span>
+                、在受让甲方上述应收账款后，依法享有对债务人的债权及其相关债权担保权利。
+            </p>
+            <span class="firstfont">8.3</span>
+            、在融资期限届满后按约定享有应收账款溢价回购金额。
+            <p>
+                <span class="firstfont">8.4</span>
+                、在实现应收账款过程中可以要求并获得甲方必要的协助。
+            </p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">9</span>
+                、 陈述、保证和承诺
+            </h3>
+
+            <p>
+                <span class="firstfont">9.1</span>
+                、甲方承诺并保证：
+                <br/>
+                <span class="FontColor129"><span class="firstfont">(1)</span>甲方保证依法设立并有效存续，有权实施本协议项下的应收账款转让并能够独立承担民事责任。</span>
+                <br/>
+                <span class="FontColor129"><span class="firstfont">(2)</span>甲方保证所转让的应收账款及其从权利是真实有效的；保证转移法律文书及条款真实、准确、完整。</span>
+                <br/>
+                <span class="FontColor129"><span
+                        class="firstfont">(3)</span>甲方保证其转让本协议项下的应收账款已经获得其内部相关权力机构的授权或批准。</span>
+                <br/>
+                <span class="FontColor129"><span class="firstfont">(4)</span>甲方保证在应收账款转让后回购前，不得以债权人身份向应收账款债务人主张债权，但可以以乙方授权清收人身份向债务人催收到期应收账款。</span>
+            </p>
+
+            <p>
+                <span class="firstfont">9.2</span>
+                、乙方承诺并保证：
+                <br/>
+                <span class="FontColor129"><span class="firstfont">(1)</span>乙方保证有权受让本协议项下的应收账款并能独立承担民事责任。</span>
+                <br/>
+                <span class="FontColor129"><span class="firstfont">(2)</span>乙方保证支付转让款的来源合法有效。</span>
+            </p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">10</span>
+                、应收账款瑕疵担保
+            </h3>
+
+            <p>甲方保证每一笔应收账款均符合以下全部条件：</p>
+
+            <p>
+                <span class="firstfont">10.1</span>
+                、基础合同真实、合法且有效，没有禁止或限制该合同项下的应收账款转 让，基础合同中不存在任何不利于乙方行使应收账款项下权利的条款，原债权人经或将会适当的履行其在基础合同项下的义务；
+            </p>
+
+            <p>
+                <span class="firstfont">10.2</span>
+                、保理合同真实、合法且有效，保理合同没有禁止或限制该合同项下应收账款的再次转让，保理合同中不存其他任何不利于乙方行使应收账款项下权利的条款；
+            </p>
+
+            <p>
+                <span class="firstfont">10.3</span>
+                、甲方已履行了保理合同项下的保理预付款支付义务和其他已到期的义 务；
+            </p>
+
+            <p>
+                <span class="firstfont">10.4</span>
+                、 每一笔应收账款均不存在任何质押或任何其他担保，也不存在任何权属争议；就已在本合同项下转让给乙方的每一笔应收账款（甲方已回购的应收账款除外）而言，甲方不会将其另行转让给任何其他第三人。
+            </p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">11</span>
+                、应收账款代位追偿权
+            </h3>
+
+            <p>如出现以下情形，乙方可向原债权人和原债务人代位行使追偿权，无需征得甲方同意：</p>
+
+            <p>
+                <span class="firstfont">11.1</span>
+                、 本合同约定回购期到期后，甲方未能向乙方溢价回购应收账款。
+            </p>
+
+            <p>
+                <span class="firstfont">11.2</span>
+                、 甲方被人民法院宣布破产。
+            </p>
+
+            <p>
+                <span class="firstfont">11.3</span>
+                、原债务人应付账款到期后，甲方怠于行使债权而影响到乙方的合法权利。
+            </p>
+
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">12</span>
+                、回购约定
+            </h3>
+
+            <p>
+                乙方同意，甲方完成应收账款回购的同时乙方将对原债务人的应收账款债权转回至甲方。
+            </p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">13</span>
+                、合同的生效、终止和变更
+            </h3>
+
+            <p>
+                <span class="firstfont">13.1</span>
+                、本合同不提供纸质版本。乙方可通过甲方网站或客服人员、移动平台查询账户信息。
+            </p>
+
+            <p>
+                <span class="firstfont">13.2</span>
+                、本合同的有效性不因个别条款无效而受影响。
+            </p>
+
+            <p>
+                <span class="firstfont">13.3</span>
+                、除本合同另有规定外，任何一方未经另一方书面同意，无权单方面更改本合同的任何条款；一方要求对本合同条款进行任何修改，应书面通知另一方，在取得另一方的书面同意后方可进行。
+            </p>
+
+            <p>
+                <span class="firstfont">13.4</span>
+                、有关本合同的所有通知、变更等均应采取书面形式。
+            </p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">14</span>
+                、风险提示
+            </h3>
+
+            <p>
+                <span class="firstfont">14.1</span>
+                、政策风险
+                <br/>
+                因国家宏观政策、财政政策、货币政策、行业政策、地区发展、法律法规等因素引起的政策风险。
+            </p>
+
+            <p>
+                <span class="firstfont">14.2</span>
+                、不可抗力
+                <br/>
+                由于战争、动乱、自然灾害等不可抗力因素的出现而可能导致乙方无法按时获得应收账款项下款项的风险。
+            </p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">15</span>
+                、保密条款
+            </h3>
+
+            <p>
+                未经双方同意，任何一方不得将本合同内容泄露给第三方（法律、行政法规、司法解释另有规定的情形除外）。
+            </p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">16</span>
+                、争议解决
+            </h3>
+
+            <p>
+                与本合同相关的任何争议双方均可向杭州市下城区人民法院提起诉讼。
+            </p>
+        </li>
+        <li>
+            <h3>
+                <span class="firstfont">17</span>
+                、适用法律、法规
+            </h3>
+
+            <p>
+                本合同适用的是中国的法律、法规和司法解释，以及服务区域的地方法规、地方规章，包括甲方所在地的人民法院对保理业务所做的指导意见、批复。上述法律、法规、文件没有规定的，适用行业惯例。
+            </p>
+
+            <p>
+                应收账款受让人同意一经勾选即认可《应收账款转让及回购协议》项下的所有条款。
+            </p>
+        </li>
+    </ul>
+</article>
+</body>
+</html>
+
+
+
+
+

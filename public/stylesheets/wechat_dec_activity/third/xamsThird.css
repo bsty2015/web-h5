@@ -1,0 +1,305 @@
+* {
+	box-sizing: border-box;
+}
+body{
+	background: #CA2A33;
+}
+.container{
+	max-width: 64rem;
+	margin: 0 auto;
+}
+.img-full{
+	display: block;
+	width: 100%;
+}
+.content{
+	display: block;
+	position: relative;
+	width: 100%;
+}
+.content .no-weixin{
+	display: none;
+	position: absolute;
+	top:40%;
+	width: 100%;
+}
+.content .weixin{
+	display: block;
+	position: absolute;
+	top:20%;
+	padding-top: 6%;
+	width: 100%;
+}
+.content .btn-p{
+	width: 100%;
+	text-align: center;
+}
+.content .see-p{
+	width: 100%;
+	text-align: center;
+}
+.content .btn{
+	background:#FFAE00 ;
+	border-radius: 4rem;
+	height: 4.3rem;
+	width:17.5rem ;
+	border: none;
+	outline: none;
+	color: white;
+	text-align: center;
+	line-height: 4.3rem;
+	font-size: 1.6rem;
+}
+.content .info{
+	text-align: center;
+	color: white;
+	font-size: 1.4rem;
+	margin-bottom: .5rem;
+}
+.content .reg-p{
+	margin-top: 5%;
+}
+.content .info span{
+	color:#FFF485 ;
+}
+.content .info-end{
+	display: none;
+	text-align: center;
+	width: 100%;
+	color: white;
+	margin-top: 2rem;
+	font-size: 1.4rem;
+}
+.container .text-detail {
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 2rem;
+	border-radius: 17px;
+	border: 1px solid #FD665E;
+	/*height: 500px;*/
+	word-break: break-word;
+	font-size: 1.4rem;
+	font-family: firstfont, "arial, helvetica, sans-serif";
+	color: #fff;
+	line-height: 1.6rem;
+	padding: 1rem;
+	margin-bottom: 6rem;
+}
+.container .title {
+	background: #CA2A33;
+	z-index: 6;
+	font-size: 1.6rem;
+	color: white;
+	width: 8rem;
+	position: absolute;
+	top: -1rem;
+	left: 50%;
+	text-align: center;
+	margin-left: -4.5rem;
+}
+
+.mask{
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.6);
+	z-index: 9;
+}
+
+/*我的红包样式*/
+.myred{
+	display: none;
+	position: absolute;
+	top: 5rem;
+	z-index: 30;
+	margin-left: 5%;
+	background: green;
+	width: 90%;
+	height: 50rem;
+	background: url(../../../img/wechat_Dec_activity/third/TC-bg.png) no-repeat;
+	background-size: 100%;
+}
+.myred .getred{
+	color:#1A8953 ;
+	width: 100%;
+	font-size: 2.4rem;
+	text-align: center;
+	padding-top: 2rem;
+}
+.myred .getred-info{
+	  width: 90%;
+	  margin: 0 auto;
+	  margin-top:3rem;
+	  border-radius: 1rem;
+	  border: 1px solid #DDDDDD;
+	  height: 12rem;
+	  padding: 1rem;
+}
+
+.myred .return-p{
+	width: 100%;
+	text-align: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.myred .buy-red {
+	color: #E01D2B;
+	font-size: 1.4rem;
+}
+.myred .time{
+	color:#DDDDDD;
+	font-size: 1.4rem;
+}
+
+.myred .money-num{
+	color: #E01D2B;
+	margin-right: .6rem;
+	font-size: 3rem;
+}
+.myred .money-num span{
+	font-size: 1.6rem;
+	
+}
+.myred .return-a{
+	display: inline-block;
+	height: 4.3rem;
+	line-height: 4.3rem;
+	width:17.5rem ;
+	text-align: center;
+	background: #E01D2B;
+	color: white;
+	font-size: 1.6rem;
+	border-radius: 4rem;
+	
+}
+.myred .divider{
+	width: 85%;
+	height: 1px;
+	margin: 0 auto;
+	margin-top: 1.5rem;
+	border-bottom: 1px dashed #DDDDDD;
+}
+.send-p{
+	display: none;
+	color: white;
+	font-size: 1.2rem;
+	position: absolute;
+	top:85%;
+	width: 100%;
+	line-height: 1.5rem;
+	z-index: 12;
+	text-align: center;
+}
+
+.regred{
+	display: none;
+	position: absolute;
+	top:5rem;
+	z-index: 30;
+	margin-left: 5%;
+	width: 90%;
+	height: 50rem;
+	background: url(../../../img/wechat_Dec_activity/third/TC-bg.png) no-repeat;
+	background-size: 100%;
+}
+.regred .getred{
+	color:#1A8953 ;
+	width: 100%;
+	font-size: 1.6rem;
+	text-align: center;
+	padding-top: 2rem;
+}
+.regred .getred-info{
+	  width: 90%;
+	  margin: 0 auto;
+	  margin-top:3rem;
+	  border-radius: 1rem;
+	  border: 1px solid #DDDDDD;
+	  height: 12rem;
+	  padding: 1rem;
+}
+
+.regred .return-p{
+	width: 100%;
+	text-align: center;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.regred .buy-red {
+	color: #E01D2B;
+	font-size: 1.4rem;
+}
+.regred .time{
+	color:#DDDDDD;
+	font-size: 1.4rem;
+}
+
+.regred .money-num{
+	width: 100%;
+	color: #7B7B7A;
+	text-align: center;
+	margin-right: .6rem;
+	line-height: 1.5rem;
+	font-size: 1.4rem;
+}
+.regred .p1{
+	margin-top: .8rem;
+}
+.regred .money-num span{
+	color: #E01D2B;
+}
+.regred .return-a{
+	display: inline-block;
+	height: 4.3rem;
+	line-height: 4.3rem;
+	width:17.5rem ;
+	text-align: center;
+	background: #E01D2B;
+	color: white;
+	font-size: 1.6rem;
+	border-radius: 4rem;
+	
+}
+.regred .divider{
+	width: 85%;
+	height: 1px;
+	margin: 0 auto;
+	margin-top: 1.5rem;
+	border-bottom: 1px dashed #D1D1D1;
+}
+.regred .img-red{
+	width: 100%;
+	margin-top: 3rem;
+	text-align: center;
+}
+.regred .img-red img{
+	width: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

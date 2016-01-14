@@ -1,0 +1,88 @@
+.user-agree-h2 {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding-top: 2rem;
+    text-align: center;
+    color: /*rgb(65,65,65);*/;
+    border-bottom: 1px solid #A4A4A4;
+}
+
+.user-agree-p {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.user-agree-h3 {
+    border-bottom: 1px solid #A4A4A4;
+    padding-top: 2rem;
+    font-size: 1.2rem;
+    max-width: 64rem;
+    margin: 0 auto;
+    /*color: rgb(65,65,65);*/
+
+    color: #00CD98;
+}
+
+.user-agree-header {
+    padding-left: 2rem;
+}
+
+.user-agree-h3 span {
+    color: #00CD98;
+    font-family: firstfont;
+}
+
+.user-agree-article {
+    max-width: 64rem;
+    margin: 0 auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.2rem;
+}
+
+.user-agree-article span {
+    font-family: firstfont;
+    color: #00CD98;
+}
+
+.user-agree-article li p {
+    padding-top: 1rem;
+}
+
+.contract-arcticle1,
+.contract-arcticle2 {
+    color: rgb(65, 65, 65);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 64rem;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+.contract-arcticle1 p {
+    padding-top: 1rem;
+}
+
+.contract-arcticle1 h3,
+.contract-arcticle2 h3 {
+    color: #00CD98;
+    border-bottom: 1px solid #A4A4A4;
+}
+
+.contract-arcticle2 li {
+    margin-top: 2rem;
+}
+
+.contract-arcticle2 li p {
+    padding-top: 2rem;
+}
+
+.contract-arcticle2 p span {
+    color: #00CD98;
+}
+
+.contract-arcticle2 .FontColor129 {
+    color: rgb(129, 129, 129);
+}

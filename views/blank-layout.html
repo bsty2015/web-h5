@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<head>
+    <meta id="api_host" content="<%=API_HOST%>"/>
+    <meta id="assert_host" content="<%=assertHost%>"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta id="userId" content="<%=userId%>"/>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>集财</title>
+    <script src="<%=assertHost%>/js/sea.js"></script>
+    <script src="<%=assertHost%>/js/seajs-config.js"></script>
+    <link rel="icon" href="<%=assertHost%>/img/jc.ico"/>
+    <link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/loading.css"/>
+    <link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/common.css"/>
+    <link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/iconfont.css"/>
+</head>
+<%-body -%>
+<script src="<%=assertHost%>/js/modules/msgTip-config.js" type="text/javascript" charset="utf-8"></script>
+<% if(isCanShare){%>
+<input type="hidden" id="J_appId" value="<%=appId%>"/>
+<input type="hidden" id="J_shareTitle" value="集财,更懂你的理财平台"/>
+<input type="hidden" id="J_shareLink" value="http://m.jicai.com/invite?code=<%=code%>"/>
+<input type="hidden" id="J_shareDesc" value="给你推荐我在用的理财平台，注册就有礼金送，小伙伴们快赚起来吧"/>
+<script src="<%=assertHost%>/js/modules/wechartShare-config.js" type="text/javascript" charset="utf-8"></script>
+<%}%>
+
+<div id="ctr_baidu">
+    <script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fec080103828329b6f956fd8b1466176b' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>

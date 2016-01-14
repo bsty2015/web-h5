@@ -1,0 +1,73 @@
+/*
+ * created by zhongciyisheng@live.com on 2015-9-9 15:02
+ * 注册、介绍页面
+ */
+
+body {
+	background: rgb( 101, 35, 176);
+}
+.reg {
+	max-width: 64rem;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+.reg form {
+	padding-bottom: 2.5rem;
+	position: relative;
+}
+.reg form input {
+	width: 100%;
+	height: 4.4rem;
+	border: none;
+	border-radius: .5rem;
+	line-height: 4.4rem;
+	text-align: center;
+	font-size: 1.4rem;
+	color: rgb( 51, 51, 51);
+}
+.reg form button {
+	width: 100%;
+	height: 4.4rem;
+	border: none;
+	border-radius: .5rem;
+	line-height: 4.4rem;
+	text-align: center;
+	font-size: 1.4rem;
+	margin-top: 1.3rem;
+	color: rgb( 51, 51, 51);
+}
+.reg form .active {
+	color: rgb( 101, 35, 176);
+	background: rgb( 255, 237, 35);
+}
+.reg form a {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: #fff;
+}
+.rule {
+	padding-left: 2rem;
+	padding-right: 2rem;
+	font-family: firstfont;
+	padding-top: 4rem;
+	color: #fff;
+	max-width: 64rem;
+	margin: 0 auto;
+}
+.rule h3 {
+	text-align: center;
+	font-size: 1.6rem;
+	height: 3rem;
+	border-bottom: .1rem solid rgb( 156, 81, 241);
+}
+.rule pre {
+	word-wrap: break-word;
+	line-height: 1.4rem;
+	padding-top: 2rem;
+	font-size: 1.2rem;
+}
+.rule .tip {
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<%-layout('blank-layout') -%>
+<html>
+<link rel="stylesheet" type="text/css" href="<%=assertHost%>/stylesheets/transactionRecord.css"/>
+
+<body>
+<input id="getID" type="hidden" name="" value="<%=userId%>"/>
+<header>
+    <a class="property_list FontColorWhite" href="/user/dealDetail">
+        <ul>
+            <li class="FontSize10"><span class="iconfont symbol">&#xe61a;</span>账户总资产（元）</li>
+            <li id="totalAmt" class="firstfont FontSize30"></li>
+        </ul>
+        <span class="iconfont toRight FontSize18">&#xe633;</span>
+    </a>
+</header>
+<nav>
+    <a id="firstBtn" class="active" href="javascript:;" data-status="待还款">持有中<%if(holdNum > 0) { %>(<%=holdNum%>)<% } %></a><a id="secondBtn" href="javascript:;"
+                                                                                    data-status="已还款">已兑付<%if(cashNum > 0) { %>(<%=cashNum%>)<% } %></a>
+</nav>
+<footer id="J_content">
+
+</footer>
+<i id="J_hide_bar" style="font-size: 10rem;color: #c1c1c1;display: none;text-align: center;margin-top:2rem"
+   class="iconfont FontColor120">&#xe642;</i>
+
+</body>
+<section id="invest_have_tpl" style="display:none;">
+    {@each products as item}
+    <article class="invest_have">
+        <a href="/user/productDetail/${item.id}">
+            <section>
+                <ul>
+                    <li class="title clear">
+                        <p class="fl">订单号：<span class="firstfont">${item.orderId}</span></p>
+
+                        <p class="fr">将于<span class="firstfont">${item.expireDate|formatDate}</span>兑付</p>
+                    </li>
+                    <li class="content clear">
+                        <h4>${item.productName}</h4>
+                        <ul class="fl">
+                            <li class="firstfont">${item.corpus|formatNumber}</li>
+                            <li class="text">购买本金（元）</li>
+                        </ul>
+                        <ul class="fr">
+                            <li class="firstfont">${item.profit|formatNumber}</li>
+                            <li class="text">到期收益（元）</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </a>
+    </article>
+    {@/each}
+</section>
+<section id="invest_not_tpl" style="display:none;">
+    {@each products as item}
+    <article class="invest_not">
+        <a href="/user/productDetail/${item.id}">
+            <section>
+                <ul>
+                    <li class="title clear">
+                        <p class="fl">订单号：<span class="firstfont"> ${item.orderId}</span></p>
+
+                        <p class="fr">已于<span class="firstfont">${item.expireDate|formatDate}</span>兑付</p>
+                    </li>
+                    <li class="content clear">
+                        <h4>${item.productName}</h4>
+                        <ul class="fl">
+                            <li class="firstfont">${item.corpus|formatNumber}</li>
+                            <li class="text not_text">购买本金（元）</li>
+                        </ul>
+                        <ul class="fr">
+                            <li class="firstfont not_num">${item.profit|formatNumber}</li>
+                            <li class="text not_text">到期收益（元）</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </a>
+    </article>
+    {@/each}
+</section>
+<script src="<%=assertHost%>/js/modules/payNotList-config.js" type="text/javascript" charset="utf-8"></script>
+</html>

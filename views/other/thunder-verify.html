@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<% layout('blank-layout') -%>
+<html>
+<link rel="stylesheet" type="text/css" href="/stylesheets/thunderVerify.css"/>
+<input type="hidden" name="userId" id="userId" value="<%=outString(userId)%>"/>
+
+<body id="invest_body">
+<header class="thunderHeader">
+    <!--<img src="<%=assertHost%>/img/thunder/thunder.png" />-->
+    <section>
+        <p>迅雷白金会员</p>
+
+        <p><strong>免费领</strong></p>
+
+        <p><a href="/thunderVerifySub">查看活动规则</a></p>
+
+        <p>认证送<span class="firstfont">7</span>天，投资送<span class="firstfont">1</span>年！！！</p>
+    </section>
+</header>
+<article class="form">
+    <form action="javascript:;" method="post">
+        <p><span class="nameverify">实名认证</span>
+            <a href="javascript:;"></a>
+        </p>
+        <input type="text" name="username" id="username" value="" placeholder="姓名"/>
+        <input type="text" name="idcardno" id="idcardno" value="" placeholder="身份证号"/>
+
+        <p class="clear"><span class="bankverify fl">银行卡</span><span class="showbank show-bList-btn fr">查看支持银行</span>
+        </p>
+        <input type="tel" name="cardno" id="cardno" value="" placeholder="银行卡号"/>
+        <input type="tel" name="telephone" id="phone" value="" placeholder="手机号"/>
+        <button class="thunderNextBtn">
+            下一步
+        </button>
+    </form>
+</article>
+<article class="thunderCode">
+    <section style="position: relative;">
+        <p>输入验证码</p>
+
+        <p class="wrapCode">
+            <input class="thunderCodeSecond" type="tel" name="code" id="code" value="" placeholder="请输入6位验证码"/>
+            <button class="getThunderCode"><span></span>重新发送</button>
+        </p>
+        <p class="textCode">集财已将动态验证码发送至您的手机，请注意查收</p>
+
+        <p>
+            <button class="btnCode">开始集财</button>
+        </p>
+        <a class="iconfont ctrHidenTh FontSize20 FontColor120" style="position: absolute;top: -.3rem; right: -.3rem;"
+           href="javascript:;">&#xe638;</a>
+    </section>
+</article>
+<footer class="add-bank-list">
+    <ul>
+        <li class="CTRHiddenWrpa">
+            <a class="CTRHidden FontColor120 FontSize30">
+                <span class="iconfont">&#xe638;</span>
+            </a>
+        </li>
+        <li id="addBList">
+            <h3 class="AlginCenter FontSize15 border1-c5 pTopBottom1">支持银行列表</h3>
+        </li>
+    </ul>
+</footer>
+<section id="msTip">
+    <input type="text" name="" id="msg" value="<%=outString(msg)%>"/>
+</section>
+<input type="hidden" name="" id="loadingText" value="正在提交,请稍后..."/>
+</body>
+<script src="<%=assertHost%>/js/modules/thunder-config.js" type="text/javascript" charset="utf-8"></script>
+<script src="<%=assertHost%>/js/modules/showBankList-config.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,24 @@
+a button,
+a span {
+    vertical-align: middle;
+}
+
+a {
+    position: relative;
+}
+
+a i {
+    font-size: 1.6rem !important;
+    position: absolute;
+    right: 2rem;
+}
+
+.set {
+    position: absolute;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+#msgContent {
+    border-top: 1px solid #f0ecec;
+}
